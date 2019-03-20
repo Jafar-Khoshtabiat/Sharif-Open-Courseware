@@ -1,0 +1,6 @@
+# Xcode
+.DS_Store
+Pods
+*.lock
+Sharif Open Courseware.xcodeproj
+Sharif Open Courseware.xcworkspace

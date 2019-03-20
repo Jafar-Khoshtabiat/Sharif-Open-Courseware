@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35A977498EC26FF0B9DDCEE0 /* Pods_Sharif_Open_Courseware.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F15D11743A0A81AFAE4520F7 /* Pods_Sharif_Open_Courseware.framework */; };
 		C4E0C2662242CD7F008518C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E0C2652242CD7F008518C3 /* AppDelegate.swift */; };
 		C4E0C2682242CD7F008518C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E0C2672242CD7F008518C3 /* ViewController.swift */; };
 		C4E0C26B2242CD7F008518C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E0C2692242CD7F008518C3 /* Main.storyboard */; };
@@ -14,6 +15,8 @@
 		C4E0C2702242CD81008518C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E0C26E2242CD81008518C3 /* LaunchScreen.storyboard */; };
 		C4E0C27B2242CD82008518C3 /* Sharif_Open_CoursewareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E0C27A2242CD82008518C3 /* Sharif_Open_CoursewareTests.swift */; };
 		C4E0C2862242CD82008518C3 /* Sharif_Open_CoursewareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E0C2852242CD82008518C3 /* Sharif_Open_CoursewareUITests.swift */; };
+		C5D94070DA424E72EE42C07B /* Pods_Sharif_Open_CoursewareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A18889C70759A3BC0FDB56F0 /* Pods_Sharif_Open_CoursewareTests.framework */; };
+		CE411A7B4769BC399AE2B2EF /* Pods_Sharif_Open_CoursewareUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A29A0359EE9796E30F6CE9B /* Pods_Sharif_Open_CoursewareUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08A26EC72A5C9F4FBF423213 /* Pods-Sharif Open CoursewareUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharif Open CoursewareUITests.debug.xcconfig"; path = "Target Support Files/Pods-Sharif Open CoursewareUITests/Pods-Sharif Open CoursewareUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5A29A0359EE9796E30F6CE9B /* Pods_Sharif_Open_CoursewareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sharif_Open_CoursewareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		629E490956ABB4D10EB4B070 /* Pods-Sharif Open CoursewareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharif Open CoursewareTests.release.xcconfig"; path = "Target Support Files/Pods-Sharif Open CoursewareTests/Pods-Sharif Open CoursewareTests.release.xcconfig"; sourceTree = "<group>"; };
+		933746739B36F185753D273D /* Pods-Sharif Open Courseware.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharif Open Courseware.debug.xcconfig"; path = "Target Support Files/Pods-Sharif Open Courseware/Pods-Sharif Open Courseware.debug.xcconfig"; sourceTree = "<group>"; };
+		A18889C70759A3BC0FDB56F0 /* Pods_Sharif_Open_CoursewareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sharif_Open_CoursewareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7D5A147A6074B6D729A3F75 /* Pods-Sharif Open CoursewareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharif Open CoursewareUITests.release.xcconfig"; path = "Target Support Files/Pods-Sharif Open CoursewareUITests/Pods-Sharif Open CoursewareUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A885CB82800A99FF1180378C /* Pods-Sharif Open CoursewareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharif Open CoursewareTests.debug.xcconfig"; path = "Target Support Files/Pods-Sharif Open CoursewareTests/Pods-Sharif Open CoursewareTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4E0C2622242CD7F008518C3 /* Sharif Open Courseware.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sharif Open Courseware.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E0C2652242CD7F008518C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4E0C2672242CD7F008518C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +57,8 @@
 		C4E0C2812242CD82008518C3 /* Sharif Open CoursewareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sharif Open CoursewareUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E0C2852242CD82008518C3 /* Sharif_Open_CoursewareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sharif_Open_CoursewareUITests.swift; sourceTree = "<group>"; };
 		C4E0C2872242CD82008518C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D563710CC4B85B4E9E733B5F /* Pods-Sharif Open Courseware.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharif Open Courseware.release.xcconfig"; path = "Target Support Files/Pods-Sharif Open Courseware/Pods-Sharif Open Courseware.release.xcconfig"; sourceTree = "<group>"; };
+		F15D11743A0A81AFAE4520F7 /* Pods_Sharif_Open_Courseware.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sharif_Open_Courseware.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35A977498EC26FF0B9DDCEE0 /* Pods_Sharif_Open_Courseware.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5D94070DA424E72EE42C07B /* Pods_Sharif_Open_CoursewareTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE411A7B4769BC399AE2B2EF /* Pods_Sharif_Open_CoursewareUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F611E2E144C6F7F3C8D41BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				933746739B36F185753D273D /* Pods-Sharif Open Courseware.debug.xcconfig */,
+				D563710CC4B85B4E9E733B5F /* Pods-Sharif Open Courseware.release.xcconfig */,
+				A885CB82800A99FF1180378C /* Pods-Sharif Open CoursewareTests.debug.xcconfig */,
+				629E490956ABB4D10EB4B070 /* Pods-Sharif Open CoursewareTests.release.xcconfig */,
+				08A26EC72A5C9F4FBF423213 /* Pods-Sharif Open CoursewareUITests.debug.xcconfig */,
+				A7D5A147A6074B6D729A3F75 /* Pods-Sharif Open CoursewareUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A1BA1EAD08710991FE4A4FB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F15D11743A0A81AFAE4520F7 /* Pods_Sharif_Open_Courseware.framework */,
+				A18889C70759A3BC0FDB56F0 /* Pods_Sharif_Open_CoursewareTests.framework */,
+				5A29A0359EE9796E30F6CE9B /* Pods_Sharif_Open_CoursewareUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C4E0C2592242CD7F008518C3 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +120,8 @@
 				C4E0C2792242CD82008518C3 /* Sharif Open CoursewareTests */,
 				C4E0C2842242CD82008518C3 /* Sharif Open CoursewareUITests */,
 				C4E0C2632242CD7F008518C3 /* Products */,
+				1F611E2E144C6F7F3C8D41BB /* Pods */,
+				A1BA1EAD08710991FE4A4FB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4E0C28A2242CD82008518C3 /* Build configuration list for PBXNativeTarget "Sharif Open Courseware" */;
 			buildPhases = (
+				3CBF0124BA99C32A5179DB7B /* [CP] Check Pods Manifest.lock */,
 				C4E0C25E2242CD7F008518C3 /* Sources */,
 				C4E0C25F2242CD7F008518C3 /* Frameworks */,
 				C4E0C2602242CD7F008518C3 /* Resources */,
+				5BCE504281BFF51C5A53707D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +192,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4E0C28D2242CD82008518C3 /* Build configuration list for PBXNativeTarget "Sharif Open CoursewareTests" */;
 			buildPhases = (
+				AE55C24CE8230E3363B58E91 /* [CP] Check Pods Manifest.lock */,
 				C4E0C2722242CD82008518C3 /* Sources */,
 				C4E0C2732242CD82008518C3 /* Frameworks */,
 				C4E0C2742242CD82008518C3 /* Resources */,
@@ -167,6 +211,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4E0C2902242CD82008518C3 /* Build configuration list for PBXNativeTarget "Sharif Open CoursewareUITests" */;
 			buildPhases = (
+				F70EF7BD3F230067F10A88A2 /* [CP] Check Pods Manifest.lock */,
 				C4E0C27D2242CD82008518C3 /* Sources */,
 				C4E0C27E2242CD82008518C3 /* Frameworks */,
 				C4E0C27F2242CD82008518C3 /* Resources */,
@@ -250,6 +295,107 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3CBF0124BA99C32A5179DB7B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sharif Open Courseware-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BCE504281BFF51C5A53707D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sharif Open Courseware/Pods-Sharif Open Courseware-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sharif Open Courseware/Pods-Sharif Open Courseware-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE55C24CE8230E3363B58E91 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sharif Open CoursewareTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F70EF7BD3F230067F10A88A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sharif Open CoursewareUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C4E0C25E2242CD7F008518C3 /* Sources */ = {
@@ -430,6 +576,7 @@
 		};
 		C4E0C28B2242CD82008518C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 933746739B36F185753D273D /* Pods-Sharif Open Courseware.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +595,7 @@
 		};
 		C4E0C28C2242CD82008518C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D563710CC4B85B4E9E733B5F /* Pods-Sharif Open Courseware.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +614,7 @@
 		};
 		C4E0C28E2242CD82008518C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A885CB82800A99FF1180378C /* Pods-Sharif Open CoursewareTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +636,7 @@
 		};
 		C4E0C28F2242CD82008518C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 629E490956ABB4D10EB4B070 /* Pods-Sharif Open CoursewareTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +658,7 @@
 		};
 		C4E0C2912242CD82008518C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08A26EC72A5C9F4FBF423213 /* Pods-Sharif Open CoursewareUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +679,7 @@
 		};
 		C4E0C2922242CD82008518C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7D5A147A6074B6D729A3F75 /* Pods-Sharif Open CoursewareUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
