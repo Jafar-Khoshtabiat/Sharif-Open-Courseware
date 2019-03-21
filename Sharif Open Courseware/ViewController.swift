@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var topBarView: UIView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var bottomBarView: UIView!
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -17,7 +21,24 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(UIApplication.shared.statusBarFrame.height)
+        self.topBarView.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 12)
+        self.bottomBarView.roundCorners(corners: [.topLeft, .topRight], radius: 18)
+    }
+    
+    @IBAction func coursesDepartmentsSwitchButtonPressed(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func myCoursesButtonPressed(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func teachersButtonPressed(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func coursesButtonPressed(_ sender: UIButton) {
+        
     }
 }
 

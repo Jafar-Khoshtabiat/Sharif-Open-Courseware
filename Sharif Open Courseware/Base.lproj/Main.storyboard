@@ -43,6 +43,9 @@
                                             <constraint firstAttribute="height" constant="24" id="rxf-bg-vdV"/>
                                         </constraints>
                                         <state key="normal" image="down-filled-24"/>
+                                        <connections>
+                                            <action selector="coursesDepartmentsSwitchButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="krh-X7-eZm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="brightLightBlue"/>
@@ -78,7 +81,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XF5-xq-qJL" userLabel="bottomBarView">
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aus-IU-zaG">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart_26" translatesAutoresizingMaskIntoConstraints="NO" id="aus-IU-zaG">
                                         <rect key="frame" x="293" y="6" width="26" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="a0o-eq-Tnf"/>
@@ -93,8 +96,11 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkI-HT-Zs3" userLabel="myCoursesButton">
                                         <rect key="frame" x="291" y="6" width="30" height="42"/>
+                                        <connections>
+                                            <action selector="myCoursesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mqg-ap-WfY"/>
+                                        </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uC0-Uy-cBr">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="school_director_26" translatesAutoresizingMaskIntoConstraints="NO" id="uC0-Uy-cBr">
                                         <rect key="frame" x="174.5" y="6" width="26" height="26"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اساتید" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16s-Pi-2x1">
@@ -105,8 +111,11 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSW-HJ-xtb" userLabel="teachersButton">
                                         <rect key="frame" x="172.5" y="6" width="30" height="42"/>
+                                        <connections>
+                                            <action selector="teachersButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oIz-ac-4hZ"/>
+                                        </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uob-aJ-zLE">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="open_book_26" translatesAutoresizingMaskIntoConstraints="NO" id="Uob-aJ-zLE">
                                         <rect key="frame" x="56" y="6" width="26" height="26"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="دروس" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqY-eP-zSF">
@@ -117,6 +126,9 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fk1-hK-zer" userLabel="coursesButton">
                                         <rect key="frame" x="54" y="6" width="30" height="42"/>
+                                        <connections>
+                                            <action selector="coursesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nq4-Si-c2J"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
@@ -161,13 +173,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomBarView" destination="XF5-xq-qJL" id="OtO-H8-dcs"/>
+                        <outlet property="collectionView" destination="EJr-sx-GJJ" id="SfF-hu-5IE"/>
+                        <outlet property="topBarView" destination="1VD-Py-Ywe" id="ZI1-OL-3z7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-505" y="89"/>
         </scene>
     </scenes>
     <resources>
         <image name="down-filled-24" width="73.531913757324219" height="73.531913757324219"/>
+        <image name="heart_26" width="101.18918609619141" height="101.18918609619141"/>
+        <image name="open_book_26" width="101.18918609619141" height="101.18918609619141"/>
+        <image name="school_director_26" width="101.18918609619141" height="101.18918609619141"/>
         <namedColor name="blueGreyTwo">
             <color red="0.4823529411764706" green="0.50588235294117645" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
