@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		35A977498EC26FF0B9DDCEE0 /* Pods_Sharif_Open_Courseware.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F15D11743A0A81AFAE4520F7 /* Pods_Sharif_Open_Courseware.framework */; };
+		C4DDF9B922430E84005930E5 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4DDF9B822430E84005930E5 /* Colors.xcassets */; };
+		C4DDF9C022431113005930E5 /* IRANSans_Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4DDF9BA22431111005930E5 /* IRANSans_Black.ttf */; };
+		C4DDF9C122431113005930E5 /* IRANSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4DDF9BB22431111005930E5 /* IRANSans.ttf */; };
+		C4DDF9C222431113005930E5 /* IRANSans_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4DDF9BC22431112005930E5 /* IRANSans_Light.ttf */; };
+		C4DDF9C322431113005930E5 /* IRANSans_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4DDF9BD22431112005930E5 /* IRANSans_Medium.ttf */; };
+		C4DDF9C422431113005930E5 /* IRANSans_UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4DDF9BE22431112005930E5 /* IRANSans_UltraLight.ttf */; };
+		C4DDF9C522431113005930E5 /* IRANSans_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4DDF9BF22431112005930E5 /* IRANSans_Bold.ttf */; };
 		C4E0C2662242CD7F008518C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E0C2652242CD7F008518C3 /* AppDelegate.swift */; };
 		C4E0C2682242CD7F008518C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E0C2672242CD7F008518C3 /* ViewController.swift */; };
 		C4E0C26B2242CD7F008518C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E0C2692242CD7F008518C3 /* Main.storyboard */; };
@@ -44,6 +51,13 @@
 		A18889C70759A3BC0FDB56F0 /* Pods_Sharif_Open_CoursewareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sharif_Open_CoursewareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D5A147A6074B6D729A3F75 /* Pods-Sharif Open CoursewareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharif Open CoursewareUITests.release.xcconfig"; path = "Target Support Files/Pods-Sharif Open CoursewareUITests/Pods-Sharif Open CoursewareUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A885CB82800A99FF1180378C /* Pods-Sharif Open CoursewareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharif Open CoursewareTests.debug.xcconfig"; path = "Target Support Files/Pods-Sharif Open CoursewareTests/Pods-Sharif Open CoursewareTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C4DDF9B822430E84005930E5 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		C4DDF9BA22431111005930E5 /* IRANSans_Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSans_Black.ttf; sourceTree = "<group>"; };
+		C4DDF9BB22431111005930E5 /* IRANSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSans.ttf; sourceTree = "<group>"; };
+		C4DDF9BC22431112005930E5 /* IRANSans_Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSans_Light.ttf; sourceTree = "<group>"; };
+		C4DDF9BD22431112005930E5 /* IRANSans_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSans_Medium.ttf; sourceTree = "<group>"; };
+		C4DDF9BE22431112005930E5 /* IRANSans_UltraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSans_UltraLight.ttf; sourceTree = "<group>"; };
+		C4DDF9BF22431112005930E5 /* IRANSans_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSans_Bold.ttf; sourceTree = "<group>"; };
 		C4E0C2622242CD7F008518C3 /* Sharif Open Courseware.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sharif Open Courseware.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E0C2652242CD7F008518C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4E0C2672242CD7F008518C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,7 +113,6 @@
 				08A26EC72A5C9F4FBF423213 /* Pods-Sharif Open CoursewareUITests.debug.xcconfig */,
 				A7D5A147A6074B6D729A3F75 /* Pods-Sharif Open CoursewareUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,10 +153,17 @@
 			children = (
 				C4E0C2652242CD7F008518C3 /* AppDelegate.swift */,
 				C4E0C2672242CD7F008518C3 /* ViewController.swift */,
+				C4DDF9BA22431111005930E5 /* IRANSans_Black.ttf */,
+				C4DDF9BF22431112005930E5 /* IRANSans_Bold.ttf */,
+				C4DDF9BC22431112005930E5 /* IRANSans_Light.ttf */,
+				C4DDF9BD22431112005930E5 /* IRANSans_Medium.ttf */,
+				C4DDF9BE22431112005930E5 /* IRANSans_UltraLight.ttf */,
+				C4DDF9BB22431111005930E5 /* IRANSans.ttf */,
 				C4E0C2692242CD7F008518C3 /* Main.storyboard */,
 				C4E0C26C2242CD81008518C3 /* Assets.xcassets */,
 				C4E0C26E2242CD81008518C3 /* LaunchScreen.storyboard */,
 				C4E0C2712242CD81008518C3 /* Info.plist */,
+				C4DDF9B822430E84005930E5 /* Colors.xcassets */,
 			);
 			path = "Sharif Open Courseware";
 			sourceTree = "<group>";
@@ -274,9 +294,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4DDF9C422431113005930E5 /* IRANSans_UltraLight.ttf in Resources */,
 				C4E0C2702242CD81008518C3 /* LaunchScreen.storyboard in Resources */,
+				C4DDF9C022431113005930E5 /* IRANSans_Black.ttf in Resources */,
+				C4DDF9B922430E84005930E5 /* Colors.xcassets in Resources */,
 				C4E0C26D2242CD81008518C3 /* Assets.xcassets in Resources */,
+				C4DDF9C222431113005930E5 /* IRANSans_Light.ttf in Resources */,
+				C4DDF9C522431113005930E5 /* IRANSans_Bold.ttf in Resources */,
 				C4E0C26B2242CD7F008518C3 /* Main.storyboard in Resources */,
+				C4DDF9C322431113005930E5 /* IRANSans_Medium.ttf in Resources */,
+				C4DDF9C122431113005930E5 /* IRANSans.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
