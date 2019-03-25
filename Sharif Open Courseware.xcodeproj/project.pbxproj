@@ -17,7 +17,7 @@
 		C4DDF9C522431113005930E5 /* IRANSans_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4DDF9BF22431112005930E5 /* IRANSans_Bold.ttf */; };
 		C4DDF9C722432007005930E5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DDF9C622432007005930E5 /* UIView+Extension.swift */; };
 		C4E0C2662242CD7F008518C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E0C2652242CD7F008518C3 /* AppDelegate.swift */; };
-		C4E0C2682242CD7F008518C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E0C2672242CD7F008518C3 /* ViewController.swift */; };
+		C4E0C2682242CD7F008518C3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E0C2672242CD7F008518C3 /* MainViewController.swift */; };
 		C4E0C26B2242CD7F008518C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E0C2692242CD7F008518C3 /* Main.storyboard */; };
 		C4E0C26D2242CD81008518C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4E0C26C2242CD81008518C3 /* Assets.xcassets */; };
 		C4E0C2702242CD81008518C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E0C26E2242CD81008518C3 /* LaunchScreen.storyboard */; };
@@ -62,7 +62,7 @@
 		C4DDF9C622432007005930E5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		C4E0C2622242CD7F008518C3 /* Sharif Open Courseware.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sharif Open Courseware.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E0C2652242CD7F008518C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C4E0C2672242CD7F008518C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C4E0C2672242CD7F008518C3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C4E0C26A2242CD7F008518C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4E0C26C2242CD81008518C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4E0C26F2242CD81008518C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,6 +128,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C428C40D224955FE00186BF5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C4E0C2672242CD7F008518C3 /* MainViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C4E0C2592242CD7F008518C3 = {
 			isa = PBXGroup;
 			children = (
@@ -153,8 +161,8 @@
 		C4E0C2642242CD7F008518C3 /* Sharif Open Courseware */ = {
 			isa = PBXGroup;
 			children = (
+				C428C40D224955FE00186BF5 /* Views */,
 				C4E0C2652242CD7F008518C3 /* AppDelegate.swift */,
-				C4E0C2672242CD7F008518C3 /* ViewController.swift */,
 				C4DDF9BA22431111005930E5 /* IRANSans_Black.ttf */,
 				C4DDF9BF22431112005930E5 /* IRANSans_Bold.ttf */,
 				C4DDF9BC22431112005930E5 /* IRANSans_Light.ttf */,
@@ -433,7 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4DDF9C722432007005930E5 /* UIView+Extension.swift in Sources */,
-				C4E0C2682242CD7F008518C3 /* ViewController.swift in Sources */,
+				C4E0C2682242CD7F008518C3 /* MainViewController.swift in Sources */,
 				C4E0C2662242CD7F008518C3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
