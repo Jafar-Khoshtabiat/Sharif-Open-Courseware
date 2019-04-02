@@ -17,7 +17,12 @@ class HomeViewController: UIViewController {
         case departments
     }
     
+    let searchTextFieldPlaceHolder = "جست‌جوی نام درس یا استاد"
+    
     @IBOutlet weak var topBarView: UIView!
+    @IBOutlet weak var searchView: UIView!
+    @IBOutlet weak var searchTextField: UITextField!
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var bottomBarView: UIView!
     
@@ -48,7 +53,16 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         self.topBarView.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 12)
+        
         self.bottomBarView.roundCorners(corners: [.topLeft, .topRight], radius: 18)
+        
+        self.searchView.layer.cornerRadius = self.searchView.frame.height / 3
+        self.searchView.layer.applySketchShadow(color: UIColor(named: "slate")!, alpha: 0.22, x: 0, y: 6, blur: 14, spread: 0)
+        
+        self.searchTextField.delegate = self
+        self.searchTextField.attributedPlaceholder =
+            NSAttributedString(string: self.searchTextFieldPlaceHolder,
+                               attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "blueGreyThree")!.withAlphaComponent(0.34)])
         
         self.state = .courses
     }
@@ -68,5 +82,9 @@ class HomeViewController: UIViewController {
     @IBAction func coursesButtonPressed(_ sender: UIButton) {
         
     }
+}
+
+extension HomeViewController: UITextFieldDelegate {
+    
 }
 

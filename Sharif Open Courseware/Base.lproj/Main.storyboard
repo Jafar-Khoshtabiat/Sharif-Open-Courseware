@@ -11,6 +11,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="IRANSans.ttf">
+            <string>IRANSans</string>
+        </array>
         <array key="IRANSans_Bold.ttf">
             <string>IRANSans-Bold</string>
         </array>
@@ -36,40 +39,37 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p45-oB-iol" userLabel="searchView">
-                                        <rect key="frame" x="16" y="69" width="343" height="36"/>
-                                        <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YyO-h0-oxJ" userLabel="searchTextField">
-                                                <rect key="frame" x="40" y="9.5" width="293" height="17"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q6x-qc-sAX">
-                                                <rect key="frame" x="8" y="10" width="16" height="16"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="q6x-qc-sAX" secondAttribute="height" multiplier="1:1" id="Alp-Kg-0CN"/>
-                                                    <constraint firstAttribute="height" constant="16" id="VEE-F6-ZZG"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="YyO-h0-oxJ" firstAttribute="centerY" secondItem="p45-oB-iol" secondAttribute="centerY" id="4dq-bf-s7X"/>
-                                            <constraint firstAttribute="height" constant="36" id="DRl-FW-T3V"/>
-                                            <constraint firstAttribute="trailing" secondItem="YyO-h0-oxJ" secondAttribute="trailing" constant="10" id="Lnc-YF-yKo"/>
-                                            <constraint firstItem="YyO-h0-oxJ" firstAttribute="leading" secondItem="q6x-qc-sAX" secondAttribute="trailing" constant="16" id="NST-aw-bcQ"/>
-                                            <constraint firstItem="q6x-qc-sAX" firstAttribute="leading" secondItem="p45-oB-iol" secondAttribute="leading" constant="8" id="Zd6-u1-Oft"/>
-                                            <constraint firstItem="q6x-qc-sAX" firstAttribute="centerY" secondItem="p45-oB-iol" secondAttribute="centerY" id="ps4-VF-4JB"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" name="brightLightBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="87" id="0l7-79-IeW"/>
-                                    <constraint firstAttribute="trailing" secondItem="p45-oB-iol" secondAttribute="trailing" constant="16" id="Lv2-Hw-hhI"/>
-                                    <constraint firstAttribute="bottom" secondItem="p45-oB-iol" secondAttribute="top" constant="18" id="Ofa-lg-vgr"/>
-                                    <constraint firstItem="p45-oB-iol" firstAttribute="centerX" secondItem="1VD-Py-Ywe" secondAttribute="centerX" id="zwQ-HT-7RP"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p45-oB-iol" userLabel="searchView">
+                                <rect key="frame" x="16" y="69" width="343" height="36"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YyO-h0-oxJ" userLabel="searchTextField">
+                                        <rect key="frame" x="40" y="8.5" width="293" height="19"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="IRANSans" family="IRANSans" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="q6x-qc-sAX">
+                                        <rect key="frame" x="8" y="10" width="16" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="q6x-qc-sAX" secondAttribute="height" multiplier="1:1" id="Alp-Kg-0CN"/>
+                                            <constraint firstAttribute="height" constant="16" id="VEE-F6-ZZG"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="YyO-h0-oxJ" firstAttribute="centerY" secondItem="p45-oB-iol" secondAttribute="centerY" id="4dq-bf-s7X"/>
+                                    <constraint firstAttribute="height" constant="36" id="DRl-FW-T3V"/>
+                                    <constraint firstAttribute="trailing" secondItem="YyO-h0-oxJ" secondAttribute="trailing" constant="10" id="Lnc-YF-yKo"/>
+                                    <constraint firstItem="YyO-h0-oxJ" firstAttribute="leading" secondItem="q6x-qc-sAX" secondAttribute="trailing" constant="16" id="NST-aw-bcQ"/>
+                                    <constraint firstItem="q6x-qc-sAX" firstAttribute="leading" secondItem="p45-oB-iol" secondAttribute="leading" constant="8" id="Zd6-u1-Oft"/>
+                                    <constraint firstItem="q6x-qc-sAX" firstAttribute="centerY" secondItem="p45-oB-iol" secondAttribute="centerY" id="ps4-VF-4JB"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XF5-xq-qJL" userLabel="bottomBarView">
@@ -156,14 +156,17 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="p45-oB-iol" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="55C-VD-wH9"/>
                             <constraint firstItem="1VD-Py-Ywe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FLU-h1-sOj"/>
                             <constraint firstItem="XF5-xq-qJL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Gdc-yd-4oO"/>
                             <constraint firstItem="1VD-Py-Ywe" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="I5I-Sm-otx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p45-oB-iol" secondAttribute="trailing" constant="16" id="Iux-WE-EEl"/>
                             <constraint firstItem="XF5-xq-qJL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PE8-Mu-9CW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZKE-P4-qD0" secondAttribute="trailing" constant="15" id="RAa-ua-goS"/>
                             <constraint firstItem="1VD-Py-Ywe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="Wm2-ts-rBP"/>
+                            <constraint firstItem="p45-oB-iol" firstAttribute="top" secondItem="1VD-Py-Ywe" secondAttribute="bottom" constant="-18" id="Xmw-Ww-e8v"/>
                             <constraint firstItem="ZKE-P4-qD0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="bea-Rb-rXo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XF5-xq-qJL" secondAttribute="bottom" id="cnh-LX-tIU"/>
                             <constraint firstItem="ZKE-P4-qD0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="r1e-1N-w13"/>
@@ -172,6 +175,8 @@
                     </view>
                     <connections>
                         <outlet property="bottomBarView" destination="XF5-xq-qJL" id="OtO-H8-dcs"/>
+                        <outlet property="searchTextField" destination="YyO-h0-oxJ" id="nxV-0Z-oqZ"/>
+                        <outlet property="searchView" destination="p45-oB-iol" id="GUx-pK-6dy"/>
                         <outlet property="topBarView" destination="1VD-Py-Ywe" id="ZI1-OL-3z7"/>
                     </connections>
                 </viewController>
@@ -184,6 +189,7 @@
         <image name="heart_26" width="26" height="26"/>
         <image name="open_book_26" width="26" height="26"/>
         <image name="school_director_26" width="26" height="26"/>
+        <image name="search" width="16" height="16"/>
         <namedColor name="blueGreyTwo">
             <color red="0.4823529411764706" green="0.50588235294117645" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
