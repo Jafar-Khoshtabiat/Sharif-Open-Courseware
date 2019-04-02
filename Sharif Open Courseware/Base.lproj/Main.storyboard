@@ -20,6 +20,9 @@
         <array key="IRANSans_Light.ttf">
             <string>IRANSans-Light</string>
         </array>
+        <array key="IRANSans_Medium.ttf">
+            <string>IRANSans-Medium</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Home View Controller-->
@@ -70,6 +73,59 @@
                                     <constraint firstItem="YyO-h0-oxJ" firstAttribute="leading" secondItem="q6x-qc-sAX" secondAttribute="trailing" constant="16" id="NST-aw-bcQ"/>
                                     <constraint firstItem="q6x-qc-sAX" firstAttribute="leading" secondItem="p45-oB-iol" secondAttribute="leading" constant="8" id="Zd6-u1-Oft"/>
                                     <constraint firstItem="q6x-qc-sAX" firstAttribute="centerY" secondItem="p45-oB-iol" secondAttribute="centerY" id="ps4-VF-4JB"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="دانشکده‌ها" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfq-mi-6Xf">
+                                <rect key="frame" x="290.5" y="135" width="68.5" height="25.5"/>
+                                <fontDescription key="fontDescription" name="IRANSans-Medium" family="IRANSans" pointSize="16"/>
+                                <color key="textColor" name="slate"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQf-4D-G21" userLabel="allDepartmentsButton">
+                                <rect key="frame" x="16" y="134" width="60" height="28"/>
+                                <fontDescription key="fontDescription" name="IRANSans-Medium" family="IRANSans" pointSize="10"/>
+                                <state key="normal" title="مشاهده همه »"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1g-UY-55X" userLabel="lineView">
+                                <rect key="frame" x="15" y="168.5" width="345" height="1"/>
+                                <color key="backgroundColor" name="veryLightBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="VLK-1p-b5U"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uyH-df-Mzu">
+                                <rect key="frame" x="0.0" y="177.5" width="375" height="295"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="295" id="6vn-jW-mOe"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UWV-eD-igQ">
+                                    <size key="itemSize" width="109" height="134"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="دوره‌های آموزشی جدید" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQF-R1-7nZ">
+                                <rect key="frame" x="210.5" y="488.5" width="148.5" height="25.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="148.5" id="3lW-Ab-U7G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IRANSans-Medium" family="IRANSans" pointSize="16"/>
+                                <color key="textColor" name="slate"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwk-Xg-WaC" userLabel="allCoursesButton">
+                                <rect key="frame" x="16" y="487.5" width="60" height="28"/>
+                                <fontDescription key="fontDescription" name="IRANSans-Medium" family="IRANSans" pointSize="10"/>
+                                <state key="normal" title="مشاهده همه »"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fB4-pX-RNH" userLabel="lineView">
+                                <rect key="frame" x="15" y="522" width="345" height="1"/>
+                                <color key="backgroundColor" name="veryLightBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="FHT-DQ-DIC"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XF5-xq-qJL" userLabel="bottomBarView">
@@ -158,18 +214,35 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Q1g-UY-55X" firstAttribute="top" secondItem="tfq-mi-6Xf" secondAttribute="bottom" constant="8" id="0Ez-oA-Knq"/>
+                            <constraint firstItem="lQf-4D-G21" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2A3-fc-u2S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uyH-df-Mzu" secondAttribute="trailing" id="4VR-BP-m1J"/>
                             <constraint firstItem="p45-oB-iol" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="55C-VD-wH9"/>
+                            <constraint firstItem="uwk-Xg-WaC" firstAttribute="centerY" secondItem="dQF-R1-7nZ" secondAttribute="centerY" id="5QQ-Rk-M8Z"/>
+                            <constraint firstItem="fB4-pX-RNH" firstAttribute="width" secondItem="Q1g-UY-55X" secondAttribute="width" id="6ZY-8v-qLu"/>
+                            <constraint firstItem="lQf-4D-G21" firstAttribute="centerY" secondItem="tfq-mi-6Xf" secondAttribute="centerY" id="7Ny-Yp-Xex"/>
+                            <constraint firstItem="fB4-pX-RNH" firstAttribute="trailing" secondItem="Q1g-UY-55X" secondAttribute="trailing" id="7hL-0C-tmQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tfq-mi-6Xf" secondAttribute="trailing" constant="16" id="Eg3-bI-QF3"/>
+                            <constraint firstItem="Q1g-UY-55X" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EgH-gA-C8e"/>
                             <constraint firstItem="1VD-Py-Ywe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FLU-h1-sOj"/>
                             <constraint firstItem="XF5-xq-qJL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Gdc-yd-4oO"/>
                             <constraint firstItem="1VD-Py-Ywe" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="I5I-Sm-otx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p45-oB-iol" secondAttribute="trailing" constant="16" id="Iux-WE-EEl"/>
+                            <constraint firstItem="tfq-mi-6Xf" firstAttribute="top" secondItem="p45-oB-iol" secondAttribute="bottom" constant="30" id="Kro-22-1bI"/>
+                            <constraint firstItem="dQF-R1-7nZ" firstAttribute="top" secondItem="uyH-df-Mzu" secondAttribute="bottom" constant="16" id="Kzf-g8-cN8"/>
+                            <constraint firstItem="uwk-Xg-WaC" firstAttribute="leading" secondItem="lQf-4D-G21" secondAttribute="leading" id="OWR-vQ-zsg"/>
                             <constraint firstItem="XF5-xq-qJL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PE8-Mu-9CW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZKE-P4-qD0" secondAttribute="trailing" constant="15" id="RAa-ua-goS"/>
                             <constraint firstItem="1VD-Py-Ywe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="Wm2-ts-rBP"/>
                             <constraint firstItem="p45-oB-iol" firstAttribute="top" secondItem="1VD-Py-Ywe" secondAttribute="bottom" constant="-18" id="Xmw-Ww-e8v"/>
                             <constraint firstItem="ZKE-P4-qD0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="bea-Rb-rXo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q1g-UY-55X" secondAttribute="trailing" constant="15" id="brN-Kb-w62"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XF5-xq-qJL" secondAttribute="bottom" id="cnh-LX-tIU"/>
+                            <constraint firstItem="uyH-df-Mzu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="m4d-Wv-gSx"/>
+                            <constraint firstItem="uyH-df-Mzu" firstAttribute="top" secondItem="Q1g-UY-55X" secondAttribute="bottom" constant="8" id="nQE-Jv-r4i"/>
                             <constraint firstItem="ZKE-P4-qD0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="r1e-1N-w13"/>
+                            <constraint firstItem="fB4-pX-RNH" firstAttribute="top" secondItem="dQF-R1-7nZ" secondAttribute="bottom" constant="8" id="tnB-Q0-fgW"/>
+                            <constraint firstItem="dQF-R1-7nZ" firstAttribute="trailing" secondItem="tfq-mi-6Xf" secondAttribute="trailing" id="vA3-c2-Iry"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -195,6 +268,12 @@
         </namedColor>
         <namedColor name="brightLightBlue">
             <color red="0.16862745098039217" green="0.74509803921568629" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="slate">
+            <color red="0.24313725490196078" green="0.27058823529411763" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="veryLightBlue">
+            <color red="0.88627450980392153" green="0.90196078431372551" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
