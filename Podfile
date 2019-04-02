@@ -9,6 +9,7 @@ target 'Sharif Open Courseware' do
       pod 'Moya', '~> 12.0'
       pod 'RealmSwift'
       pod 'SwiftyJSON', '~> 4.0'
+      pod 'SwiftSVG', '~> 2.0'
 
   target 'Sharif Open CoursewareTests' do
     inherit! :search_paths
