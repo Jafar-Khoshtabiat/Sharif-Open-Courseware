@@ -22,9 +22,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var topBarView: UIView!
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var searchTextField: UITextField!
-    
-    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var bottomBarView: UIView!
+    @IBOutlet weak var tableView: UITableView!
     
     var state: State? {
         didSet {
@@ -66,6 +65,11 @@ class HomeViewController: UIViewController {
                                attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "blueGreyThree")!.withAlphaComponent(0.34)])
         
         self.state = .courses
+        
+        self.tableView.allowsSelection = false
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        
     }
     
     @IBAction func coursesDepartmentsSwitchButtonPressed(_ sender: UIButton) {
@@ -87,5 +91,15 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITextFieldDelegate {
     
+}
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
 }
 

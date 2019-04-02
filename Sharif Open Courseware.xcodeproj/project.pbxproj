@@ -23,6 +23,8 @@
 		C4E0C2702242CD81008518C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E0C26E2242CD81008518C3 /* LaunchScreen.storyboard */; };
 		C4E0C27B2242CD82008518C3 /* Sharif_Open_CoursewareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E0C27A2242CD82008518C3 /* Sharif_Open_CoursewareTests.swift */; };
 		C4E0C2862242CD82008518C3 /* Sharif_Open_CoursewareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E0C2852242CD82008518C3 /* Sharif_Open_CoursewareUITests.swift */; };
+		C4F49D36225390E800F7228F /* DepartmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F49D34225390E800F7228F /* DepartmentCollectionViewCell.swift */; };
+		C4F49D37225390E800F7228F /* DepartmentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F49D35225390E800F7228F /* DepartmentCollectionViewCell.xib */; };
 		C5D94070DA424E72EE42C07B /* Pods_Sharif_Open_CoursewareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A18889C70759A3BC0FDB56F0 /* Pods_Sharif_Open_CoursewareTests.framework */; };
 		CE411A7B4769BC399AE2B2EF /* Pods_Sharif_Open_CoursewareUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A29A0359EE9796E30F6CE9B /* Pods_Sharif_Open_CoursewareUITests.framework */; };
 /* End PBXBuildFile section */
@@ -73,6 +75,8 @@
 		C4E0C2812242CD82008518C3 /* Sharif Open CoursewareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sharif Open CoursewareUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E0C2852242CD82008518C3 /* Sharif_Open_CoursewareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sharif_Open_CoursewareUITests.swift; sourceTree = "<group>"; };
 		C4E0C2872242CD82008518C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4F49D34225390E800F7228F /* DepartmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentCollectionViewCell.swift; sourceTree = "<group>"; };
+		C4F49D35225390E800F7228F /* DepartmentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartmentCollectionViewCell.xib; sourceTree = "<group>"; };
 		D563710CC4B85B4E9E733B5F /* Pods-Sharif Open Courseware.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharif Open Courseware.release.xcconfig"; path = "Target Support Files/Pods-Sharif Open Courseware/Pods-Sharif Open Courseware.release.xcconfig"; sourceTree = "<group>"; };
 		F15D11743A0A81AFAE4520F7 /* Pods_Sharif_Open_Courseware.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sharif_Open_Courseware.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -131,6 +135,7 @@
 		C428C40D224955FE00186BF5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C4F49D33225390C700F7228F /* DepartmentCollectionViewCell */,
 				C4E0C2672242CD7F008518C3 /* HomeViewController.swift */,
 			);
 			path = Views;
@@ -195,6 +200,15 @@
 				C4E0C2872242CD82008518C3 /* Info.plist */,
 			);
 			path = "Sharif Open CoursewareUITests";
+			sourceTree = "<group>";
+		};
+		C4F49D33225390C700F7228F /* DepartmentCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C4F49D34225390E800F7228F /* DepartmentCollectionViewCell.swift */,
+				C4F49D35225390E800F7228F /* DepartmentCollectionViewCell.xib */,
+			);
+			path = DepartmentCollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +321,7 @@
 			files = (
 				C4DDF9C422431113005930E5 /* IRANSans_UltraLight.ttf in Resources */,
 				C4E0C2702242CD81008518C3 /* LaunchScreen.storyboard in Resources */,
+				C4F49D37225390E800F7228F /* DepartmentCollectionViewCell.xib in Resources */,
 				C4DDF9C022431113005930E5 /* IRANSans_Black.ttf in Resources */,
 				C4DDF9B922430E84005930E5 /* Colors.xcassets in Resources */,
 				C4E0C26D2242CD81008518C3 /* Assets.xcassets in Resources */,
@@ -440,6 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4F49D36225390E800F7228F /* DepartmentCollectionViewCell.swift in Sources */,
 				C4DDF9C722432007005930E5 /* UIView+Extension.swift in Sources */,
 				C4E0C2682242CD7F008518C3 /* HomeViewController.swift in Sources */,
 				C4E0C2662242CD7F008518C3 /* AppDelegate.swift in Sources */,
