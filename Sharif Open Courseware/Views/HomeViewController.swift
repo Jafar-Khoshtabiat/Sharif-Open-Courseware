@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  HomeViewController.swift
 //  Sharif Open Courseware
 //
 //  Created by Jafar Khoshtabiat on 3/20/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class HomeViewController: UIViewController {
     
     enum State {
         case myCourses
