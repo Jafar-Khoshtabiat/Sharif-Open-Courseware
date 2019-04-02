@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		35A977498EC26FF0B9DDCEE0 /* Pods_Sharif_Open_Courseware.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F15D11743A0A81AFAE4520F7 /* Pods_Sharif_Open_Courseware.framework */; };
+		C4DB74122253E69A00C97FDD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB74112253E69A00C97FDD /* HomeViewModel.swift */; };
+		C4DB74152253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB74132253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.swift */; };
+		C4DB74162253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4DB74142253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.xib */; };
+		C4DB741B2253F27600C97FDD /* DepartmentsCollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB74192253F27600C97FDD /* DepartmentsCollectionViewTableViewCell.swift */; };
+		C4DB741C2253F27600C97FDD /* DepartmentsCollectionViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4DB741A2253F27600C97FDD /* DepartmentsCollectionViewTableViewCell.xib */; };
+		C4DB74202253FD0A00C97FDD /* DepartmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB741E2253FD0A00C97FDD /* DepartmentCollectionViewCell.swift */; };
+		C4DB74212253FD0A00C97FDD /* DepartmentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4DB741F2253FD0A00C97FDD /* DepartmentCollectionViewCell.xib */; };
 		C4DDF9B922430E84005930E5 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4DDF9B822430E84005930E5 /* Colors.xcassets */; };
 		C4DDF9C022431113005930E5 /* IRANSans_Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4DDF9BA22431111005930E5 /* IRANSans_Black.ttf */; };
 		C4DDF9C122431113005930E5 /* IRANSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4DDF9BB22431111005930E5 /* IRANSans.ttf */; };
@@ -23,8 +30,6 @@
 		C4E0C2702242CD81008518C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E0C26E2242CD81008518C3 /* LaunchScreen.storyboard */; };
 		C4E0C27B2242CD82008518C3 /* Sharif_Open_CoursewareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E0C27A2242CD82008518C3 /* Sharif_Open_CoursewareTests.swift */; };
 		C4E0C2862242CD82008518C3 /* Sharif_Open_CoursewareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E0C2852242CD82008518C3 /* Sharif_Open_CoursewareUITests.swift */; };
-		C4F49D36225390E800F7228F /* DepartmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F49D34225390E800F7228F /* DepartmentCollectionViewCell.swift */; };
-		C4F49D37225390E800F7228F /* DepartmentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F49D35225390E800F7228F /* DepartmentCollectionViewCell.xib */; };
 		C5D94070DA424E72EE42C07B /* Pods_Sharif_Open_CoursewareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A18889C70759A3BC0FDB56F0 /* Pods_Sharif_Open_CoursewareTests.framework */; };
 		CE411A7B4769BC399AE2B2EF /* Pods_Sharif_Open_CoursewareUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A29A0359EE9796E30F6CE9B /* Pods_Sharif_Open_CoursewareUITests.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +59,13 @@
 		A18889C70759A3BC0FDB56F0 /* Pods_Sharif_Open_CoursewareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sharif_Open_CoursewareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D5A147A6074B6D729A3F75 /* Pods-Sharif Open CoursewareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharif Open CoursewareUITests.release.xcconfig"; path = "Target Support Files/Pods-Sharif Open CoursewareUITests/Pods-Sharif Open CoursewareUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A885CB82800A99FF1180378C /* Pods-Sharif Open CoursewareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharif Open CoursewareTests.debug.xcconfig"; path = "Target Support Files/Pods-Sharif Open CoursewareTests/Pods-Sharif Open CoursewareTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C4DB74112253E69A00C97FDD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		C4DB74132253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentsHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		C4DB74142253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartmentsHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		C4DB74192253F27600C97FDD /* DepartmentsCollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentsCollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		C4DB741A2253F27600C97FDD /* DepartmentsCollectionViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartmentsCollectionViewTableViewCell.xib; sourceTree = "<group>"; };
+		C4DB741E2253FD0A00C97FDD /* DepartmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentCollectionViewCell.swift; sourceTree = "<group>"; };
+		C4DB741F2253FD0A00C97FDD /* DepartmentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartmentCollectionViewCell.xib; sourceTree = "<group>"; };
 		C4DDF9B822430E84005930E5 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		C4DDF9BA22431111005930E5 /* IRANSans_Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSans_Black.ttf; sourceTree = "<group>"; };
 		C4DDF9BB22431111005930E5 /* IRANSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSans.ttf; sourceTree = "<group>"; };
@@ -75,8 +87,6 @@
 		C4E0C2812242CD82008518C3 /* Sharif Open CoursewareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sharif Open CoursewareUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E0C2852242CD82008518C3 /* Sharif_Open_CoursewareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sharif_Open_CoursewareUITests.swift; sourceTree = "<group>"; };
 		C4E0C2872242CD82008518C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C4F49D34225390E800F7228F /* DepartmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentCollectionViewCell.swift; sourceTree = "<group>"; };
-		C4F49D35225390E800F7228F /* DepartmentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartmentCollectionViewCell.xib; sourceTree = "<group>"; };
 		D563710CC4B85B4E9E733B5F /* Pods-Sharif Open Courseware.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharif Open Courseware.release.xcconfig"; path = "Target Support Files/Pods-Sharif Open Courseware/Pods-Sharif Open Courseware.release.xcconfig"; sourceTree = "<group>"; };
 		F15D11743A0A81AFAE4520F7 /* Pods_Sharif_Open_Courseware.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sharif_Open_Courseware.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -135,10 +145,47 @@
 		C428C40D224955FE00186BF5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C4F49D33225390C700F7228F /* DepartmentCollectionViewCell */,
+				C4DB741D2253FCE400C97FDD /* DepartmentCollectionViewCell */,
+				C4DB74182253F25700C97FDD /* DepartmentsCollectionViewTableViewCell */,
+				C4DB74172253E8CB00C97FDD /* DepartmentsHeaderTableViewCell */,
 				C4E0C2672242CD7F008518C3 /* HomeViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C4DB74102253E64E00C97FDD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C4DB74112253E69A00C97FDD /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C4DB74172253E8CB00C97FDD /* DepartmentsHeaderTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C4DB74132253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.swift */,
+				C4DB74142253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.xib */,
+			);
+			path = DepartmentsHeaderTableViewCell;
+			sourceTree = "<group>";
+		};
+		C4DB74182253F25700C97FDD /* DepartmentsCollectionViewTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C4DB74192253F27600C97FDD /* DepartmentsCollectionViewTableViewCell.swift */,
+				C4DB741A2253F27600C97FDD /* DepartmentsCollectionViewTableViewCell.xib */,
+			);
+			path = DepartmentsCollectionViewTableViewCell;
+			sourceTree = "<group>";
+		};
+		C4DB741D2253FCE400C97FDD /* DepartmentCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C4DB741E2253FD0A00C97FDD /* DepartmentCollectionViewCell.swift */,
+				C4DB741F2253FD0A00C97FDD /* DepartmentCollectionViewCell.xib */,
+			);
+			path = DepartmentCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		C4E0C2592242CD7F008518C3 = {
@@ -166,6 +213,7 @@
 		C4E0C2642242CD7F008518C3 /* Sharif Open Courseware */ = {
 			isa = PBXGroup;
 			children = (
+				C4DB74102253E64E00C97FDD /* ViewModels */,
 				C428C40D224955FE00186BF5 /* Views */,
 				C4E0C2652242CD7F008518C3 /* AppDelegate.swift */,
 				C4DDF9BA22431111005930E5 /* IRANSans_Black.ttf */,
@@ -200,15 +248,6 @@
 				C4E0C2872242CD82008518C3 /* Info.plist */,
 			);
 			path = "Sharif Open CoursewareUITests";
-			sourceTree = "<group>";
-		};
-		C4F49D33225390C700F7228F /* DepartmentCollectionViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				C4F49D34225390E800F7228F /* DepartmentCollectionViewCell.swift */,
-				C4F49D35225390E800F7228F /* DepartmentCollectionViewCell.xib */,
-			);
-			path = DepartmentCollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,7 +360,7 @@
 			files = (
 				C4DDF9C422431113005930E5 /* IRANSans_UltraLight.ttf in Resources */,
 				C4E0C2702242CD81008518C3 /* LaunchScreen.storyboard in Resources */,
-				C4F49D37225390E800F7228F /* DepartmentCollectionViewCell.xib in Resources */,
+				C4DB74162253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.xib in Resources */,
 				C4DDF9C022431113005930E5 /* IRANSans_Black.ttf in Resources */,
 				C4DDF9B922430E84005930E5 /* Colors.xcassets in Resources */,
 				C4E0C26D2242CD81008518C3 /* Assets.xcassets in Resources */,
@@ -329,7 +368,9 @@
 				C4DDF9C522431113005930E5 /* IRANSans_Bold.ttf in Resources */,
 				C4E0C26B2242CD7F008518C3 /* Main.storyboard in Resources */,
 				C4DDF9C322431113005930E5 /* IRANSans_Medium.ttf in Resources */,
+				C4DB741C2253F27600C97FDD /* DepartmentsCollectionViewTableViewCell.xib in Resources */,
 				C4DDF9C122431113005930E5 /* IRANSans.ttf in Resources */,
+				C4DB74212253FD0A00C97FDD /* DepartmentCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,9 +496,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4F49D36225390E800F7228F /* DepartmentCollectionViewCell.swift in Sources */,
+				C4DB74202253FD0A00C97FDD /* DepartmentCollectionViewCell.swift in Sources */,
+				C4DB74152253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.swift in Sources */,
 				C4DDF9C722432007005930E5 /* UIView+Extension.swift in Sources */,
 				C4E0C2682242CD7F008518C3 /* HomeViewController.swift in Sources */,
+				C4DB741B2253F27600C97FDD /* DepartmentsCollectionViewTableViewCell.swift in Sources */,
+				C4DB74122253E69A00C97FDD /* HomeViewModel.swift in Sources */,
 				C4E0C2662242CD7F008518C3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
