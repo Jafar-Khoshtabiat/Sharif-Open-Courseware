@@ -112,6 +112,17 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Owr-KW-jIG" userLabel="coursesCollectionView">
+                                <rect key="frame" x="0.0" y="667" width="375" height="532"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="12" minimumInteritemSpacing="12" id="mSQ-46-eew">
+                                    <size key="itemSize" width="168" height="164"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="8" minY="12" maxX="8" maxY="12"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XF5-xq-qJL" userLabel="bottomBarView">
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                                 <subviews>
@@ -218,6 +229,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p45-oB-iol" secondAttribute="trailing" constant="16" id="Iux-WE-EEl"/>
                             <constraint firstItem="XF5-xq-qJL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PE8-Mu-9CW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZKE-P4-qD0" secondAttribute="trailing" constant="15" id="RAa-ua-goS"/>
+                            <constraint firstItem="Owr-KW-jIG" firstAttribute="height" secondItem="STG-Q9-tRC" secondAttribute="height" id="UBD-d3-YlJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="STG-Q9-tRC" secondAttribute="trailing" id="UdN-2E-kav"/>
                             <constraint firstItem="v4F-Z0-zMt" firstAttribute="trailing" secondItem="STG-Q9-tRC" secondAttribute="trailing" id="W0r-Aj-Bx9"/>
                             <constraint firstItem="1VD-Py-Ywe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="Wm2-ts-rBP"/>
@@ -228,8 +240,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XF5-xq-qJL" secondAttribute="bottom" id="cnh-LX-tIU"/>
                             <constraint firstItem="v4F-Z0-zMt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fpe-E9-Atu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="STG-Q9-tRC" secondAttribute="bottom" id="hWJ-i0-59M"/>
+                            <constraint firstItem="Owr-KW-jIG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="nUR-FG-Wy1"/>
+                            <constraint firstItem="Owr-KW-jIG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="p2I-5S-VtZ"/>
                             <constraint firstItem="ZKE-P4-qD0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="r1e-1N-w13"/>
                             <constraint firstItem="STG-Q9-tRC" firstAttribute="top" secondItem="p45-oB-iol" secondAttribute="bottom" constant="30" id="uF5-Ni-xbA"/>
+                            <constraint firstItem="Owr-KW-jIG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uOe-N5-oed"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -237,6 +252,7 @@
                         <outlet property="bottomBarContainerView" destination="hqJ-jX-CSI" id="Mw7-fb-BXx"/>
                         <outlet property="bottomBarView" destination="XF5-xq-qJL" id="OtO-H8-dcs"/>
                         <outlet property="closeButton" destination="UU5-Uz-oKa" id="Y2N-Ds-9S4"/>
+                        <outlet property="coursesCollectionView" destination="Owr-KW-jIG" id="5k8-su-aAX"/>
                         <outlet property="coursesImageView" destination="Uob-aJ-zLE" id="w4m-IZ-kZS"/>
                         <outlet property="coursesLabel" destination="uqY-eP-zSF" id="4BK-Zi-plw"/>
                         <outlet property="coursesTitleLabel" destination="i4e-rz-iLN" id="ALB-lX-W7n"/>

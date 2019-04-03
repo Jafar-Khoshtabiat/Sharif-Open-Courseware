@@ -48,6 +48,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var myCoursesLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var departmentsCollectionView: UICollectionView!
+    @IBOutlet weak var coursesCollectionView: UICollectionView!
     
     var homeViewModel: HomeViewModel?
     
@@ -130,8 +131,14 @@ class HomeViewController: UIViewController {
         self.departmentsCollectionView.tag = Tag.allDepartmentsCollectionViewTag.rawValue
         self.departmentsCollectionView.delegate = self
         self.departmentsCollectionView.dataSource = self
-//        self.departmentsCollectionView.scroll
+
         self.departmentsCollectionView.register(UINib(nibName: "DepartmentCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DepartmentCollectionViewCell")
+        
+        self.coursesCollectionView.tag = Tag.allCoursesCollectionViewTag.rawValue
+        self.coursesCollectionView.delegate = self
+        self.coursesCollectionView.dataSource = self
+        
+        self.coursesCollectionView.register(UINib(nibName: "CourseCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CourseCollectionViewCell")
         
         self.homeViewModel = HomeViewModel(vc: self)
     }
@@ -163,7 +170,7 @@ class HomeViewController: UIViewController {
     @IBAction func closeButtonTouchUpInside(_ sender: UIButton) {
         if !self.departmentsTitleLabel.isHidden {
             UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseOut], animations: {
-                self.departmentsCollectionView.frame = CGRect(x: 0, y: self.tableView.frame.maxY,
+                self.departmentsCollectionView.frame = CGRect(x: 0, y: self.view.frame.maxY,
                                                               width: self.departmentsCollectionView.frame.width,
                                                               height: self.departmentsCollectionView.frame.height)
                 self.closeButton.isHidden = true
@@ -173,7 +180,16 @@ class HomeViewController: UIViewController {
                 self.departmentsTitleLabel.isHidden = true
             }, completion: nil)
         } else if !self.coursesTitleLabel.isHidden {
-            print("TODO")
+            UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseOut], animations: {
+                self.coursesCollectionView.frame = CGRect(x: 0, y: self.view.frame.maxY,
+                                                              width: self.coursesCollectionView.frame.width,
+                                                              height: self.coursesCollectionView.frame.height)
+                self.closeButton.isHidden = true
+//            self.bottomBarView.isHidden = false
+                self.searchView.isHidden = false
+                self.ocwTitleLabel.isHidden = false
+                self.coursesTitleLabel.isHidden = true
+            }, completion: nil)
         } else {
             fatalError("should not reach here")
         }
@@ -280,8 +296,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DepartmentCollectionViewCell", for: indexPath) as! DepartmentCollectionViewCell
             return cell
         case Tag.allCoursesCollectionViewTag.rawValue:
-            // MARK: TODO
-            fatalError("TODO")
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CourseCollectionViewCell", for: indexPath) as! CourseCollectionViewCell
+            return cell
         default:
             fatalError("should not reach here")
         }
@@ -290,6 +306,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
 extension HomeViewController: ItemsHeaderTableViewCellDelegate {
     func itemsHeaderTableViewCellWantsToSeeAllItemsWith(title: String) {
+//        self.tableView.isHidden = true
+        
         switch title {
         case Title.departments.rawValue:
             UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseOut], animations: {
@@ -303,11 +321,20 @@ extension HomeViewController: ItemsHeaderTableViewCellDelegate {
                 self.ocwTitleLabel.isHidden = true
                 self.departmentsTitleLabel.isHidden = false
                 self.coursesTitleLabel.isHidden = true
-            }, completion: { (finished) in
-                print("done")
-            })
+            }, completion: nil)
         case Title.newCourses.rawValue:
-            fatalError("TODO")
+            UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseOut], animations: {
+                self.coursesCollectionView.frame = CGRect(x: 0, y: self.topBarView.frame.maxY + 16,
+                                                              width: self.coursesCollectionView.frame.width,
+                                                              height: self.coursesCollectionView.frame.height)
+                
+                self.closeButton.isHidden = false
+//                self.bottomBarView.isHidden = true
+                self.searchView.isHidden = true
+                self.ocwTitleLabel.isHidden = true
+                self.departmentsTitleLabel.isHidden = true
+                self.coursesTitleLabel.isHidden = false
+            }, completion: nil)
         default:
             fatalError("should not reach here")
         }
