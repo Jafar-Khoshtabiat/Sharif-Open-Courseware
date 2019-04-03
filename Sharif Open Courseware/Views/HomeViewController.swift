@@ -35,6 +35,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var myCoursesImageView: UIImageView!
     @IBOutlet weak var myCoursesLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var departmentsCollectionView: UICollectionView!
     
     var homeViewModel: HomeViewModel?
     
