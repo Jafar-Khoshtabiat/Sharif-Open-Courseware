@@ -132,7 +132,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return 40
         case (1, 1):
             // MARK: TODO
-            return 500
+            return 1000
+//            return UITableView.automaticDimension
         default:
             fatalError("should not reach here")
         }
@@ -184,7 +185,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DepartmentCollectionViewCell", for: indexPath) as! DepartmentCollectionViewCell
             return cell
         } else if collectionView.tag == 3 {
-            // MARK: TODO
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CourseCollectionViewCell", for: indexPath) as! CourseCollectionViewCell
             return cell
         } else {
