@@ -20,18 +20,18 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wWm-jO-Rfc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="384.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="400.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4k3-cm-h0c">
                             <size key="itemSize" width="109" height="134"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="9" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="9" minY="9" maxX="9" maxY="16"/>
                         </collectionViewFlowLayout>
                     </collectionView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="wWm-jO-Rfc" secondAttribute="bottom" constant="16" id="LYb-yj-lnb"/>
+                    <constraint firstAttribute="bottom" secondItem="wWm-jO-Rfc" secondAttribute="bottom" id="LYb-yj-lnb"/>
                     <constraint firstItem="wWm-jO-Rfc" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Paq-Z8-S92"/>
                     <constraint firstItem="wWm-jO-Rfc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="URZ-Yn-Dvp"/>
                     <constraint firstAttribute="trailing" secondItem="wWm-jO-Rfc" secondAttribute="trailing" id="gT9-wc-uQV"/>
