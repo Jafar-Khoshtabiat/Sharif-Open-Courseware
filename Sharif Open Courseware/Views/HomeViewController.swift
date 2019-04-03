@@ -14,7 +14,6 @@ class HomeViewController: UIViewController {
         case myCourses
         case teachers
         case courses
-        case departments
     }
     
     enum Title: String {
@@ -29,25 +28,55 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var bottomBarView: UIView!
     @IBOutlet weak var bottomBarContainerView: UIView!
+    @IBOutlet weak var coursesImageView: UIImageView!
+    @IBOutlet weak var coursesLabel: UILabel!
+    @IBOutlet weak var teachersImageView: UIImageView!
+    @IBOutlet weak var teachersLabel: UILabel!
+    @IBOutlet weak var myCoursesImageView: UIImageView!
+    @IBOutlet weak var myCoursesLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     var homeViewModel: HomeViewModel?
     
     var state: State? {
         didSet {
-            guard let _state = self.state else {
+            guard let newState = self.state else {
                 fatalError("This variable can't be nil")
             }
             
-            switch _state {
-            case .courses:
-                print("TODO")
-            case .departments:
-                print("TODO")
-            case .myCourses:
-                print("TODO")
-            case .teachers:
-                print("TODO")
+            if newState != oldValue {
+                if let _oldValue = oldValue {
+                    switch _oldValue {
+                    case .courses:
+                        self.coursesImageView.image = UIImage(named: "book-open_grey")
+                        self.coursesLabel.textColor = UIColor(named: "blueGreyTwo")
+                    case .teachers:
+                        self.teachersImageView.image = UIImage(named: "graduation-hat_grey")
+                        self.teachersLabel.textColor = UIColor(named: "blueGreyTwo")
+                    case .myCourses:
+                        self.myCoursesImageView.image = UIImage(named: "heart_grey")
+                        self.myCoursesLabel.textColor = UIColor(named: "blueGreyTwo")
+                    }
+                } else {
+                    self.coursesImageView.image = UIImage(named: "book-open_grey")
+                    self.coursesLabel.textColor = UIColor(named: "blueGreyTwo")
+                    self.teachersImageView.image = UIImage(named: "graduation-hat_grey")
+                    self.teachersLabel.textColor = UIColor(named: "blueGreyTwo")
+                    self.myCoursesImageView.image = UIImage(named: "heart_grey")
+                    self.myCoursesLabel.textColor = UIColor(named: "blueGreyTwo")
+                }
+                
+                switch newState {
+                case .courses:
+                    self.coursesImageView.image = UIImage(named: "book-open_blue")
+                    self.coursesLabel.textColor = UIColor(named: "brightLightBlue")
+                case .teachers:
+                    self.teachersImageView.image = UIImage(named: "graduation-hat_blue")
+                    self.teachersLabel.textColor = UIColor(named: "brightLightBlue")
+                case .myCourses:
+                    self.myCoursesImageView.image = UIImage(named: "heart_blue")
+                    self.myCoursesLabel.textColor = UIColor(named: "brightLightBlue")
+                }
             }
         }
     }
@@ -82,23 +111,31 @@ class HomeViewController: UIViewController {
         self.tableView.register(UINib(nibName: "DepartmentsCollectionViewTableViewCell", bundle: nil), forCellReuseIdentifier: "DepartmentsCollectionViewTableViewCell")
         self.tableView.register(UINib(nibName: "CoursesCollectionTableViewCell", bundle: nil), forCellReuseIdentifier: "CoursesCollectionTableViewCell")
         
-        self.homeViewModel = HomeViewModel()
+        self.homeViewModel = HomeViewModel(vc: self)
     }
     
-    @IBAction func coursesDepartmentsSwitchButtonPressed(_ sender: UIButton) {
+    @IBAction func coursesButtonTouchUpInside(_ sender: UIButton) {
+        guard let viewModel = self.homeViewModel else {
+            fatalError("cannot access HomeViewModel object")
+        }
         
+        viewModel.coursesButtonTouchUpInsideEvent()
     }
     
-    @IBAction func myCoursesButtonPressed(_ sender: UIButton) {
+    @IBAction func teachersButtonTouchUpInside(_ sender: UIButton) {
+        guard let viewModel = self.homeViewModel else {
+            fatalError("cannot access HomeViewModel object")
+        }
         
+        viewModel.teachersButtonTouchUpInsideEvent()
     }
     
-    @IBAction func teachersButtonPressed(_ sender: UIButton) {
+    @IBAction func myCoursesButtonTouchUpInside(_ sender: UIButton) {
+        guard let viewModel = self.homeViewModel else {
+            fatalError("cannot access HomeViewModel object")
+        }
         
-    }
-    
-    @IBAction func coursesButtonPressed(_ sender: UIButton) {
-        
+        viewModel.myCoursesButtonTouchUpInsideEvent()
     }
 }
 

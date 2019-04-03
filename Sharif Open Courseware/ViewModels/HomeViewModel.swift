@@ -10,8 +10,22 @@ import Foundation
 
 class HomeViewModel {
     
-    init() {
-        
+    let homeViewController: HomeViewController
+    
+    init(vc: HomeViewController) {
+        self.homeViewController = vc
+    }
+    
+    func coursesButtonTouchUpInsideEvent() {
+        self.homeViewController.state = .courses
+    }
+    
+    func teachersButtonTouchUpInsideEvent() {
+        self.homeViewController.state = .teachers
+    }
+    
+    func myCoursesButtonTouchUpInsideEvent() {
+        self.homeViewController.state = .myCourses
     }
     
     func getNumberOfSections() -> Int {

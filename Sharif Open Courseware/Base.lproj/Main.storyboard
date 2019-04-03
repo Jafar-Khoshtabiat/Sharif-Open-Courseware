@@ -98,7 +98,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkI-HT-Zs3" userLabel="myCoursesButton">
                                                 <rect key="frame" x="291" y="6" width="30" height="38"/>
                                                 <connections>
-                                                    <action selector="myCoursesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mqg-ap-WfY"/>
+                                                    <action selector="myCoursesButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="if1-od-Irw"/>
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="graduation-hat_grey" translatesAutoresizingMaskIntoConstraints="NO" id="uC0-Uy-cBr">
@@ -113,7 +113,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSW-HJ-xtb" userLabel="teachersButton">
                                                 <rect key="frame" x="172.5" y="6" width="30" height="38"/>
                                                 <connections>
-                                                    <action selector="teachersButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oIz-ac-4hZ"/>
+                                                    <action selector="teachersButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jly-ea-pot"/>
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book-open_blue" translatesAutoresizingMaskIntoConstraints="NO" id="Uob-aJ-zLE">
@@ -128,7 +128,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fk1-hK-zer" userLabel="coursesButton">
                                                 <rect key="frame" x="54" y="6" width="30" height="38"/>
                                                 <connections>
-                                                    <action selector="coursesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nq4-Si-c2J"/>
+                                                    <action selector="coursesButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JMK-LA-yM0"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -196,9 +196,15 @@
                     <connections>
                         <outlet property="bottomBarContainerView" destination="hqJ-jX-CSI" id="Mw7-fb-BXx"/>
                         <outlet property="bottomBarView" destination="XF5-xq-qJL" id="OtO-H8-dcs"/>
+                        <outlet property="coursesImageView" destination="Uob-aJ-zLE" id="w4m-IZ-kZS"/>
+                        <outlet property="coursesLabel" destination="uqY-eP-zSF" id="4BK-Zi-plw"/>
+                        <outlet property="myCoursesImageView" destination="aus-IU-zaG" id="Ffc-61-eWH"/>
+                        <outlet property="myCoursesLabel" destination="hz2-fc-VAX" id="CbS-Uw-GRc"/>
                         <outlet property="searchTextField" destination="YyO-h0-oxJ" id="nxV-0Z-oqZ"/>
                         <outlet property="searchView" destination="p45-oB-iol" id="GUx-pK-6dy"/>
                         <outlet property="tableView" destination="STG-Q9-tRC" id="X0b-CN-h1c"/>
+                        <outlet property="teachersImageView" destination="uC0-Uy-cBr" id="9IR-Rs-ThT"/>
+                        <outlet property="teachersLabel" destination="16s-Pi-2x1" id="cnQ-5O-RPq"/>
                         <outlet property="topBarView" destination="1VD-Py-Ywe" id="ZI1-OL-3z7"/>
                     </connections>
                 </viewController>
