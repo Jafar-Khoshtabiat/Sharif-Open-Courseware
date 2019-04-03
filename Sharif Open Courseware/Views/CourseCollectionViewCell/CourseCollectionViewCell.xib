@@ -6,23 +6,103 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSans.ttf">
+            <string>IRANSans</string>
+        </array>
+        <array key="IRANSans_Light.ttf">
+            <string>IRANSans-Light</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CourseCollectionViewCell" customModule="Sharif_Open_Courseware" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="182" height="246"/>
+            <rect key="frame" x="0.0" y="0.0" width="298" height="287"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="182" height="246"/>
+                <rect key="frame" x="0.0" y="0.0" width="298" height="287"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6dB-2K-vU4" userLabel="roundedView">
+                        <rect key="frame" x="0.0" y="44" width="298" height="209"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t_c_2" translatesAutoresizingMaskIntoConstraints="NO" id="0ZH-Tf-hVm" userLabel="courseImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="298" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="cc7-L6-YTu"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الکترونیک ۲" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEB-2Q-bZS">
+                                <rect key="frame" x="20" y="101" width="258" height="19"/>
+                                <fontDescription key="fontDescription" name="IRANSans" family="IRANSans" pointSize="12"/>
+                                <color key="textColor" name="slate"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="استاد مهرداد شریف بختیاری" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTA-6b-Det">
+                                <rect key="frame" x="20" y="124" width="258" height="13"/>
+                                <fontDescription key="fontDescription" name="IRANSans-Light" family="IRANSans" pointSize="8"/>
+                                <color key="textColor" name="blueGreyThree"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="دانشکده مهندسی برق" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ak4-jw-A7z">
+                                <rect key="frame" x="20" y="141" width="258" height="13"/>
+                                <fontDescription key="fontDescription" name="IRANSans-Light" family="IRANSans" pointSize="8"/>
+                                <color key="textColor" name="darkSkyBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oTA-6b-Det" firstAttribute="trailing" secondItem="JEB-2Q-bZS" secondAttribute="trailing" id="3WI-Lf-4pr"/>
+                            <constraint firstItem="ak4-jw-A7z" firstAttribute="leading" secondItem="oTA-6b-Det" secondAttribute="leading" id="5V5-ft-Zis"/>
+                            <constraint firstItem="JEB-2Q-bZS" firstAttribute="top" secondItem="0ZH-Tf-hVm" secondAttribute="bottom" constant="8" id="5dt-Ld-TIg"/>
+                            <constraint firstAttribute="trailing" secondItem="0ZH-Tf-hVm" secondAttribute="trailing" id="Guk-PF-itM"/>
+                            <constraint firstItem="0ZH-Tf-hVm" firstAttribute="top" secondItem="6dB-2K-vU4" secondAttribute="top" id="IhV-7G-hGK"/>
+                            <constraint firstItem="0ZH-Tf-hVm" firstAttribute="centerX" secondItem="6dB-2K-vU4" secondAttribute="centerX" id="NQc-vR-MUq"/>
+                            <constraint firstItem="JEB-2Q-bZS" firstAttribute="centerX" secondItem="6dB-2K-vU4" secondAttribute="centerX" id="aCq-Yb-Syw"/>
+                            <constraint firstItem="oTA-6b-Det" firstAttribute="top" secondItem="JEB-2Q-bZS" secondAttribute="bottom" constant="4" id="mxT-5j-Dl2"/>
+                            <constraint firstItem="ak4-jw-A7z" firstAttribute="top" secondItem="oTA-6b-Det" secondAttribute="bottom" constant="4" id="pcl-5W-oo5"/>
+                            <constraint firstItem="oTA-6b-Det" firstAttribute="leading" secondItem="JEB-2Q-bZS" secondAttribute="leading" id="yNs-1f-eBi"/>
+                            <constraint firstItem="ak4-jw-A7z" firstAttribute="trailing" secondItem="oTA-6b-Det" secondAttribute="trailing" id="yfA-D9-g0S"/>
+                            <constraint firstAttribute="trailing" secondItem="JEB-2Q-bZS" secondAttribute="trailing" constant="20" id="zgT-nB-GL6"/>
+                        </constraints>
+                    </view>
+                </subviews>
             </view>
-            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="6dB-2K-vU4" secondAttribute="trailing" id="2Aj-qt-42l"/>
+                <constraint firstItem="6dB-2K-vU4" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="RN1-sh-tkc"/>
+                <constraint firstItem="6dB-2K-vU4" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="buV-Sf-EKb"/>
+                <constraint firstItem="6dB-2K-vU4" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="zZw-no-MoT"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="182" height="246"/>
-            <point key="canvasLocation" x="233.33333333333334" y="123.21428571428571"/>
+            <size key="customSize" width="298" height="287"/>
+            <connections>
+                <outlet property="courseDepartmentNameLabel" destination="ak4-jw-A7z" id="0ll-QT-Vz9"/>
+                <outlet property="courseImageView" destination="0ZH-Tf-hVm" id="6C9-gk-LSb"/>
+                <outlet property="courseNameLabel" destination="JEB-2Q-bZS" id="aWW-Z5-PLs"/>
+                <outlet property="courseTeacherNameLabel" destination="oTA-6b-Det" id="c7L-yn-X0x"/>
+                <outlet property="roundedView" destination="6dB-2K-vU4" id="DvA-jn-XFG"/>
+            </connections>
+            <point key="canvasLocation" x="218.84057971014494" y="136.94196428571428"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="t_c_2" width="427" height="320"/>
+        <namedColor name="blueGreyThree">
+            <color red="0.52549019607843139" green="0.54509803921568623" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkSkyBlue">
+            <color red="0.16862745098039217" green="0.74509803921568629" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="slate">
+            <color red="0.24313725490196078" green="0.27058823529411763" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
