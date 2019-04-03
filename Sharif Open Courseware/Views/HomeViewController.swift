@@ -33,7 +33,8 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var topBarView: UIView!
     @IBOutlet weak var ocwTitleLabel: UILabel!
-    @IBOutlet weak var pageTitleLabel: UILabel!
+    @IBOutlet weak var coursesTitleLabel: UILabel!
+    @IBOutlet weak var departmentsTitleLabel: UILabel!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var searchTextField: UITextField!
@@ -47,7 +48,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var myCoursesLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var departmentsCollectionView: UICollectionView!
-    
     
     var homeViewModel: HomeViewModel?
     
@@ -78,7 +78,8 @@ class HomeViewController: UIViewController {
                     self.myCoursesImageView.image = UIImage(named: "heart_grey")
                     self.myCoursesLabel.textColor = UIColor(named: "blueGreyTwo")
                     self.closeButton.isHidden = true
-                    self.pageTitleLabel.isHidden = true
+                    self.coursesTitleLabel.isHidden = true
+                    self.departmentsTitleLabel.isHidden = true
                 }
                 
                 switch newState {
@@ -160,16 +161,22 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func closeButtonTouchUpInside(_ sender: UIButton) {
-        UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseOut], animations: {
-            self.departmentsCollectionView.frame = CGRect(x: 0, y: self.tableView.frame.maxY,
-                                                          width: self.departmentsCollectionView.frame.width,
-                                                          height: self.departmentsCollectionView.frame.height)
-            self.closeButton.isHidden = true
+        if !self.departmentsTitleLabel.isHidden {
+            UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseOut], animations: {
+                self.departmentsCollectionView.frame = CGRect(x: 0, y: self.tableView.frame.maxY,
+                                                              width: self.departmentsCollectionView.frame.width,
+                                                              height: self.departmentsCollectionView.frame.height)
+                self.closeButton.isHidden = true
 //            self.bottomBarView.isHidden = false
-            self.searchView.isHidden = false
-            self.ocwTitleLabel.isHidden = false
-            self.pageTitleLabel.isHidden = true
-        }, completion: nil)
+                self.searchView.isHidden = false
+                self.ocwTitleLabel.isHidden = false
+                self.departmentsTitleLabel.isHidden = true
+            }, completion: nil)
+        } else if !self.coursesTitleLabel.isHidden {
+            print("TODO")
+        } else {
+            fatalError("should not reach here")
+        }
     }
 }
 
@@ -285,18 +292,20 @@ extension HomeViewController: ItemsHeaderTableViewCellDelegate {
     func itemsHeaderTableViewCellWantsToSeeAllItemsWith(title: String) {
         switch title {
         case Title.departments.rawValue:
-            self.pageTitleLabel.text = Title.departments.rawValue
-            
             UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseOut], animations: {
                 self.departmentsCollectionView.frame = CGRect(x: 0, y: self.topBarView.frame.maxY + 16,
                                                               width: self.departmentsCollectionView.frame.width,
                                                               height: self.departmentsCollectionView.frame.height)
+                
                 self.closeButton.isHidden = false
 //                self.bottomBarView.isHidden = true
                 self.searchView.isHidden = true
                 self.ocwTitleLabel.isHidden = true
-                self.pageTitleLabel.isHidden = false
-            }, completion: nil)
+                self.departmentsTitleLabel.isHidden = false
+                self.coursesTitleLabel.isHidden = true
+            }, completion: { (finished) in
+                print("done")
+            })
         case Title.newCourses.rawValue:
             fatalError("TODO")
         default:

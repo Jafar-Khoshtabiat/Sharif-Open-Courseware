@@ -46,8 +46,14 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="دوره‌های آموزشی" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4e-rz-iLN">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="دوره‌های آموزشی" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4e-rz-iLN" userLabel="coursesTitleLabel">
                                         <rect key="frame" x="126" y="52.5" width="123" height="29"/>
+                                        <fontDescription key="fontDescription" name="IRANSans-Bold" family="IRANSans" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="دانشکده‌ها" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1c-DX-wgs">
+                                        <rect key="frame" x="149" y="52.5" width="77" height="29"/>
                                         <fontDescription key="fontDescription" name="IRANSans-Bold" family="IRANSans" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -57,7 +63,9 @@
                                 <constraints>
                                     <constraint firstItem="UU5-Uz-oKa" firstAttribute="leading" secondItem="1VD-Py-Ywe" secondAttribute="leading" constant="16" id="0KC-2F-AtR"/>
                                     <constraint firstAttribute="height" constant="87" id="0l7-79-IeW"/>
+                                    <constraint firstItem="O1c-DX-wgs" firstAttribute="centerX" secondItem="1VD-Py-Ywe" secondAttribute="centerX" id="AtR-XZ-7xf"/>
                                     <constraint firstItem="i4e-rz-iLN" firstAttribute="centerX" secondItem="1VD-Py-Ywe" secondAttribute="centerX" id="FV5-5B-5ni"/>
+                                    <constraint firstItem="O1c-DX-wgs" firstAttribute="centerY" secondItem="UU5-Uz-oKa" secondAttribute="centerY" id="NZ7-BT-UEV"/>
                                     <constraint firstItem="i4e-rz-iLN" firstAttribute="centerY" secondItem="UU5-Uz-oKa" secondAttribute="centerY" id="qh3-KR-yxr"/>
                                     <constraint firstAttribute="bottom" secondItem="UU5-Uz-oKa" secondAttribute="bottom" constant="8" id="qia-Fi-AIU"/>
                                 </constraints>
@@ -231,11 +239,12 @@
                         <outlet property="closeButton" destination="UU5-Uz-oKa" id="Y2N-Ds-9S4"/>
                         <outlet property="coursesImageView" destination="Uob-aJ-zLE" id="w4m-IZ-kZS"/>
                         <outlet property="coursesLabel" destination="uqY-eP-zSF" id="4BK-Zi-plw"/>
+                        <outlet property="coursesTitleLabel" destination="i4e-rz-iLN" id="ALB-lX-W7n"/>
                         <outlet property="departmentsCollectionView" destination="v4F-Z0-zMt" id="ovP-qB-8gG"/>
+                        <outlet property="departmentsTitleLabel" destination="O1c-DX-wgs" id="43A-5K-RWN"/>
                         <outlet property="myCoursesImageView" destination="aus-IU-zaG" id="Ffc-61-eWH"/>
                         <outlet property="myCoursesLabel" destination="hz2-fc-VAX" id="CbS-Uw-GRc"/>
                         <outlet property="ocwTitleLabel" destination="ZKE-P4-qD0" id="jah-aD-OL1"/>
-                        <outlet property="pageTitleLabel" destination="i4e-rz-iLN" id="eRy-yK-7Iz"/>
                         <outlet property="searchTextField" destination="YyO-h0-oxJ" id="nxV-0Z-oqZ"/>
                         <outlet property="searchView" destination="p45-oB-iol" id="GUx-pK-6dy"/>
                         <outlet property="tableView" destination="STG-Q9-tRC" id="X0b-CN-h1c"/>
