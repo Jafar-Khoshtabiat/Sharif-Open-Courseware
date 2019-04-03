@@ -34,7 +34,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="درس افزار آزاد شریف" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKE-P4-qD0">
-                                        <rect key="frame" x="32" y="30" width="328" height="28.5"/>
+                                        <rect key="frame" x="32" y="30" width="328" height="21"/>
                                         <fontDescription key="fontDescription" name="IRANSans-Bold" family="IRANSans" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -49,7 +49,7 @@
                                 <rect key="frame" x="16" y="69" width="343" height="36"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YyO-h0-oxJ" userLabel="searchTextField">
-                                        <rect key="frame" x="40" y="8.5" width="293" height="19"/>
+                                        <rect key="frame" x="40" y="11" width="293" height="14"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="IRANSans" family="IRANSans" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
@@ -79,84 +79,96 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XF5-xq-qJL" userLabel="bottomBarView">
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart_26" translatesAutoresizingMaskIntoConstraints="NO" id="aus-IU-zaG">
-                                        <rect key="frame" x="293" y="6" width="26" height="26"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqJ-jX-CSI" userLabel="bottomBarContainerView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart_grey" translatesAutoresizingMaskIntoConstraints="NO" id="aus-IU-zaG">
+                                                <rect key="frame" x="293" y="6" width="26" height="26"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="a0o-eq-Tnf"/>
+                                                    <constraint firstAttribute="width" secondItem="aus-IU-zaG" secondAttribute="height" multiplier="1:1" id="j5P-sk-gkK"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="درس‌های من" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hz2-fc-VAX">
+                                                <rect key="frame" x="285" y="32" width="42.5" height="12"/>
+                                                <fontDescription key="fontDescription" name="IRANSans-Light" family="IRANSans" pointSize="10"/>
+                                                <color key="textColor" name="blueGreyTwo"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkI-HT-Zs3" userLabel="myCoursesButton">
+                                                <rect key="frame" x="291" y="6" width="30" height="38"/>
+                                                <connections>
+                                                    <action selector="myCoursesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mqg-ap-WfY"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="graduation-hat_grey" translatesAutoresizingMaskIntoConstraints="NO" id="uC0-Uy-cBr">
+                                                <rect key="frame" x="174.5" y="6" width="26" height="26"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اساتید" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16s-Pi-2x1">
+                                                <rect key="frame" x="176" y="32" width="23.5" height="12"/>
+                                                <fontDescription key="fontDescription" name="IRANSans-Light" family="IRANSans" pointSize="10"/>
+                                                <color key="textColor" name="blueGreyTwo"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSW-HJ-xtb" userLabel="teachersButton">
+                                                <rect key="frame" x="172.5" y="6" width="30" height="38"/>
+                                                <connections>
+                                                    <action selector="teachersButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oIz-ac-4hZ"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book-open_blue" translatesAutoresizingMaskIntoConstraints="NO" id="Uob-aJ-zLE">
+                                                <rect key="frame" x="56" y="6" width="26" height="26"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="دروس" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqY-eP-zSF">
+                                                <rect key="frame" x="59" y="32" width="20.5" height="12"/>
+                                                <fontDescription key="fontDescription" name="IRANSans-Light" family="IRANSans" pointSize="10"/>
+                                                <color key="textColor" name="brightLightBlue"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fk1-hK-zer" userLabel="coursesButton">
+                                                <rect key="frame" x="54" y="6" width="30" height="38"/>
+                                                <connections>
+                                                    <action selector="coursesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nq4-Si-c2J"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="a0o-eq-Tnf"/>
-                                            <constraint firstAttribute="width" secondItem="aus-IU-zaG" secondAttribute="height" multiplier="1:1" id="j5P-sk-gkK"/>
+                                            <constraint firstAttribute="trailing" secondItem="aus-IU-zaG" secondAttribute="trailing" constant="56" id="34Q-AD-hsJ"/>
+                                            <constraint firstItem="uC0-Uy-cBr" firstAttribute="height" secondItem="aus-IU-zaG" secondAttribute="height" id="3am-qh-GmS"/>
+                                            <constraint firstItem="IkI-HT-Zs3" firstAttribute="centerX" secondItem="aus-IU-zaG" secondAttribute="centerX" id="62T-6M-X5L"/>
+                                            <constraint firstItem="Uob-aJ-zLE" firstAttribute="width" secondItem="uC0-Uy-cBr" secondAttribute="width" id="8e2-9A-Mxz"/>
+                                            <constraint firstItem="hz2-fc-VAX" firstAttribute="centerX" secondItem="aus-IU-zaG" secondAttribute="centerX" id="8om-4u-7EI"/>
+                                            <constraint firstItem="RSW-HJ-xtb" firstAttribute="bottom" secondItem="16s-Pi-2x1" secondAttribute="bottom" id="AdI-WB-KmN"/>
+                                            <constraint firstItem="uC0-Uy-cBr" firstAttribute="centerX" secondItem="hqJ-jX-CSI" secondAttribute="centerX" id="BzY-86-tgh"/>
+                                            <constraint firstItem="uqY-eP-zSF" firstAttribute="centerX" secondItem="Uob-aJ-zLE" secondAttribute="centerX" id="FvK-R0-0W9"/>
+                                            <constraint firstItem="Fk1-hK-zer" firstAttribute="top" secondItem="Uob-aJ-zLE" secondAttribute="top" id="Iy9-ls-qDt"/>
+                                            <constraint firstItem="Fk1-hK-zer" firstAttribute="bottom" secondItem="uqY-eP-zSF" secondAttribute="bottom" id="Q5G-rt-tzs"/>
+                                            <constraint firstItem="hz2-fc-VAX" firstAttribute="top" secondItem="aus-IU-zaG" secondAttribute="bottom" id="RM5-dw-Cob"/>
+                                            <constraint firstItem="Fk1-hK-zer" firstAttribute="centerX" secondItem="Uob-aJ-zLE" secondAttribute="centerX" id="a0J-Pr-Je7"/>
+                                            <constraint firstItem="RSW-HJ-xtb" firstAttribute="top" secondItem="uC0-Uy-cBr" secondAttribute="top" id="cLM-Y6-SnL"/>
+                                            <constraint firstItem="IkI-HT-Zs3" firstAttribute="top" secondItem="aus-IU-zaG" secondAttribute="top" id="fBr-8r-jxA"/>
+                                            <constraint firstItem="Uob-aJ-zLE" firstAttribute="top" secondItem="uC0-Uy-cBr" secondAttribute="top" id="jLq-JB-fq1"/>
+                                            <constraint firstItem="16s-Pi-2x1" firstAttribute="centerX" secondItem="uC0-Uy-cBr" secondAttribute="centerX" id="kKg-U3-6aA"/>
+                                            <constraint firstItem="16s-Pi-2x1" firstAttribute="top" secondItem="uC0-Uy-cBr" secondAttribute="bottom" id="mCb-5Y-y8i"/>
+                                            <constraint firstItem="IkI-HT-Zs3" firstAttribute="bottom" secondItem="hz2-fc-VAX" secondAttribute="bottom" id="ngh-u1-FzW"/>
+                                            <constraint firstItem="uC0-Uy-cBr" firstAttribute="top" secondItem="aus-IU-zaG" secondAttribute="top" id="qCt-zw-RyJ"/>
+                                            <constraint firstItem="uC0-Uy-cBr" firstAttribute="width" secondItem="aus-IU-zaG" secondAttribute="width" id="qFu-nw-aix"/>
+                                            <constraint firstItem="Uob-aJ-zLE" firstAttribute="height" secondItem="uC0-Uy-cBr" secondAttribute="height" id="qNP-Bj-QPF"/>
+                                            <constraint firstItem="RSW-HJ-xtb" firstAttribute="centerX" secondItem="uC0-Uy-cBr" secondAttribute="centerX" id="qv9-DJ-gTM"/>
+                                            <constraint firstItem="Uob-aJ-zLE" firstAttribute="leading" secondItem="hqJ-jX-CSI" secondAttribute="leading" constant="56" id="r9a-Vh-Wj0"/>
+                                            <constraint firstItem="uqY-eP-zSF" firstAttribute="top" secondItem="Uob-aJ-zLE" secondAttribute="bottom" id="uKu-zN-HBd"/>
+                                            <constraint firstItem="aus-IU-zaG" firstAttribute="top" secondItem="hqJ-jX-CSI" secondAttribute="top" constant="6" id="yaZ-cW-B2n"/>
                                         </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="درس‌های من" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hz2-fc-VAX">
-                                        <rect key="frame" x="280" y="32" width="52.5" height="16"/>
-                                        <fontDescription key="fontDescription" name="IRANSans-Light" family="IRANSans" pointSize="10"/>
-                                        <color key="textColor" name="blueGreyTwo"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkI-HT-Zs3" userLabel="myCoursesButton">
-                                        <rect key="frame" x="291" y="6" width="30" height="42"/>
-                                        <connections>
-                                            <action selector="myCoursesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mqg-ap-WfY"/>
-                                        </connections>
-                                    </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="school_director_26" translatesAutoresizingMaskIntoConstraints="NO" id="uC0-Uy-cBr">
-                                        <rect key="frame" x="174.5" y="6" width="26" height="26"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اساتید" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16s-Pi-2x1">
-                                        <rect key="frame" x="175" y="32" width="25.5" height="16"/>
-                                        <fontDescription key="fontDescription" name="IRANSans-Light" family="IRANSans" pointSize="10"/>
-                                        <color key="textColor" name="blueGreyTwo"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSW-HJ-xtb" userLabel="teachersButton">
-                                        <rect key="frame" x="172.5" y="6" width="30" height="42"/>
-                                        <connections>
-                                            <action selector="teachersButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oIz-ac-4hZ"/>
-                                        </connections>
-                                    </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="open_book_26" translatesAutoresizingMaskIntoConstraints="NO" id="Uob-aJ-zLE">
-                                        <rect key="frame" x="56" y="6" width="26" height="26"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="دروس" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqY-eP-zSF">
-                                        <rect key="frame" x="56.5" y="32" width="25" height="16"/>
-                                        <fontDescription key="fontDescription" name="IRANSans-Light" family="IRANSans" pointSize="10"/>
-                                        <color key="textColor" name="blueGreyTwo"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fk1-hK-zer" userLabel="coursesButton">
-                                        <rect key="frame" x="54" y="6" width="30" height="42"/>
-                                        <connections>
-                                            <action selector="coursesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nq4-Si-c2J"/>
-                                        </connections>
-                                    </button>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="IkI-HT-Zs3" firstAttribute="bottom" secondItem="hz2-fc-VAX" secondAttribute="bottom" id="16D-S3-zbX"/>
                                     <constraint firstAttribute="height" constant="49" id="7Gy-Xo-9Xd"/>
-                                    <constraint firstItem="uC0-Uy-cBr" firstAttribute="width" secondItem="aus-IU-zaG" secondAttribute="width" id="7Nt-rg-hKi"/>
-                                    <constraint firstItem="aus-IU-zaG" firstAttribute="top" secondItem="XF5-xq-qJL" secondAttribute="top" constant="6" id="CKu-mu-JTy"/>
-                                    <constraint firstItem="uC0-Uy-cBr" firstAttribute="height" secondItem="aus-IU-zaG" secondAttribute="height" id="P9L-Nd-d8a"/>
-                                    <constraint firstItem="hz2-fc-VAX" firstAttribute="centerX" secondItem="aus-IU-zaG" secondAttribute="centerX" id="QRA-RP-N7E"/>
-                                    <constraint firstItem="hz2-fc-VAX" firstAttribute="top" secondItem="aus-IU-zaG" secondAttribute="bottom" id="QZ7-Cm-ugz"/>
-                                    <constraint firstItem="uqY-eP-zSF" firstAttribute="centerX" secondItem="Uob-aJ-zLE" secondAttribute="centerX" id="Tun-57-KUn"/>
-                                    <constraint firstItem="Uob-aJ-zLE" firstAttribute="leading" secondItem="XF5-xq-qJL" secondAttribute="leading" constant="56" id="W1A-bF-Neg"/>
-                                    <constraint firstItem="RSW-HJ-xtb" firstAttribute="top" secondItem="uC0-Uy-cBr" secondAttribute="top" id="WLU-wX-Jec"/>
-                                    <constraint firstItem="16s-Pi-2x1" firstAttribute="centerX" secondItem="uC0-Uy-cBr" secondAttribute="centerX" id="X5i-GQ-p7G"/>
-                                    <constraint firstItem="Fk1-hK-zer" firstAttribute="top" secondItem="Uob-aJ-zLE" secondAttribute="top" id="XXu-x9-maz"/>
-                                    <constraint firstItem="Fk1-hK-zer" firstAttribute="centerX" secondItem="Uob-aJ-zLE" secondAttribute="centerX" id="Y9n-ld-5YL"/>
-                                    <constraint firstItem="Uob-aJ-zLE" firstAttribute="width" secondItem="aus-IU-zaG" secondAttribute="width" id="bSc-fd-ALC"/>
-                                    <constraint firstItem="Fk1-hK-zer" firstAttribute="bottom" secondItem="uqY-eP-zSF" secondAttribute="bottom" id="bXN-6H-Gzg"/>
-                                    <constraint firstItem="RSW-HJ-xtb" firstAttribute="bottom" secondItem="16s-Pi-2x1" secondAttribute="bottom" id="bbh-44-tNx"/>
-                                    <constraint firstItem="16s-Pi-2x1" firstAttribute="top" secondItem="hz2-fc-VAX" secondAttribute="top" id="eWJ-j6-kpT"/>
-                                    <constraint firstAttribute="trailing" secondItem="aus-IU-zaG" secondAttribute="trailing" constant="56" id="fVK-f8-pfS"/>
-                                    <constraint firstItem="uqY-eP-zSF" firstAttribute="top" secondItem="hz2-fc-VAX" secondAttribute="top" id="gft-Zq-70n"/>
-                                    <constraint firstItem="IkI-HT-Zs3" firstAttribute="top" secondItem="aus-IU-zaG" secondAttribute="top" id="hEY-UB-knQ"/>
-                                    <constraint firstItem="uC0-Uy-cBr" firstAttribute="top" secondItem="aus-IU-zaG" secondAttribute="top" id="hsZ-RA-ell"/>
-                                    <constraint firstItem="Uob-aJ-zLE" firstAttribute="top" secondItem="aus-IU-zaG" secondAttribute="top" id="ihQ-4A-jiI"/>
-                                    <constraint firstItem="IkI-HT-Zs3" firstAttribute="centerX" secondItem="aus-IU-zaG" secondAttribute="centerX" id="nLj-Ov-DQb"/>
-                                    <constraint firstItem="RSW-HJ-xtb" firstAttribute="centerX" secondItem="uC0-Uy-cBr" secondAttribute="centerX" id="oTI-Ha-F66"/>
-                                    <constraint firstItem="Uob-aJ-zLE" firstAttribute="height" secondItem="aus-IU-zaG" secondAttribute="height" id="pA6-kR-fkV"/>
-                                    <constraint firstItem="uC0-Uy-cBr" firstAttribute="centerX" secondItem="XF5-xq-qJL" secondAttribute="centerX" id="sEm-UX-hVC"/>
+                                    <constraint firstAttribute="trailing" secondItem="hqJ-jX-CSI" secondAttribute="trailing" id="Bt9-IX-wRW"/>
+                                    <constraint firstItem="hqJ-jX-CSI" firstAttribute="top" secondItem="XF5-xq-qJL" secondAttribute="top" id="JUC-wc-DoF"/>
+                                    <constraint firstItem="hqJ-jX-CSI" firstAttribute="centerY" secondItem="XF5-xq-qJL" secondAttribute="centerY" id="LNz-hW-CWL"/>
+                                    <constraint firstItem="hqJ-jX-CSI" firstAttribute="centerX" secondItem="XF5-xq-qJL" secondAttribute="centerX" id="tQv-eB-wl7"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -182,6 +194,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bottomBarContainerView" destination="hqJ-jX-CSI" id="Mw7-fb-BXx"/>
                         <outlet property="bottomBarView" destination="XF5-xq-qJL" id="OtO-H8-dcs"/>
                         <outlet property="searchTextField" destination="YyO-h0-oxJ" id="nxV-0Z-oqZ"/>
                         <outlet property="searchView" destination="p45-oB-iol" id="GUx-pK-6dy"/>
@@ -195,9 +208,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heart_26" width="26" height="26"/>
-        <image name="open_book_26" width="26" height="26"/>
-        <image name="school_director_26" width="26" height="26"/>
+        <image name="book-open_blue" width="26" height="26"/>
+        <image name="graduation-hat_grey" width="26" height="26"/>
+        <image name="heart_grey" width="26" height="26"/>
         <image name="search" width="16" height="16"/>
         <namedColor name="blueGreyTwo">
             <color red="0.4823529411764706" green="0.50588235294117645" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
