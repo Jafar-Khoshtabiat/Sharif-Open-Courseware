@@ -265,7 +265,7 @@ extension HomeViewController: ItemsHeaderTableViewCellDelegate {
     func itemsHeaderTableViewCellWantsToSeeAllItemsWith(title: String) {
         switch title {
         case Title.departments.rawValue:
-            UIView.animate(withDuration: 0.5, delay: 0.0, options: [.curveEaseOut], animations: {
+            UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseOut], animations: {
                 self.departmentsCollectionView.frame = CGRect(x: self.tableView.frame.minX, y: self.tableView.frame.minY,
                                                               width: self.departmentsCollectionView.frame.width,
                                                               height: self.departmentsCollectionView.frame.height)
