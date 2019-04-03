@@ -18,7 +18,8 @@ class HomeViewController: UIViewController {
     
     enum Title: String {
         case departments = "دانشکده‌ها"
-        case courses = "دوره‌های آموزشی جدید"
+        case newCourses = "دوره‌های آموزشی جدید"
+        case courses = "دوره‌های آموزشی"
     }
     
     let searchTextFieldPlaceHolder = "جست‌جوی نام درس یا استاد"
@@ -31,6 +32,9 @@ class HomeViewController: UIViewController {
     }
     
     @IBOutlet weak var topBarView: UIView!
+    @IBOutlet weak var ocwTitleLabel: UILabel!
+    @IBOutlet weak var pageTitleLabel: UILabel!
+    @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var bottomBarView: UIView!
@@ -43,6 +47,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var myCoursesLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var departmentsCollectionView: UICollectionView!
+    
     
     var homeViewModel: HomeViewModel?
     
@@ -72,6 +77,8 @@ class HomeViewController: UIViewController {
                     self.teachersLabel.textColor = UIColor(named: "blueGreyTwo")
                     self.myCoursesImageView.image = UIImage(named: "heart_grey")
                     self.myCoursesLabel.textColor = UIColor(named: "blueGreyTwo")
+                    self.closeButton.isHidden = true
+                    self.pageTitleLabel.isHidden = true
                 }
                 
                 switch newState {
@@ -122,7 +129,7 @@ class HomeViewController: UIViewController {
         self.departmentsCollectionView.tag = Tag.allDepartmentsCollectionViewTag.rawValue
         self.departmentsCollectionView.delegate = self
         self.departmentsCollectionView.dataSource = self
-        
+//        self.departmentsCollectionView.scroll
         self.departmentsCollectionView.register(UINib(nibName: "DepartmentCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DepartmentCollectionViewCell")
         
         self.homeViewModel = HomeViewModel(vc: self)
@@ -150,6 +157,19 @@ class HomeViewController: UIViewController {
         }
         
         viewModel.myCoursesButtonTouchUpInsideEvent()
+    }
+    
+    @IBAction func closeButtonTouchUpInside(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseOut], animations: {
+            self.departmentsCollectionView.frame = CGRect(x: 0, y: self.tableView.frame.maxY,
+                                                          width: self.departmentsCollectionView.frame.width,
+                                                          height: self.departmentsCollectionView.frame.height)
+            self.closeButton.isHidden = true
+//            self.bottomBarView.isHidden = false
+            self.searchView.isHidden = false
+            self.ocwTitleLabel.isHidden = false
+            self.pageTitleLabel.isHidden = true
+        }, completion: nil)
     }
 }
 
@@ -206,7 +226,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case (1, 0):
             let cell = tableView.dequeueReusableCell(withIdentifier: "ItemsHeaderTableViewCell", for: indexPath) as! ItemsHeaderTableViewCell
-            cell.title = Title.courses.rawValue
+            cell.title = Title.newCourses.rawValue
             cell.delegate = self
             return cell
         case (1, 1):
@@ -265,12 +285,19 @@ extension HomeViewController: ItemsHeaderTableViewCellDelegate {
     func itemsHeaderTableViewCellWantsToSeeAllItemsWith(title: String) {
         switch title {
         case Title.departments.rawValue:
+            self.pageTitleLabel.text = Title.departments.rawValue
+            
             UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseOut], animations: {
-                self.departmentsCollectionView.frame = CGRect(x: self.tableView.frame.minX, y: self.tableView.frame.minY,
+                self.departmentsCollectionView.frame = CGRect(x: 0, y: self.topBarView.frame.maxY + 16,
                                                               width: self.departmentsCollectionView.frame.width,
                                                               height: self.departmentsCollectionView.frame.height)
+                self.closeButton.isHidden = false
+//                self.bottomBarView.isHidden = true
+                self.searchView.isHidden = true
+                self.ocwTitleLabel.isHidden = true
+                self.pageTitleLabel.isHidden = false
             }, completion: nil)
-        case Title.courses.rawValue:
+        case Title.newCourses.rawValue:
             fatalError("TODO")
         default:
             fatalError("should not reach here")
