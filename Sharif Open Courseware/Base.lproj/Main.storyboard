@@ -70,6 +70,10 @@
                                     <constraint firstAttribute="bottom" secondItem="UU5-Uz-oKa" secondAttribute="bottom" constant="8" id="qia-Fi-AIU"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N87-XR-Z1K" userLabel="dummyContainerView">
+                                <rect key="frame" x="0.0" y="103" width="375" height="564"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p45-oB-iol" userLabel="searchView">
                                 <rect key="frame" x="16" y="69" width="343" height="36"/>
                                 <subviews>
@@ -112,17 +116,10 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Owr-KW-jIG" userLabel="coursesCollectionView">
-                                <rect key="frame" x="0.0" y="667" width="375" height="532"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TMM-uq-8L2" userLabel="coursesCollectionTableView">
+                                <rect key="frame" x="0.0" y="667" width="375" height="564"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="12" minimumInteritemSpacing="12" id="mSQ-46-eew">
-                                    <size key="itemSize" width="168" height="164"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="8" minY="12" maxX="8" maxY="12"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
+                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XF5-xq-qJL" userLabel="bottomBarView">
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                                 <subviews>
@@ -225,11 +222,14 @@
                             <constraint firstItem="v4F-Z0-zMt" firstAttribute="width" secondItem="STG-Q9-tRC" secondAttribute="width" id="7hc-uL-TPl"/>
                             <constraint firstItem="1VD-Py-Ywe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FLU-h1-sOj"/>
                             <constraint firstItem="XF5-xq-qJL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Gdc-yd-4oO"/>
+                            <constraint firstItem="N87-XR-Z1K" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="H1Y-RF-yWT"/>
                             <constraint firstItem="1VD-Py-Ywe" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="I5I-Sm-otx"/>
+                            <constraint firstItem="N87-XR-Z1K" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Im8-xH-sR0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p45-oB-iol" secondAttribute="trailing" constant="16" id="Iux-WE-EEl"/>
+                            <constraint firstItem="TMM-uq-8L2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JC3-oi-pPd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="N87-XR-Z1K" secondAttribute="bottom" id="Jp3-kh-VEd"/>
                             <constraint firstItem="XF5-xq-qJL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PE8-Mu-9CW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZKE-P4-qD0" secondAttribute="trailing" constant="15" id="RAa-ua-goS"/>
-                            <constraint firstItem="Owr-KW-jIG" firstAttribute="height" secondItem="STG-Q9-tRC" secondAttribute="height" id="UBD-d3-YlJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="STG-Q9-tRC" secondAttribute="trailing" id="UdN-2E-kav"/>
                             <constraint firstItem="v4F-Z0-zMt" firstAttribute="trailing" secondItem="STG-Q9-tRC" secondAttribute="trailing" id="W0r-Aj-Bx9"/>
                             <constraint firstItem="1VD-Py-Ywe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="Wm2-ts-rBP"/>
@@ -238,13 +238,14 @@
                             <constraint firstItem="v4F-Z0-zMt" firstAttribute="height" secondItem="STG-Q9-tRC" secondAttribute="height" id="a36-Al-qvI"/>
                             <constraint firstItem="ZKE-P4-qD0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="bea-Rb-rXo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XF5-xq-qJL" secondAttribute="bottom" id="cnh-LX-tIU"/>
+                            <constraint firstItem="TMM-uq-8L2" firstAttribute="height" secondItem="N87-XR-Z1K" secondAttribute="height" id="e9d-3F-MaF"/>
                             <constraint firstItem="v4F-Z0-zMt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fpe-E9-Atu"/>
+                            <constraint firstItem="TMM-uq-8L2" firstAttribute="width" secondItem="N87-XR-Z1K" secondAttribute="width" id="gz8-6B-Gld"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="STG-Q9-tRC" secondAttribute="bottom" id="hWJ-i0-59M"/>
-                            <constraint firstItem="Owr-KW-jIG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="nUR-FG-Wy1"/>
-                            <constraint firstItem="Owr-KW-jIG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="p2I-5S-VtZ"/>
+                            <constraint firstItem="N87-XR-Z1K" firstAttribute="top" secondItem="1VD-Py-Ywe" secondAttribute="bottom" constant="16" id="hmM-vi-qT3"/>
+                            <constraint firstItem="TMM-uq-8L2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="n7u-hR-Cty"/>
                             <constraint firstItem="ZKE-P4-qD0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="r1e-1N-w13"/>
                             <constraint firstItem="STG-Q9-tRC" firstAttribute="top" secondItem="p45-oB-iol" secondAttribute="bottom" constant="30" id="uF5-Ni-xbA"/>
-                            <constraint firstItem="Owr-KW-jIG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uOe-N5-oed"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -252,12 +253,13 @@
                         <outlet property="bottomBarContainerView" destination="hqJ-jX-CSI" id="Mw7-fb-BXx"/>
                         <outlet property="bottomBarView" destination="XF5-xq-qJL" id="OtO-H8-dcs"/>
                         <outlet property="closeButton" destination="UU5-Uz-oKa" id="Y2N-Ds-9S4"/>
-                        <outlet property="coursesCollectionView" destination="Owr-KW-jIG" id="5k8-su-aAX"/>
+                        <outlet property="coursesCollectionTableView" destination="TMM-uq-8L2" id="xMl-Va-p78"/>
                         <outlet property="coursesImageView" destination="Uob-aJ-zLE" id="w4m-IZ-kZS"/>
                         <outlet property="coursesLabel" destination="uqY-eP-zSF" id="4BK-Zi-plw"/>
                         <outlet property="coursesTitleLabel" destination="i4e-rz-iLN" id="ALB-lX-W7n"/>
                         <outlet property="departmentsCollectionView" destination="v4F-Z0-zMt" id="ovP-qB-8gG"/>
                         <outlet property="departmentsTitleLabel" destination="O1c-DX-wgs" id="43A-5K-RWN"/>
+                        <outlet property="dummyContainerView" destination="N87-XR-Z1K" id="KLk-Hl-OaT"/>
                         <outlet property="myCoursesImageView" destination="aus-IU-zaG" id="Ffc-61-eWH"/>
                         <outlet property="myCoursesLabel" destination="hz2-fc-VAX" id="CbS-Uw-GRc"/>
                         <outlet property="ocwTitleLabel" destination="ZKE-P4-qD0" id="jah-aD-OL1"/>

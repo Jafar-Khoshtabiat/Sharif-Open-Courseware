@@ -25,10 +25,11 @@ class HomeViewController: UIViewController {
     let searchTextFieldPlaceHolder = "جست‌جوی نام درس یا استاد"
     
     enum Tag: Int {
+        case mainTableViewTag = 4
         case departmentsCollectionViewTag = 2
         case coursesCollectionViewTag = 3
         case allDepartmentsCollectionViewTag = 20
-        case allCoursesCollectionViewTag = 30
+        case allCoursesCollectionTableViewTag = 30
     }
     
     @IBOutlet weak var topBarView: UIView!
@@ -48,7 +49,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var myCoursesLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var departmentsCollectionView: UICollectionView!
-    @IBOutlet weak var coursesCollectionView: UICollectionView!
+    @IBOutlet weak var dummyContainerView: UIView!
+    @IBOutlet weak var coursesCollectionTableView: UITableView!
     
     var homeViewModel: HomeViewModel?
     
@@ -123,6 +125,7 @@ class HomeViewController: UIViewController {
         self.tableView.allowsSelection = false
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.tag = Tag.mainTableViewTag.rawValue
         
         self.tableView.register(UINib(nibName: "ItemsHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "ItemsHeaderTableViewCell")
         self.tableView.register(UINib(nibName: "DepartmentsCollectionViewTableViewCell", bundle: nil), forCellReuseIdentifier: "DepartmentsCollectionViewTableViewCell")
@@ -134,11 +137,11 @@ class HomeViewController: UIViewController {
 
         self.departmentsCollectionView.register(UINib(nibName: "DepartmentCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DepartmentCollectionViewCell")
         
-        self.coursesCollectionView.tag = Tag.allCoursesCollectionViewTag.rawValue
-        self.coursesCollectionView.delegate = self
-        self.coursesCollectionView.dataSource = self
-        
-        self.coursesCollectionView.register(UINib(nibName: "CourseCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CourseCollectionViewCell")
+        self.coursesCollectionTableView.tag = Tag.allCoursesCollectionTableViewTag.rawValue
+        self.coursesCollectionTableView.delegate = self
+        self.coursesCollectionTableView.dataSource = self
+
+        self.coursesCollectionTableView.register(UINib(nibName: "CoursesCollectionTableViewCell", bundle: nil), forCellReuseIdentifier: "CoursesCollectionTableViewCell")
         
         self.homeViewModel = HomeViewModel(vc: self)
     }
@@ -181,9 +184,9 @@ class HomeViewController: UIViewController {
             }, completion: nil)
         } else if !self.coursesTitleLabel.isHidden {
             UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseOut], animations: {
-                self.coursesCollectionView.frame = CGRect(x: 0, y: self.view.frame.maxY,
-                                                              width: self.coursesCollectionView.frame.width,
-                                                              height: self.coursesCollectionView.frame.height)
+                self.coursesCollectionTableView.frame = CGRect(x: 0, y: self.view.frame.maxY,
+                                                              width: self.coursesCollectionTableView.frame.width,
+                                                              height: self.coursesCollectionTableView.frame.height)
                 self.closeButton.isHidden = true
 //            self.bottomBarView.isHidden = false
                 self.searchView.isHidden = false
@@ -206,7 +209,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             fatalError("cannot access HomeViewModel object")
         }
         
-        return viewModel.getNumberOfSections()
+        switch tableView.tag {
+        case Tag.mainTableViewTag.rawValue:
+            return viewModel.getNumberOfSections()
+        case Tag.allCoursesCollectionTableViewTag.rawValue:
+            return 1
+        default:
+            fatalError("should not reach here")
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -214,45 +224,71 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             fatalError("cannot access HomeViewModel object")
         }
         
-        return viewModel.getNumberOfRowsInSection(section: section)
+        switch tableView.tag {
+        case Tag.mainTableViewTag.rawValue:
+            return viewModel.getNumberOfRowsInSection(section: section)
+        case Tag.allCoursesCollectionTableViewTag.rawValue:
+            return 1
+        default:
+            fatalError("should not reach here")
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch (indexPath.section, indexPath.row) {
-        case (0, 0):
-            return 40
-        case (0, 1):
-            return 311
-        case (1, 0):
-            return 40
-        case (1, 1):
+        switch tableView.tag {
+        case Tag.mainTableViewTag.rawValue:
+            switch (indexPath.section, indexPath.row) {
+            case (0, 0):
+                return 40
+            case (0, 1):
+                return 311
+            case (1, 0):
+                return 40
+            case (1, 1):
+                // MARK: TODO
+                return 1000
+//            return UITableView.automaticDimension
+            default:
+                fatalError("should not reach here")
+            }
+        case Tag.allCoursesCollectionTableViewTag.rawValue:
             // MARK: TODO
             return 1000
-//            return UITableView.automaticDimension
         default:
             fatalError("should not reach here")
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch (indexPath.section, indexPath.row) {
-        case (0, 0):
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ItemsHeaderTableViewCell", for: indexPath) as! ItemsHeaderTableViewCell
-            cell.title = Title.departments.rawValue
-            cell.delegate = self
-            return cell
-        case (0, 1):
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DepartmentsCollectionViewTableViewCell", for: indexPath) as! DepartmentsCollectionViewTableViewCell
-            cell.collectionView.tag = Tag.departmentsCollectionViewTag.rawValue
-            cell.collectionView.delegate = self
-            cell.collectionView.dataSource = self
-            return cell
-        case (1, 0):
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ItemsHeaderTableViewCell", for: indexPath) as! ItemsHeaderTableViewCell
-            cell.title = Title.newCourses.rawValue
-            cell.delegate = self
-            return cell
-        case (1, 1):
+        switch tableView.tag {
+        case Tag.mainTableViewTag.rawValue:
+            switch (indexPath.section, indexPath.row) {
+            case (0, 0):
+                let cell = tableView.dequeueReusableCell(withIdentifier: "ItemsHeaderTableViewCell", for: indexPath) as! ItemsHeaderTableViewCell
+                cell.title = Title.departments.rawValue
+                cell.delegate = self
+                return cell
+            case (0, 1):
+                let cell = tableView.dequeueReusableCell(withIdentifier: "DepartmentsCollectionViewTableViewCell", for: indexPath) as! DepartmentsCollectionViewTableViewCell
+                cell.collectionView.tag = Tag.departmentsCollectionViewTag.rawValue
+                cell.collectionView.delegate = self
+                cell.collectionView.dataSource = self
+                return cell
+            case (1, 0):
+                let cell = tableView.dequeueReusableCell(withIdentifier: "ItemsHeaderTableViewCell", for: indexPath) as! ItemsHeaderTableViewCell
+                cell.title = Title.newCourses.rawValue
+                cell.delegate = self
+                return cell
+            case (1, 1):
+                let cell = tableView.dequeueReusableCell(withIdentifier: "CoursesCollectionTableViewCell", for: indexPath) as! CoursesCollectionTableViewCell
+                cell.collectionView.tag = Tag.coursesCollectionViewTag.rawValue
+                cell.collectionView.delegate = self
+                cell.collectionView.dataSource = self
+                return cell
+            default:
+                fatalError("should not reach here")
+            }
+        case Tag.allCoursesCollectionTableViewTag.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: "CoursesCollectionTableViewCell", for: indexPath) as! CoursesCollectionTableViewCell
             cell.collectionView.tag = Tag.coursesCollectionViewTag.rawValue
             cell.collectionView.delegate = self
@@ -261,6 +297,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         default:
             fatalError("should not reach here")
         }
+        
     }
 }
 
@@ -276,7 +313,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case Tag.allDepartmentsCollectionViewTag.rawValue:
             // MARK: TODO
             return 10
-        case Tag.allCoursesCollectionViewTag.rawValue:
+        case Tag.allCoursesCollectionTableViewTag.rawValue:
             // MARK: TODO
             return 10
         default:
@@ -295,7 +332,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case Tag.allDepartmentsCollectionViewTag.rawValue:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DepartmentCollectionViewCell", for: indexPath) as! DepartmentCollectionViewCell
             return cell
-        case Tag.allCoursesCollectionViewTag.rawValue:
+        case Tag.allCoursesCollectionTableViewTag.rawValue:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CourseCollectionViewCell", for: indexPath) as! CourseCollectionViewCell
             return cell
         default:
@@ -324,9 +361,9 @@ extension HomeViewController: ItemsHeaderTableViewCellDelegate {
             }, completion: nil)
         case Title.newCourses.rawValue:
             UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseOut], animations: {
-                self.coursesCollectionView.frame = CGRect(x: 0, y: self.topBarView.frame.maxY + 16,
-                                                              width: self.coursesCollectionView.frame.width,
-                                                              height: self.coursesCollectionView.frame.height)
+                self.coursesCollectionTableView.frame = CGRect(x: 0, y: self.dummyContainerView.frame.minY,
+                                                              width: self.coursesCollectionTableView.frame.width,
+                                                              height: self.coursesCollectionTableView.frame.height)
                 
                 self.closeButton.isHidden = false
 //                self.bottomBarView.isHidden = true
