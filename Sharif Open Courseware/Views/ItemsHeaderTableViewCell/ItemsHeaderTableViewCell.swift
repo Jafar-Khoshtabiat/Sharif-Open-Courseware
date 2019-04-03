@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol ItemsHeaderTableViewCellDelegate {
+    func itemsHeaderTableViewCellWantsToSeeAllItemsWith(title: String)
+}
+
 class ItemsHeaderTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
+    
+    var delegate: ItemsHeaderTableViewCellDelegate?
     
     var title: String? {
         didSet {
@@ -30,5 +36,13 @@ class ItemsHeaderTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    @IBAction func seeAllButtonTouchUpInside(_ sender: UIButton) {
+        guard let _title = self.title else {
+            fatalError("this variable can't be nil")
+        }
+        
+        self.delegate?.itemsHeaderTableViewCellWantsToSeeAllItemsWith(title: _title)
     }
 }

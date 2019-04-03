@@ -182,6 +182,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case (0, 0):
             let cell = tableView.dequeueReusableCell(withIdentifier: "ItemsHeaderTableViewCell", for: indexPath) as! ItemsHeaderTableViewCell
             cell.title = Title.departments.rawValue
+            cell.delegate = self
             return cell
         case (0, 1):
             let cell = tableView.dequeueReusableCell(withIdentifier: "DepartmentsCollectionViewTableViewCell", for: indexPath) as! DepartmentsCollectionViewTableViewCell
@@ -192,6 +193,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case (1, 0):
             let cell = tableView.dequeueReusableCell(withIdentifier: "ItemsHeaderTableViewCell", for: indexPath) as! ItemsHeaderTableViewCell
             cell.title = Title.courses.rawValue
+            cell.delegate = self
             return cell
         case (1, 1):
             let cell = tableView.dequeueReusableCell(withIdentifier: "CoursesCollectionTableViewCell", for: indexPath) as! CoursesCollectionTableViewCell
@@ -226,6 +228,19 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CourseCollectionViewCell", for: indexPath) as! CourseCollectionViewCell
             return cell
         } else {
+            fatalError("should not reach here")
+        }
+    }
+}
+
+extension HomeViewController: ItemsHeaderTableViewCellDelegate {
+    func itemsHeaderTableViewCellWantsToSeeAllItemsWith(title: String) {
+        switch title {
+        case Title.departments.rawValue:
+            
+        case Title.courses.rawValue:
+            fatalError("TODO")
+        default:
             fatalError("should not reach here")
         }
     }
