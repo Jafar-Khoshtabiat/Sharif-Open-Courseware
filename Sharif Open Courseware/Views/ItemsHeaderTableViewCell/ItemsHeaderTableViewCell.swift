@@ -1,5 +1,5 @@
 //
-//  DepartmentsHeaderTableViewCell.swift
+//  ItemsHeaderTableViewCell.swift
 //  Sharif Open Courseware
 //
 //  Created by Jafar Khoshtabiat on 4/2/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DepartmentsHeaderTableViewCell: UITableViewCell {
+class ItemsHeaderTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     

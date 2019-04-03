@@ -107,7 +107,7 @@ class HomeViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        self.tableView.register(UINib(nibName: "DepartmentsHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "DepartmentsHeaderTableViewCell")
+        self.tableView.register(UINib(nibName: "ItemsHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "ItemsHeaderTableViewCell")
         self.tableView.register(UINib(nibName: "DepartmentsCollectionViewTableViewCell", bundle: nil), forCellReuseIdentifier: "DepartmentsCollectionViewTableViewCell")
         self.tableView.register(UINib(nibName: "CoursesCollectionTableViewCell", bundle: nil), forCellReuseIdentifier: "CoursesCollectionTableViewCell")
         
@@ -180,7 +180,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch (indexPath.section, indexPath.row) {
         case (0, 0):
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DepartmentsHeaderTableViewCell", for: indexPath) as! DepartmentsHeaderTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ItemsHeaderTableViewCell", for: indexPath) as! ItemsHeaderTableViewCell
             cell.title = Title.departments.rawValue
             return cell
         case (0, 1):
@@ -190,7 +190,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             cell.collectionView.dataSource = self
             return cell
         case (1, 0):
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DepartmentsHeaderTableViewCell", for: indexPath) as! DepartmentsHeaderTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ItemsHeaderTableViewCell", for: indexPath) as! ItemsHeaderTableViewCell
             cell.title = Title.courses.rawValue
             return cell
         case (1, 1):

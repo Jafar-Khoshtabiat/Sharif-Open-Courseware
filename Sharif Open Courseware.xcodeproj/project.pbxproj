@@ -14,8 +14,8 @@
 		C4CF6D6F2254AC7D005D3F38 /* CoursesCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF6D6D2254AC7D005D3F38 /* CoursesCollectionTableViewCell.swift */; };
 		C4CF6D702254AC7D005D3F38 /* CoursesCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4CF6D6E2254AC7D005D3F38 /* CoursesCollectionTableViewCell.xib */; };
 		C4DB74122253E69A00C97FDD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB74112253E69A00C97FDD /* HomeViewModel.swift */; };
-		C4DB74152253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB74132253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.swift */; };
-		C4DB74162253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4DB74142253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.xib */; };
+		C4DB74152253E8BC00C97FDD /* ItemsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB74132253E8BC00C97FDD /* ItemsHeaderTableViewCell.swift */; };
+		C4DB74162253E8BC00C97FDD /* ItemsHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4DB74142253E8BC00C97FDD /* ItemsHeaderTableViewCell.xib */; };
 		C4DB741B2253F27600C97FDD /* DepartmentsCollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB74192253F27600C97FDD /* DepartmentsCollectionViewTableViewCell.swift */; };
 		C4DB741C2253F27600C97FDD /* DepartmentsCollectionViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4DB741A2253F27600C97FDD /* DepartmentsCollectionViewTableViewCell.xib */; };
 		C4DB74202253FD0A00C97FDD /* DepartmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB741E2253FD0A00C97FDD /* DepartmentCollectionViewCell.swift */; };
@@ -70,8 +70,8 @@
 		C4CF6D6D2254AC7D005D3F38 /* CoursesCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesCollectionTableViewCell.swift; sourceTree = "<group>"; };
 		C4CF6D6E2254AC7D005D3F38 /* CoursesCollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoursesCollectionTableViewCell.xib; sourceTree = "<group>"; };
 		C4DB74112253E69A00C97FDD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		C4DB74132253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentsHeaderTableViewCell.swift; sourceTree = "<group>"; };
-		C4DB74142253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartmentsHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		C4DB74132253E8BC00C97FDD /* ItemsHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		C4DB74142253E8BC00C97FDD /* ItemsHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		C4DB74192253F27600C97FDD /* DepartmentsCollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentsCollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		C4DB741A2253F27600C97FDD /* DepartmentsCollectionViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartmentsCollectionViewTableViewCell.xib; sourceTree = "<group>"; };
 		C4DB741E2253FD0A00C97FDD /* DepartmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 				C4CF6D672254ABD2005D3F38 /* CourseCollectionViewCell */,
 				C4DB741D2253FCE400C97FDD /* DepartmentCollectionViewCell */,
 				C4DB74182253F25700C97FDD /* DepartmentsCollectionViewTableViewCell */,
-				C4DB74172253E8CB00C97FDD /* DepartmentsHeaderTableViewCell */,
+				C4DB74172253E8CB00C97FDD /* ItemsHeaderTableViewCell */,
 				C4E0C2672242CD7F008518C3 /* HomeViewController.swift */,
 			);
 			path = Views;
@@ -199,13 +199,13 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		C4DB74172253E8CB00C97FDD /* DepartmentsHeaderTableViewCell */ = {
+		C4DB74172253E8CB00C97FDD /* ItemsHeaderTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				C4DB74132253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.swift */,
-				C4DB74142253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.xib */,
+				C4DB74132253E8BC00C97FDD /* ItemsHeaderTableViewCell.swift */,
+				C4DB74142253E8BC00C97FDD /* ItemsHeaderTableViewCell.xib */,
 			);
-			path = DepartmentsHeaderTableViewCell;
+			path = ItemsHeaderTableViewCell;
 			sourceTree = "<group>";
 		};
 		C4DB74182253F25700C97FDD /* DepartmentsCollectionViewTableViewCell */ = {
@@ -400,7 +400,7 @@
 				C4DDF9C422431113005930E5 /* IRANSans_UltraLight.ttf in Resources */,
 				C4CF6D702254AC7D005D3F38 /* CoursesCollectionTableViewCell.xib in Resources */,
 				C4E0C2702242CD81008518C3 /* LaunchScreen.storyboard in Resources */,
-				C4DB74162253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.xib in Resources */,
+				C4DB74162253E8BC00C97FDD /* ItemsHeaderTableViewCell.xib in Resources */,
 				C4DDF9C022431113005930E5 /* IRANSans_Black.ttf in Resources */,
 				C4DDF9B922430E84005930E5 /* Colors.xcassets in Resources */,
 				C4E0C26D2242CD81008518C3 /* Assets.xcassets in Resources */,
@@ -539,7 +539,7 @@
 			files = (
 				C4CF6D6F2254AC7D005D3F38 /* CoursesCollectionTableViewCell.swift in Sources */,
 				C4DB74202253FD0A00C97FDD /* DepartmentCollectionViewCell.swift in Sources */,
-				C4DB74152253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.swift in Sources */,
+				C4DB74152253E8BC00C97FDD /* ItemsHeaderTableViewCell.swift in Sources */,
 				C4DDF9C722432007005930E5 /* UIView+Extension.swift in Sources */,
 				C4E0C2682242CD7F008518C3 /* HomeViewController.swift in Sources */,
 				C4DB741B2253F27600C97FDD /* DepartmentsCollectionViewTableViewCell.swift in Sources */,
