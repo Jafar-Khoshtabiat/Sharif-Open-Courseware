@@ -23,6 +23,13 @@ class HomeViewController: UIViewController {
     
     let searchTextFieldPlaceHolder = "جست‌جوی نام درس یا استاد"
     
+    enum Tag: Int {
+        case departmentsCollectionViewTag = 2
+        case coursesCollectionViewTag = 3
+        case allDepartmentsCollectionViewTag = 20
+        case allCoursesCollectionViewTag = 30
+    }
+    
     @IBOutlet weak var topBarView: UIView!
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var searchTextField: UITextField!
@@ -112,6 +119,12 @@ class HomeViewController: UIViewController {
         self.tableView.register(UINib(nibName: "DepartmentsCollectionViewTableViewCell", bundle: nil), forCellReuseIdentifier: "DepartmentsCollectionViewTableViewCell")
         self.tableView.register(UINib(nibName: "CoursesCollectionTableViewCell", bundle: nil), forCellReuseIdentifier: "CoursesCollectionTableViewCell")
         
+        self.departmentsCollectionView.tag = Tag.allDepartmentsCollectionViewTag.rawValue
+        self.departmentsCollectionView.delegate = self
+        self.departmentsCollectionView.dataSource = self
+        
+        self.departmentsCollectionView.register(UINib(nibName: "DepartmentCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DepartmentCollectionViewCell")
+        
         self.homeViewModel = HomeViewModel(vc: self)
     }
     
@@ -187,7 +200,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case (0, 1):
             let cell = tableView.dequeueReusableCell(withIdentifier: "DepartmentsCollectionViewTableViewCell", for: indexPath) as! DepartmentsCollectionViewTableViewCell
-            cell.collectionView.tag = 2
+            cell.collectionView.tag = Tag.departmentsCollectionViewTag.rawValue
             cell.collectionView.delegate = self
             cell.collectionView.dataSource = self
             return cell
@@ -198,7 +211,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case (1, 1):
             let cell = tableView.dequeueReusableCell(withIdentifier: "CoursesCollectionTableViewCell", for: indexPath) as! CoursesCollectionTableViewCell
-            cell.collectionView.tag = 3
+            cell.collectionView.tag = Tag.coursesCollectionViewTag.rawValue
             cell.collectionView.delegate = self
             cell.collectionView.dataSource = self
             return cell
@@ -210,25 +223,39 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView.tag == 2 {
+        switch collectionView.tag {
+        case Tag.departmentsCollectionViewTag.rawValue:
             // MARK: TODO
             return 10
-        } else if collectionView.tag == 3 {
+        case Tag.coursesCollectionViewTag.rawValue:
             // MARK: TODO
             return 10
-        } else {
+        case Tag.allDepartmentsCollectionViewTag.rawValue:
+            // MARK: TODO
+            return 10
+        case Tag.allCoursesCollectionViewTag.rawValue:
+            // MARK: TODO
+            return 10
+        default:
             fatalError("should not reach here")
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView.tag == 2 {
+        switch collectionView.tag {
+        case Tag.departmentsCollectionViewTag.rawValue:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DepartmentCollectionViewCell", for: indexPath) as! DepartmentCollectionViewCell
             return cell
-        } else if collectionView.tag == 3 {
+        case Tag.coursesCollectionViewTag.rawValue:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CourseCollectionViewCell", for: indexPath) as! CourseCollectionViewCell
             return cell
-        } else {
+        case Tag.allDepartmentsCollectionViewTag.rawValue:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DepartmentCollectionViewCell", for: indexPath) as! DepartmentCollectionViewCell
+            return cell
+        case Tag.allCoursesCollectionViewTag.rawValue:
+            // MARK: TODO
+            fatalError("TODO")
+        default:
             fatalError("should not reach here")
         }
     }
@@ -238,7 +265,11 @@ extension HomeViewController: ItemsHeaderTableViewCellDelegate {
     func itemsHeaderTableViewCellWantsToSeeAllItemsWith(title: String) {
         switch title {
         case Title.departments.rawValue:
-            
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: [.curveEaseOut], animations: {
+                self.departmentsCollectionView.frame = CGRect(x: self.tableView.frame.minX, y: self.tableView.frame.minY,
+                                                              width: self.departmentsCollectionView.frame.width,
+                                                              height: self.departmentsCollectionView.frame.height)
+            }, completion: nil)
         case Title.courses.rawValue:
             fatalError("TODO")
         default:
