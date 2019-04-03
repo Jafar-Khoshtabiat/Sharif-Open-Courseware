@@ -22,11 +22,11 @@
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="f3x-kb-IX1">
                         <rect key="frame" x="0.0" y="0.0" width="441" height="318.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="9" id="Bbg-qY-5PG">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="12" id="Bbg-qY-5PG">
                             <size key="itemSize" width="168" height="164"/>
                             <size key="headerReferenceSize" width="0.0" height="4"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="12" minY="12" maxX="12" maxY="12"/>
+                            <inset key="sectionInset" minX="8" minY="12" maxX="8" maxY="12"/>
                         </collectionViewFlowLayout>
                     </collectionView>
                 </subviews>

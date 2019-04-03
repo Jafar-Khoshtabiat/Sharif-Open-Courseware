@@ -62,6 +62,7 @@ class HomeViewController: UIViewController {
         
         self.bottomBarView.roundCorners(corners: [.topLeft, .topRight], radius: 18)
         self.bottomBarView.layer.applySketchShadow(color: UIColor(named: "blueGreyTwo")!, alpha: 0.72, x: 0, y: 0, blur: 15, spread: 0)
+//        self.bottomBarView.layer.masksToBounds = false
         
         self.searchView.layer.cornerRadius = self.searchView.frame.height / 3
         self.searchView.layer.applySketchShadow(color: UIColor(named: "slate")!, alpha: 0.22, x: 0, y: 6, blur: 14, spread: 0)
