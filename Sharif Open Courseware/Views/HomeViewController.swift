@@ -79,6 +79,7 @@ class HomeViewController: UIViewController {
         
         self.tableView.register(UINib(nibName: "DepartmentsHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "DepartmentsHeaderTableViewCell")
         self.tableView.register(UINib(nibName: "DepartmentsCollectionViewTableViewCell", bundle: nil), forCellReuseIdentifier: "DepartmentsCollectionViewTableViewCell")
+        self.tableView.register(UINib(nibName: "CoursesCollectionTableViewCell", bundle: nil), forCellReuseIdentifier: "CoursesCollectionTableViewCell")
         
         self.homeViewModel = HomeViewModel()
     }
@@ -131,7 +132,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return 40
         case (1, 1):
             // MARK: TODO
-            return 0
+            return 500
         default:
             fatalError("should not reach here")
         }
@@ -154,8 +155,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             cell.title = Title.courses.rawValue
             return cell
         case (1, 1):
-            // MARK: TODO
-            return UITableViewCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CoursesCollectionTableViewCell", for: indexPath) as! CoursesCollectionTableViewCell
+            cell.collectionView.tag = 3
+            cell.collectionView.delegate = self
+            cell.collectionView.dataSource = self
+            return cell
         default:
             fatalError("should not reach here")
         }
@@ -181,7 +185,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return cell
         } else if collectionView.tag == 3 {
             // MARK: TODO
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DepartmentCollectionViewCell", for: indexPath) as! DepartmentCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CourseCollectionViewCell", for: indexPath) as! CourseCollectionViewCell
             return cell
         } else {
             fatalError("should not reach here")

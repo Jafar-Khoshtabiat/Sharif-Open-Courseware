@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		35A977498EC26FF0B9DDCEE0 /* Pods_Sharif_Open_Courseware.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F15D11743A0A81AFAE4520F7 /* Pods_Sharif_Open_Courseware.framework */; };
+		C4CF6D662254A2E8005D3F38 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF6D652254A2E8005D3F38 /* Department.swift */; };
+		C4CF6D6A2254AC2F005D3F38 /* CourseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF6D682254AC2F005D3F38 /* CourseCollectionViewCell.swift */; };
+		C4CF6D6B2254AC2F005D3F38 /* CourseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4CF6D692254AC2F005D3F38 /* CourseCollectionViewCell.xib */; };
+		C4CF6D6F2254AC7D005D3F38 /* CoursesCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF6D6D2254AC7D005D3F38 /* CoursesCollectionTableViewCell.swift */; };
+		C4CF6D702254AC7D005D3F38 /* CoursesCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4CF6D6E2254AC7D005D3F38 /* CoursesCollectionTableViewCell.xib */; };
 		C4DB74122253E69A00C97FDD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB74112253E69A00C97FDD /* HomeViewModel.swift */; };
 		C4DB74152253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB74132253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.swift */; };
 		C4DB74162253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4DB74142253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.xib */; };
@@ -59,6 +64,11 @@
 		A18889C70759A3BC0FDB56F0 /* Pods_Sharif_Open_CoursewareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sharif_Open_CoursewareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D5A147A6074B6D729A3F75 /* Pods-Sharif Open CoursewareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharif Open CoursewareUITests.release.xcconfig"; path = "Target Support Files/Pods-Sharif Open CoursewareUITests/Pods-Sharif Open CoursewareUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A885CB82800A99FF1180378C /* Pods-Sharif Open CoursewareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharif Open CoursewareTests.debug.xcconfig"; path = "Target Support Files/Pods-Sharif Open CoursewareTests/Pods-Sharif Open CoursewareTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C4CF6D652254A2E8005D3F38 /* Department.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
+		C4CF6D682254AC2F005D3F38 /* CourseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCollectionViewCell.swift; sourceTree = "<group>"; };
+		C4CF6D692254AC2F005D3F38 /* CourseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseCollectionViewCell.xib; sourceTree = "<group>"; };
+		C4CF6D6D2254AC7D005D3F38 /* CoursesCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesCollectionTableViewCell.swift; sourceTree = "<group>"; };
+		C4CF6D6E2254AC7D005D3F38 /* CoursesCollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoursesCollectionTableViewCell.xib; sourceTree = "<group>"; };
 		C4DB74112253E69A00C97FDD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C4DB74132253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentsHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		C4DB74142253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartmentsHeaderTableViewCell.xib; sourceTree = "<group>"; };
@@ -145,12 +155,40 @@
 		C428C40D224955FE00186BF5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C4CF6D6C2254AC5C005D3F38 /* CoursesCollectionTableViewCell */,
+				C4CF6D672254ABD2005D3F38 /* CourseCollectionViewCell */,
 				C4DB741D2253FCE400C97FDD /* DepartmentCollectionViewCell */,
 				C4DB74182253F25700C97FDD /* DepartmentsCollectionViewTableViewCell */,
 				C4DB74172253E8CB00C97FDD /* DepartmentsHeaderTableViewCell */,
 				C4E0C2672242CD7F008518C3 /* HomeViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C4CF6D642254A038005D3F38 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C4CF6D652254A2E8005D3F38 /* Department.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C4CF6D672254ABD2005D3F38 /* CourseCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C4CF6D682254AC2F005D3F38 /* CourseCollectionViewCell.swift */,
+				C4CF6D692254AC2F005D3F38 /* CourseCollectionViewCell.xib */,
+			);
+			path = CourseCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		C4CF6D6C2254AC5C005D3F38 /* CoursesCollectionTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C4CF6D6D2254AC7D005D3F38 /* CoursesCollectionTableViewCell.swift */,
+				C4CF6D6E2254AC7D005D3F38 /* CoursesCollectionTableViewCell.xib */,
+			);
+			path = CoursesCollectionTableViewCell;
 			sourceTree = "<group>";
 		};
 		C4DB74102253E64E00C97FDD /* ViewModels */ = {
@@ -213,6 +251,7 @@
 		C4E0C2642242CD7F008518C3 /* Sharif Open Courseware */ = {
 			isa = PBXGroup;
 			children = (
+				C4CF6D642254A038005D3F38 /* Model */,
 				C4DB74102253E64E00C97FDD /* ViewModels */,
 				C428C40D224955FE00186BF5 /* Views */,
 				C4E0C2652242CD7F008518C3 /* AppDelegate.swift */,
@@ -359,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4DDF9C422431113005930E5 /* IRANSans_UltraLight.ttf in Resources */,
+				C4CF6D702254AC7D005D3F38 /* CoursesCollectionTableViewCell.xib in Resources */,
 				C4E0C2702242CD81008518C3 /* LaunchScreen.storyboard in Resources */,
 				C4DB74162253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.xib in Resources */,
 				C4DDF9C022431113005930E5 /* IRANSans_Black.ttf in Resources */,
@@ -371,6 +411,7 @@
 				C4DB741C2253F27600C97FDD /* DepartmentsCollectionViewTableViewCell.xib in Resources */,
 				C4DDF9C122431113005930E5 /* IRANSans.ttf in Resources */,
 				C4DB74212253FD0A00C97FDD /* DepartmentCollectionViewCell.xib in Resources */,
+				C4CF6D6B2254AC2F005D3F38 /* CourseCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,13 +537,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4CF6D6F2254AC7D005D3F38 /* CoursesCollectionTableViewCell.swift in Sources */,
 				C4DB74202253FD0A00C97FDD /* DepartmentCollectionViewCell.swift in Sources */,
 				C4DB74152253E8BC00C97FDD /* DepartmentsHeaderTableViewCell.swift in Sources */,
 				C4DDF9C722432007005930E5 /* UIView+Extension.swift in Sources */,
 				C4E0C2682242CD7F008518C3 /* HomeViewController.swift in Sources */,
 				C4DB741B2253F27600C97FDD /* DepartmentsCollectionViewTableViewCell.swift in Sources */,
 				C4DB74122253E69A00C97FDD /* HomeViewModel.swift in Sources */,
+				C4CF6D6A2254AC2F005D3F38 /* CourseCollectionViewCell.swift in Sources */,
 				C4E0C2662242CD7F008518C3 /* AppDelegate.swift in Sources */,
+				C4CF6D662254A2E8005D3F38 /* Department.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,10 @@ import Foundation
 
 class HomeViewModel {
     
+    init() {
+        
+    }
+    
     func getNumberOfSections() -> Int {
         return 2
     }
