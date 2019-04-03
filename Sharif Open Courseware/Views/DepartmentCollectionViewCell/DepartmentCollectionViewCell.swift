@@ -14,6 +14,22 @@ class DepartmentCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var departmentImageView: UIImageView!
     @IBOutlet weak var departmentNameLabel: UILabel!
     
+    var departmentName: String? {
+        didSet {
+            guard let _departmentName = self.departmentName else {
+                fatalError("this variable can't be nil")
+            }
+            
+            self.departmentNameLabel.text = _departmentName
+        }
+    }
+    
+    var departmentImage: UIImage? {
+        didSet {
+            self.departmentImageView.image = self.departmentImage
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
