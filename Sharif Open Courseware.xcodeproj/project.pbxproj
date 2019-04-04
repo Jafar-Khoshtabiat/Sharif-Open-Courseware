@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		35A977498EC26FF0B9DDCEE0 /* Pods_Sharif_Open_Courseware.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F15D11743A0A81AFAE4520F7 /* Pods_Sharif_Open_Courseware.framework */; };
+		C47E0B412255D8AC00772A0C /* DepartmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E0B402255D8AC00772A0C /* DepartmentViewController.swift */; };
 		C4CF6D662254A2E8005D3F38 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF6D652254A2E8005D3F38 /* Department.swift */; };
 		C4CF6D6A2254AC2F005D3F38 /* CourseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF6D682254AC2F005D3F38 /* CourseCollectionViewCell.swift */; };
 		C4CF6D6B2254AC2F005D3F38 /* CourseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4CF6D692254AC2F005D3F38 /* CourseCollectionViewCell.xib */; };
@@ -64,6 +65,7 @@
 		A18889C70759A3BC0FDB56F0 /* Pods_Sharif_Open_CoursewareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sharif_Open_CoursewareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D5A147A6074B6D729A3F75 /* Pods-Sharif Open CoursewareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharif Open CoursewareUITests.release.xcconfig"; path = "Target Support Files/Pods-Sharif Open CoursewareUITests/Pods-Sharif Open CoursewareUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A885CB82800A99FF1180378C /* Pods-Sharif Open CoursewareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharif Open CoursewareTests.debug.xcconfig"; path = "Target Support Files/Pods-Sharif Open CoursewareTests/Pods-Sharif Open CoursewareTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C47E0B402255D8AC00772A0C /* DepartmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentViewController.swift; sourceTree = "<group>"; };
 		C4CF6D652254A2E8005D3F38 /* Department.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
 		C4CF6D682254AC2F005D3F38 /* CourseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCollectionViewCell.swift; sourceTree = "<group>"; };
 		C4CF6D692254AC2F005D3F38 /* CourseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				C4DB74182253F25700C97FDD /* DepartmentsCollectionViewTableViewCell */,
 				C4DB74172253E8CB00C97FDD /* ItemsHeaderTableViewCell */,
 				C4E0C2672242CD7F008518C3 /* HomeViewController.swift */,
+				C47E0B402255D8AC00772A0C /* DepartmentViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				C4CF6D6A2254AC2F005D3F38 /* CourseCollectionViewCell.swift in Sources */,
 				C4E0C2662242CD7F008518C3 /* AppDelegate.swift in Sources */,
 				C4CF6D662254A2E8005D3F38 /* Department.swift in Sources */,
+				C47E0B412255D8AC00772A0C /* DepartmentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

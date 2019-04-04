@@ -339,6 +339,23 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             fatalError("should not reach here")
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch collectionView.tag {
+        case Tag.departmentsCollectionViewTag.rawValue:
+            self.performSegue(withIdentifier: "department", sender: nil)
+        case Tag.coursesCollectionViewTag.rawValue:
+            // MARK: TODO
+            break
+        case Tag.allDepartmentsCollectionViewTag.rawValue:
+            self.performSegue(withIdentifier: "department", sender: nil)
+        case Tag.allCoursesCollectionTableViewTag.rawValue:
+            // MARK: TODO
+            break
+        default:
+            fatalError("should not reach here")
+        }
+    }
 }
 
 extension HomeViewController: ItemsHeaderTableViewCellDelegate {
