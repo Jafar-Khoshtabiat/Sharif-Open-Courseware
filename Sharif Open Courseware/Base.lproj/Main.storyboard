@@ -273,7 +273,7 @@
                         <outlet property="teachersLabel" destination="16s-Pi-2x1" id="cnQ-5O-RPq"/>
                         <outlet property="topBarView" destination="1VD-Py-Ywe" id="ZI1-OL-3z7"/>
                         <segue destination="C4B-d6-pZO" kind="presentation" identifier="department" id="vuu-tr-cnr"/>
-                        <segue destination="PPW-jv-MJ1" kind="presentation" id="AwU-fd-KhQ"/>
+                        <segue destination="PPW-jv-MJ1" kind="presentation" identifier="course" id="AwU-fd-KhQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -291,7 +291,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHa-b0-7H8" userLabel="topBarView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تئوری سازه ها ۲" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2W-Rs-hc0" userLabel="titleLabel">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تئوری سازه ها ۲" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2W-Rs-hc0" userLabel="topBarTitleLabel">
                                         <rect key="frame" x="130" y="30" width="115.5" height="28.5"/>
                                         <fontDescription key="fontDescription" name="IRANSans-Medium" family="IRANSans" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -347,6 +347,9 @@
                                             <constraint firstAttribute="width" secondItem="pqd-wi-gn6" secondAttribute="height" multiplier="1:1" id="hf7-xE-Bod"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="check"/>
+                                        <connections>
+                                            <action selector="deleteButtonTouchUpInside:" destination="PPW-jv-MJ1" eventType="touchUpInside" id="p6k-U7-dkT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Akk-Co-RKG" userLabel="closeButton">
                                         <rect key="frame" x="16" y="32" width="24" height="24"/>
@@ -380,8 +383,11 @@
                                         <state key="normal" title="معرفی دوره">
                                             <color key="titleColor" name="slate"/>
                                         </state>
+                                        <connections>
+                                            <action selector="courseIntroButtonTouchUpInside:" destination="PPW-jv-MJ1" eventType="touchUpInside" id="exG-53-SsQ"/>
+                                        </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Whw-pr-s3J" userLabel="introductionSelectedView">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Whw-pr-s3J" userLabel="courseIntroView">
                                         <rect key="frame" x="187.5" y="45" width="187.5" height="3"/>
                                         <color key="backgroundColor" name="darkSkyBlue"/>
                                         <constraints>
@@ -394,8 +400,11 @@
                                         <state key="normal" title="ویدئوهای دوره">
                                             <color key="titleColor" name="slate"/>
                                         </state>
+                                        <connections>
+                                            <action selector="courseVideosButtonTouchUpInside:" destination="PPW-jv-MJ1" eventType="touchUpInside" id="5SJ-te-aPc"/>
+                                        </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kf6-on-vCR" userLabel="videosSelectedView">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kf6-on-vCR" userLabel="courseVideosView">
                                         <rect key="frame" x="0.0" y="45" width="187.5" height="3"/>
                                         <color key="backgroundColor" name="darkSkyBlue"/>
                                     </view>
@@ -430,7 +439,7 @@
                                     <constraint firstItem="kf6-on-vCR" firstAttribute="leading" secondItem="TOn-gq-eKn" secondAttribute="leading" id="zQr-AT-7E5"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HIY-hl-yr4">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HIY-hl-yr4">
                                 <rect key="frame" x="0.0" y="244" width="375" height="423"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -453,6 +462,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="r1U-1b-9Ic"/>
                     </view>
+                    <connections>
+                        <outlet property="courseIntroView" destination="Whw-pr-s3J" id="mp9-vP-0EZ"/>
+                        <outlet property="courseNameLabel" destination="Mec-sH-IhZ" id="fHe-gR-ZKE"/>
+                        <outlet property="courseVideosView" destination="kf6-on-vCR" id="6Xc-gi-cMy"/>
+                        <outlet property="deleteButton" destination="pqd-wi-gn6" id="GJQ-Q1-Pl3"/>
+                        <outlet property="departmentNameLabel" destination="KLS-Ab-hCv" id="nmQ-9M-BB4"/>
+                        <outlet property="tableView" destination="HIY-hl-yr4" id="xlE-87-yVk"/>
+                        <outlet property="teacherNameLabel" destination="M9J-RJ-59K" id="597-vC-IcS"/>
+                        <outlet property="topBarTitleLabel" destination="F2W-Rs-hc0" id="TA8-Vm-qAD"/>
+                        <outlet property="topImageContainerView" destination="cIC-jZ-LLD" id="mv0-3f-uNe"/>
+                        <outlet property="topImageView" destination="Qg2-tt-Hh4" id="u1Q-Di-i3L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWp-hE-Udb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

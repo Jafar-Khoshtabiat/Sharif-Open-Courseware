@@ -155,6 +155,9 @@ class HomeViewController: UIViewController {
         case "department":
             let vc = segue.destination as! DepartmentViewController
             vc.departmentViewModel = viewModel.departmentViewModelFactory()
+        case "course":
+            let vc = segue.destination as! CourseViewController
+            vc.courseViewModel = viewModel.courseViewModelFactory()
         default:
             fatalError("should not reach here")
         }
@@ -359,13 +362,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case Tag.departmentsCollectionViewTag.rawValue:
             self.performSegue(withIdentifier: "department", sender: nil)
         case Tag.coursesCollectionViewTag.rawValue:
-            // MARK: TODO
-            break
+            self.performSegue(withIdentifier: "course", sender: nil)
         case Tag.allDepartmentsCollectionViewTag.rawValue:
             self.performSegue(withIdentifier: "department", sender: nil)
         case Tag.allCoursesCollectionTableViewTag.rawValue:
-            // MARK: TODO
-            break
+            self.performSegue(withIdentifier: "course", sender: nil)
         default:
             fatalError("should not reach here")
         }
