@@ -157,7 +157,7 @@ class HomeViewController: UIViewController {
             vc.departmentViewModel = viewModel.departmentViewModelFactory()
         case "course":
             let vc = segue.destination as! CourseViewController
-            vc.courseViewModel = viewModel.courseViewModelFactory()
+            vc.courseViewModel = viewModel.courseViewModelFactory(vc: vc)
         default:
             fatalError("should not reach here")
         }

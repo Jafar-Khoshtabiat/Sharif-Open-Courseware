@@ -47,7 +47,7 @@ class HomeViewModel {
         return DepartmentViewModel()
     }
     
-    func courseViewModelFactory() -> CourseViewModel {
-        return CourseViewModel()
+    func courseViewModelFactory(vc: CourseViewController) -> CourseViewModel {
+        return CourseViewModel(state: .courseIntro, vc: vc)
     }
 }

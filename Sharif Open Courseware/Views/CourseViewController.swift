@@ -23,25 +23,6 @@ class CourseViewController: UIViewController {
     
     var courseViewModel: CourseViewModel?
     
-    var state: State? {
-        didSet {
-            guard let _state = self.state else {
-                fatalError("this variable can't be nil")
-            }
-            
-            switch _state {
-            case .courseIntro:
-                self.courseIntroView.isHidden = false
-                self.courseVideosView.isHidden = true
-            case .courseVideos:
-                self.courseIntroView.isHidden = true
-                self.courseVideosView.isHidden = false
-            default:
-                fatalError("should not reach here")
-            }
-        }
-    }
-    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -49,11 +30,29 @@ class CourseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        guard let viewModel = self.courseViewModel else {
+            fatalError("cannot access CourseViewModel object")
+        }
+        
+        viewModel.viewDidLoad()
+        
         self.tableView.allowsSelection = false
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
         self.tableView.register(UINib(nibName: "DepartmentIntroductionTableViewCell", bundle: nil), forCellReuseIdentifier: "DepartmentIntroductionTableViewCell")
+        self.tableView.register(UINib(nibName: "TeacherIntroForCourseTableViewCell", bundle: nil), forCellReuseIdentifier: "TeacherIntroForCourseTableViewCell")
+        self.tableView.register(UINib(nibName: "DepartmentCoursesCollectionTableViewCell", bundle: nil), forCellReuseIdentifier: "DepartmentCoursesCollectionTableViewCell")
+    }
+    
+    func displayCourseIntro(value: Bool) {
+        if value {
+            self.courseIntroView.isHidden = false
+            self.courseVideosView.isHidden = true
+        } else {
+            self.courseIntroView.isHidden = true
+            self.courseVideosView.isHidden = false
+        }
     }
     
     /*
@@ -74,36 +73,99 @@ class CourseViewController: UIViewController {
     }
     
     @IBAction func courseIntroButtonTouchUpInside(_ sender: UIButton) {
-        guard let _state = self.state else {
-            fatalError("this variable can't be nil")
+        guard let viewModel = self.courseViewModel else {
+            fatalError("cannot access CourseViewModel object")
         }
         
-        if _state == .courseVideos {
-            self.state = .courseIntro
-        }
+        viewModel.courseIntroButtonTouchUpInsideEvent()
     }
     
     @IBAction func courseVideosButtonTouchUpInside(_ sender: UIButton) {
-        guard let _state = self.state else {
-            fatalError("this variable can't be nil")
+        guard let viewModel = self.courseViewModel else {
+            fatalError("cannot access CourseViewModel object")
         }
         
-        if _state == .courseIntro {
-            self.state = .courseVideos
-        }
+        viewModel.courseVideosButtonTouchUpInsideEvent()
     }
 }
 
 extension CourseViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        <#code#>
+        guard let viewModel = self.courseViewModel else {
+            fatalError("should not reach here")
+        }
+        
+        return viewModel.getNumberOfSections()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        guard let viewModel = self.courseViewModel else {
+            fatalError("should not reach here")
+        }
+        
+        return viewModel.getNumberOfRowsInSection(section: section)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        guard let viewModel = self.courseViewModel else {
+            fatalError("should not reach here")
+        }
+        
+        switch viewModel.getState() {
+        case .courseIntro:
+            switch (indexPath.section, indexPath.row) {
+            case (0, 0):
+                return UITableView.automaticDimension
+            case (1, 0):
+                return UITableView.automaticDimension
+            case (2, 0):
+                return 1000
+            default:
+                fatalError("should not reach here")
+            }
+        case .courseVideos:
+            // MARK: TODO
+            return UITableView.automaticDimension
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        guard let viewModel = self.courseViewModel else {
+            fatalError("should not reach here")
+        }
+        
+        switch viewModel.getState() {
+        case .courseIntro:
+            switch (indexPath.section, indexPath.row) {
+            case (0, 0):
+                let cell = tableView.dequeueReusableCell(withIdentifier: "DepartmentIntroductionTableViewCell", for: indexPath) as! DepartmentIntroductionTableViewCell
+                return cell
+            case (1, 0):
+                let cell = tableView.dequeueReusableCell(withIdentifier: "TeacherIntroForCourseTableViewCell", for: indexPath) as! TeacherIntroForCourseTableViewCell
+                return cell
+            case (2, 0):
+                let cell = tableView.dequeueReusableCell(withIdentifier: "DepartmentCoursesCollectionTableViewCell", for: indexPath) as! DepartmentCoursesCollectionTableViewCell
+//                cell.collectionView.tag = Tag.collectionViewTag.rawValue
+                cell.collectionView.delegate = self
+                cell.collectionView.dataSource = self
+                return cell
+            default:
+                fatalError("should not reach here")
+            }
+        case .courseVideos:
+            // MARK: TODO
+            return UITableViewCell()
+        }
+    }
+}
+
+extension CourseViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CourseCollectionViewCell", for: indexPath) as! CourseCollectionViewCell
+        return cell
     }
 }

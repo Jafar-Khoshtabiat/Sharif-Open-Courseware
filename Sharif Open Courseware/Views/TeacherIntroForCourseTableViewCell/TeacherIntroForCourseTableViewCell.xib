@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSans.ttf">
+            <string>IRANSans</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="211" id="KGk-i7-Jjw" customClass="TeacherIntroForCourseTableViewCell" customModule="Sharif_Open_Courseware" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="384" height="211"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="384" height="210.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="معرفی مدرس" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faX-hY-P7w">
+                        <rect key="frame" x="315" y="16" width="54" height="16"/>
+                        <fontDescription key="fontDescription" name="IRANSans" family="IRANSans" pointSize="10"/>
+                        <color key="textColor" name="blueGreyThree"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t_c_2" translatesAutoresizingMaskIntoConstraints="NO" id="ISc-LP-ByU">
+                        <rect key="frame" x="15" y="42" width="110" height="110"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ISc-LP-ByU" secondAttribute="height" multiplier="1:1" id="fgA-Em-Xlb"/>
+                            <constraint firstAttribute="height" constant="110" id="scz-Cs-xxi"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhO-7a-cN9">
+                        <rect key="frame" x="133" y="40" width="236" height="121"/>
+                        <mutableString key="text">وقتی که نیولاین به اشتباه خود در ارسال پیش‌نویسِ ارسال شده برای فینچر پی برد؛ مایکل د لوکا، مدیر تولید، با فینچر دیدار کرده و ذکر می‌کند که یک فشار درون‌سازمانی برای باقی ماندنِ نسخه تجدید نظر شده وجود دارد. دلوکا اظهار می‌کند که در صورتی که فینچر تولید این فیلم را به عهده بگیرد؛ آن‌ها قادر خواهند بود که پایان سر بریده در بسته را باقی نگه دارند.</mutableString>
+                        <fontDescription key="fontDescription" name="IRANSans" family="IRANSans" pointSize="11"/>
+                        <color key="textColor" name="slate"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2YL-0w-V8c" userLabel="bottomLineView">
+                        <rect key="frame" x="14" y="209.5" width="356" height="1"/>
+                        <color key="backgroundColor" name="veryLightBlue"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="ULP-PB-7Fl"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="2YL-0w-V8c" secondAttribute="bottom" id="0MB-VX-nD5"/>
+                    <constraint firstItem="mhO-7a-cN9" firstAttribute="top" secondItem="faX-hY-P7w" secondAttribute="bottom" constant="8" id="Ate-VM-g4O"/>
+                    <constraint firstItem="ISc-LP-ByU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="BWL-bk-77M"/>
+                    <constraint firstItem="2YL-0w-V8c" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="JMF-5u-U4K"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="mhO-7a-cN9" secondAttribute="bottom" constant="15" id="MwI-ar-gs7"/>
+                    <constraint firstItem="faX-hY-P7w" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Ncf-Ad-b3J"/>
+                    <constraint firstItem="mhO-7a-cN9" firstAttribute="leading" secondItem="ISc-LP-ByU" secondAttribute="trailing" constant="8" id="QqJ-HY-me9"/>
+                    <constraint firstItem="ISc-LP-ByU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="42" id="SZX-1t-4xj"/>
+                    <constraint firstAttribute="trailing" secondItem="faX-hY-P7w" secondAttribute="trailing" constant="15" id="Vpp-kf-qBT"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ISc-LP-ByU" secondAttribute="bottom" constant="15" id="mrp-m9-5vb"/>
+                    <constraint firstItem="mhO-7a-cN9" firstAttribute="trailing" secondItem="faX-hY-P7w" secondAttribute="trailing" id="sHk-Eg-cCK"/>
+                    <constraint firstAttribute="trailing" secondItem="2YL-0w-V8c" secondAttribute="trailing" constant="14" id="vhW-e2-F72"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="teacherImageView" destination="ISc-LP-ByU" id="b8Q-vZ-KF8"/>
+                <outlet property="teacherIntroLabel" destination="mhO-7a-cN9" id="ph0-pC-CyM"/>
+            </connections>
+            <point key="canvasLocation" x="168.11594202898553" y="102.12053571428571"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="t_c_2" width="427" height="320"/>
+        <namedColor name="blueGreyThree">
+            <color red="0.52549019607843139" green="0.54509803921568623" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="slate">
+            <color red="0.24313725490196078" green="0.27058823529411763" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="veryLightBlue">
+            <color red="0.88627450980392153" green="0.90196078431372551" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

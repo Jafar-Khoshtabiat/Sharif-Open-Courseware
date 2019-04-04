@@ -16,6 +16,8 @@
 		C47E0B4D2255F75700772A0C /* DepartmentCoursesCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C47E0B4B2255F75700772A0C /* DepartmentCoursesCollectionTableViewCell.xib */; };
 		C47E0B4F225607C500772A0C /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E0B4E225607C500772A0C /* CourseViewController.swift */; };
 		C47E0B512256334600772A0C /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E0B502256334600772A0C /* CourseViewModel.swift */; };
+		C47E0B552256660700772A0C /* TeacherIntroForCourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E0B532256660700772A0C /* TeacherIntroForCourseTableViewCell.swift */; };
+		C47E0B562256660700772A0C /* TeacherIntroForCourseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C47E0B542256660700772A0C /* TeacherIntroForCourseTableViewCell.xib */; };
 		C4CF6D662254A2E8005D3F38 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF6D652254A2E8005D3F38 /* Department.swift */; };
 		C4CF6D6A2254AC2F005D3F38 /* CourseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF6D682254AC2F005D3F38 /* CourseCollectionViewCell.swift */; };
 		C4CF6D6B2254AC2F005D3F38 /* CourseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4CF6D692254AC2F005D3F38 /* CourseCollectionViewCell.xib */; };
@@ -80,6 +82,8 @@
 		C47E0B4B2255F75700772A0C /* DepartmentCoursesCollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartmentCoursesCollectionTableViewCell.xib; sourceTree = "<group>"; };
 		C47E0B4E225607C500772A0C /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
 		C47E0B502256334600772A0C /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
+		C47E0B532256660700772A0C /* TeacherIntroForCourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherIntroForCourseTableViewCell.swift; sourceTree = "<group>"; };
+		C47E0B542256660700772A0C /* TeacherIntroForCourseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeacherIntroForCourseTableViewCell.xib; sourceTree = "<group>"; };
 		C4CF6D652254A2E8005D3F38 /* Department.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
 		C4CF6D682254AC2F005D3F38 /* CourseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCollectionViewCell.swift; sourceTree = "<group>"; };
 		C4CF6D692254AC2F005D3F38 /* CourseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 		C428C40D224955FE00186BF5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C47E0B52225665B300772A0C /* TeacherIntroForCourseTableViewCell */,
 				C47E0B492255F71000772A0C /* DepartmentCoursesCollectionTableViewCell */,
 				C47E0B442255F31500772A0C /* DepartmentIntroductionTableViewCell */,
 				C4CF6D6C2254AC5C005D3F38 /* CoursesCollectionTableViewCell */,
@@ -201,6 +206,15 @@
 				C47E0B4B2255F75700772A0C /* DepartmentCoursesCollectionTableViewCell.xib */,
 			);
 			path = DepartmentCoursesCollectionTableViewCell;
+			sourceTree = "<group>";
+		};
+		C47E0B52225665B300772A0C /* TeacherIntroForCourseTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C47E0B532256660700772A0C /* TeacherIntroForCourseTableViewCell.swift */,
+				C47E0B542256660700772A0C /* TeacherIntroForCourseTableViewCell.xib */,
+			);
+			path = TeacherIntroForCourseTableViewCell;
 			sourceTree = "<group>";
 		};
 		C4CF6D642254A038005D3F38 /* Model */ = {
@@ -437,6 +451,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C47E0B562256660700772A0C /* TeacherIntroForCourseTableViewCell.xib in Resources */,
 				C4DDF9C422431113005930E5 /* IRANSans_UltraLight.ttf in Resources */,
 				C47E0B482255F35500772A0C /* DepartmentIntroductionTableViewCell.xib in Resources */,
 				C47E0B4D2255F75700772A0C /* DepartmentCoursesCollectionTableViewCell.xib in Resources */,
@@ -590,6 +605,7 @@
 				C47E0B4F225607C500772A0C /* CourseViewController.swift in Sources */,
 				C4DB74122253E69A00C97FDD /* HomeViewModel.swift in Sources */,
 				C4CF6D6A2254AC2F005D3F38 /* CourseCollectionViewCell.swift in Sources */,
+				C47E0B552256660700772A0C /* TeacherIntroForCourseTableViewCell.swift in Sources */,
 				C47E0B472255F35500772A0C /* DepartmentIntroductionTableViewCell.swift in Sources */,
 				C4E0C2662242CD7F008518C3 /* AppDelegate.swift in Sources */,
 				C47E0B512256334600772A0C /* CourseViewModel.swift in Sources */,

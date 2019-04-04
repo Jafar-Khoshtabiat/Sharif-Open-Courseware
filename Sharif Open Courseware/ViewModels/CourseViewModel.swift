@@ -16,25 +16,64 @@ class CourseViewModel {
     }
     
     var state: State
+    let courseViewController: CourseViewController
     
-    init() {
-        
+    init(state: State, vc: CourseViewController) {
+        self.state = state
+        self.courseViewController = vc
+    }
+    
+    func viewDidLoad() {
+        self.courseViewController.displayCourseIntro(value: self.state == .courseIntro)
     }
     
     func getNumberOfSections() -> Int {
-        return 3
+        switch self.state {
+        case .courseIntro:
+            return 3
+        case .courseVideos:
+            return 1
+        }
     }
     
     func getNumberOfRowsInSection(section: Int) -> Int {
-        switch section {
-        case 0:
-            return 1
-        case 1:
-            return 1
-        case 2:
-            return 1
-        default:
-            fatalError("should not reach here")
+        switch self.state {
+        case .courseIntro:
+            switch section {
+            case 0:
+                return 1
+            case 1:
+                return 1
+            case 2:
+                return 1
+            default:
+                fatalError("should not reach here")
+            }
+        case .courseVideos:
+            switch section {
+            case 0:
+                return 1
+            default:
+                fatalError("should not reach here")
+            }
         }
+    }
+    
+    func courseIntroButtonTouchUpInsideEvent() {
+        if self.state == .courseVideos {
+            self.state = .courseIntro
+            self.courseViewController.displayCourseIntro(value: true)
+        }
+    }
+    
+    func courseVideosButtonTouchUpInsideEvent() {
+        if self.state == .courseIntro {
+            self.state = .courseVideos
+            self.courseViewController.displayCourseIntro(value: false)
+        }
+    }
+    
+    func getState() -> State {
+        return self.state
     }
 }
