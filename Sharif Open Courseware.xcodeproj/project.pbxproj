@@ -14,6 +14,7 @@
 		C47E0B482255F35500772A0C /* DepartmentIntroductionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C47E0B462255F35500772A0C /* DepartmentIntroductionTableViewCell.xib */; };
 		C47E0B4C2255F75700772A0C /* DepartmentCoursesCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E0B4A2255F75700772A0C /* DepartmentCoursesCollectionTableViewCell.swift */; };
 		C47E0B4D2255F75700772A0C /* DepartmentCoursesCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C47E0B4B2255F75700772A0C /* DepartmentCoursesCollectionTableViewCell.xib */; };
+		C47E0B4F225607C500772A0C /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E0B4E225607C500772A0C /* CourseViewController.swift */; };
 		C4CF6D662254A2E8005D3F38 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF6D652254A2E8005D3F38 /* Department.swift */; };
 		C4CF6D6A2254AC2F005D3F38 /* CourseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF6D682254AC2F005D3F38 /* CourseCollectionViewCell.swift */; };
 		C4CF6D6B2254AC2F005D3F38 /* CourseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4CF6D692254AC2F005D3F38 /* CourseCollectionViewCell.xib */; };
@@ -76,6 +77,7 @@
 		C47E0B462255F35500772A0C /* DepartmentIntroductionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartmentIntroductionTableViewCell.xib; sourceTree = "<group>"; };
 		C47E0B4A2255F75700772A0C /* DepartmentCoursesCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentCoursesCollectionTableViewCell.swift; sourceTree = "<group>"; };
 		C47E0B4B2255F75700772A0C /* DepartmentCoursesCollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartmentCoursesCollectionTableViewCell.xib; sourceTree = "<group>"; };
+		C47E0B4E225607C500772A0C /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
 		C4CF6D652254A2E8005D3F38 /* Department.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
 		C4CF6D682254AC2F005D3F38 /* CourseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCollectionViewCell.swift; sourceTree = "<group>"; };
 		C4CF6D692254AC2F005D3F38 /* CourseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				C4DB74172253E8CB00C97FDD /* ItemsHeaderTableViewCell */,
 				C4E0C2672242CD7F008518C3 /* HomeViewController.swift */,
 				C47E0B402255D8AC00772A0C /* DepartmentViewController.swift */,
+				C47E0B4E225607C500772A0C /* CourseViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				C4E0C2682242CD7F008518C3 /* HomeViewController.swift in Sources */,
 				C47E0B4C2255F75700772A0C /* DepartmentCoursesCollectionTableViewCell.swift in Sources */,
 				C4DB741B2253F27600C97FDD /* DepartmentsCollectionViewTableViewCell.swift in Sources */,
+				C47E0B4F225607C500772A0C /* CourseViewController.swift in Sources */,
 				C4DB74122253E69A00C97FDD /* HomeViewModel.swift in Sources */,
 				C4CF6D6A2254AC2F005D3F38 /* CourseCollectionViewCell.swift in Sources */,
 				C47E0B472255F35500772A0C /* DepartmentIntroductionTableViewCell.swift in Sources */,

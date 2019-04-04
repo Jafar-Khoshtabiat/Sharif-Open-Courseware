@@ -273,11 +273,27 @@
                         <outlet property="teachersLabel" destination="16s-Pi-2x1" id="cnQ-5O-RPq"/>
                         <outlet property="topBarView" destination="1VD-Py-Ywe" id="ZI1-OL-3z7"/>
                         <segue destination="C4B-d6-pZO" kind="presentation" identifier="department" id="vuu-tr-cnr"/>
+                        <segue destination="PPW-jv-MJ1" kind="presentation" id="AwU-fd-KhQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-506.39999999999998" y="88.605697151424295"/>
+        </scene>
+        <!--Course View Controller-->
+        <scene sceneID="Ij1-hN-jX4">
+            <objects>
+                <viewController id="PPW-jv-MJ1" customClass="CourseViewController" customModule="Sharif_Open_Courseware" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uS0-wP-5Lw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="r1U-1b-9Ic"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iWp-hE-Udb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="393" y="-160"/>
         </scene>
         <!--Department View Controller-->
         <scene sceneID="gFE-2o-HGB">
@@ -383,7 +399,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vB3-8l-BW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="311" y="89"/>
+            <point key="canvasLocation" x="393" y="580"/>
         </scene>
     </scenes>
     <resources>
