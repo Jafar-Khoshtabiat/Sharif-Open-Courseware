@@ -20,6 +20,9 @@
         <array key="IRANSans_Light.ttf">
             <string>IRANSans-Light</string>
         </array>
+        <array key="IRANSans_Medium.ttf">
+            <string>IRANSans-Medium</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Home View Controller-->
@@ -283,7 +286,44 @@
                     <view key="view" contentMode="scaleToFill" id="zDK-JO-5dr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmm-NJ-VaC" userLabel="topBarView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9w-3Q-qqP" userLabel="closeButton">
+                                        <rect key="frame" x="16" y="32" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="g9w-3Q-qqP" secondAttribute="height" multiplier="1:1" id="Cre-Vu-Uha"/>
+                                            <constraint firstAttribute="height" constant="24" id="g68-IR-bHe"/>
+                                        </constraints>
+                                        <state key="normal" image="angle-down"/>
+                                        <connections>
+                                            <action selector="closeButtonTouchUpInside:" destination="C4B-d6-pZO" eventType="touchUpInside" id="hAF-59-yc2"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="دانشکده مهندسی کامپیوتر" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEd-cB-Wzp">
+                                        <rect key="frame" x="94" y="29.5" width="187" height="29"/>
+                                        <fontDescription key="fontDescription" name="IRANSans-Medium" family="IRANSans" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="blackTwo"/>
+                                <constraints>
+                                    <constraint firstItem="g9w-3Q-qqP" firstAttribute="leading" secondItem="pmm-NJ-VaC" secondAttribute="leading" constant="16" id="1wc-qz-TcG"/>
+                                    <constraint firstAttribute="height" constant="64" id="5A3-OJ-yNq"/>
+                                    <constraint firstItem="dEd-cB-Wzp" firstAttribute="centerY" secondItem="g9w-3Q-qqP" secondAttribute="centerY" id="BKT-Fh-JQl"/>
+                                    <constraint firstAttribute="bottom" secondItem="g9w-3Q-qqP" secondAttribute="bottom" constant="8" id="LCj-PU-m90"/>
+                                    <constraint firstItem="dEd-cB-Wzp" firstAttribute="centerX" secondItem="pmm-NJ-VaC" secondAttribute="centerX" id="dMo-ll-WRV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pmm-NJ-VaC" firstAttribute="top" secondItem="i0M-4U-zjH" secondAttribute="top" constant="-20" id="6Vn-A4-gFS"/>
+                            <constraint firstItem="i0M-4U-zjH" firstAttribute="trailing" secondItem="pmm-NJ-VaC" secondAttribute="trailing" id="Q5p-sD-FJH"/>
+                            <constraint firstItem="pmm-NJ-VaC" firstAttribute="centerX" secondItem="i0M-4U-zjH" secondAttribute="centerX" id="rL2-CS-s9q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="i0M-4U-zjH"/>
                     </view>
                 </viewController>
@@ -298,6 +338,9 @@
         <image name="graduation-hat_grey" width="26" height="26"/>
         <image name="heart_grey" width="26" height="26"/>
         <image name="search" width="16" height="16"/>
+        <namedColor name="blackTwo">
+            <color red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="blueGreyTwo">
             <color red="0.4823529411764706" green="0.50588235294117645" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

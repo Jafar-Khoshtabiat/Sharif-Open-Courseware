@@ -9,7 +9,11 @@
 import UIKit
 
 class DepartmentViewController: UIViewController {
-
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -23,4 +27,8 @@ class DepartmentViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func closeButtonTouchUpInside(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
