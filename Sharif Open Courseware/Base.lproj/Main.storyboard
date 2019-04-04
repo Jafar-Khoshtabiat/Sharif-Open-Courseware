@@ -443,10 +443,42 @@
                                 <rect key="frame" x="0.0" y="244" width="375" height="423"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBY-wb-XlR" userLabel="addCourseView">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FAm-r4-BJF" userLabel="rounedView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K0W-Ta-f3Y">
+                                                <rect key="frame" x="266" y="13" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="IZO-Y1-xF3"/>
+                                                    <constraint firstAttribute="width" secondItem="K0W-Ta-f3Y" secondAttribute="height" multiplier="1:1" id="RN6-Nd-rge"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="K0W-Ta-f3Y" secondAttribute="trailing" constant="85" id="Oxc-yU-BGJ"/>
+                                            <constraint firstItem="K0W-Ta-f3Y" firstAttribute="centerY" secondItem="FAm-r4-BJF" secondAttribute="centerY" id="eLr-ew-qFC"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="FAm-r4-BJF" firstAttribute="height" secondItem="bBY-wb-XlR" secondAttribute="height" id="5YI-nb-za9"/>
+                                    <constraint firstItem="FAm-r4-BJF" firstAttribute="centerY" secondItem="bBY-wb-XlR" secondAttribute="centerY" id="B0Q-JE-fdQ"/>
+                                    <constraint firstItem="FAm-r4-BJF" firstAttribute="width" secondItem="bBY-wb-XlR" secondAttribute="width" id="D3h-fF-X8E"/>
+                                    <constraint firstAttribute="height" constant="50" id="QSc-nE-9gN"/>
+                                    <constraint firstItem="FAm-r4-BJF" firstAttribute="centerX" secondItem="bBY-wb-XlR" secondAttribute="centerX" id="ryG-eZ-qR7"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="r1U-1b-9Ic" firstAttribute="trailing" secondItem="bBY-wb-XlR" secondAttribute="trailing" id="0YX-81-7Kk"/>
                             <constraint firstItem="r1U-1b-9Ic" firstAttribute="trailing" secondItem="HIY-hl-yr4" secondAttribute="trailing" id="2LU-ng-ahH"/>
+                            <constraint firstItem="r1U-1b-9Ic" firstAttribute="bottom" secondItem="bBY-wb-XlR" secondAttribute="bottom" id="2Mh-IS-adT"/>
                             <constraint firstItem="If2-3a-P1E" firstAttribute="centerX" secondItem="r1U-1b-9Ic" secondAttribute="centerX" id="9Jm-LI-ojo"/>
                             <constraint firstItem="r1U-1b-9Ic" firstAttribute="bottom" secondItem="HIY-hl-yr4" secondAttribute="bottom" id="ATV-wm-Y8W"/>
                             <constraint firstItem="cIC-jZ-LLD" firstAttribute="centerX" secondItem="r1U-1b-9Ic" secondAttribute="centerX" id="AbM-Yz-4PW"/>
@@ -457,6 +489,7 @@
                             <constraint firstItem="r1U-1b-9Ic" firstAttribute="trailing" secondItem="kHa-b0-7H8" secondAttribute="trailing" id="jyH-jE-0Cz"/>
                             <constraint firstItem="kHa-b0-7H8" firstAttribute="centerX" secondItem="r1U-1b-9Ic" secondAttribute="centerX" id="mS8-na-Vbh"/>
                             <constraint firstItem="If2-3a-P1E" firstAttribute="top" secondItem="r1U-1b-9Ic" secondAttribute="top" constant="176" id="nGu-6D-tSu"/>
+                            <constraint firstItem="bBY-wb-XlR" firstAttribute="centerX" secondItem="r1U-1b-9Ic" secondAttribute="centerX" id="pwt-Bj-3Gt"/>
                             <constraint firstItem="r1U-1b-9Ic" firstAttribute="trailing" secondItem="If2-3a-P1E" secondAttribute="trailing" id="qPK-0f-GAT"/>
                             <constraint firstItem="HIY-hl-yr4" firstAttribute="top" secondItem="If2-3a-P1E" secondAttribute="bottom" id="tap-fA-zfS"/>
                         </constraints>
