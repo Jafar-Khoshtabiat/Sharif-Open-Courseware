@@ -146,6 +146,20 @@ class HomeViewController: UIViewController {
         self.homeViewModel = HomeViewModel(vc: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let viewModel = self.homeViewModel else {
+            fatalError("cannot access HomeViewModel object")
+        }
+        
+        switch segue.identifier {
+        case "department":
+            let vc = segue.destination as! DepartmentViewController
+            vc.departmentViewModel = viewModel.departmentViewModelFactory()
+        default:
+            fatalError("should not reach here")
+        }
+    }
+    
     @IBAction func coursesButtonTouchUpInside(_ sender: UIButton) {
         guard let viewModel = self.homeViewModel else {
             fatalError("cannot access HomeViewModel object")

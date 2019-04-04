@@ -42,4 +42,8 @@ class HomeViewModel {
             fatalError("should not reach here")
         }
     }
+    
+    func departmentViewModelFactory() -> DepartmentViewModel {
+        return DepartmentViewModel()
+    }
 }

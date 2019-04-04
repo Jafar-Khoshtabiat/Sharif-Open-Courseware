@@ -290,6 +290,46 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmm-NJ-VaC" userLabel="topBarView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="دانشکده مهندسی کامپیوتر" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEd-cB-Wzp">
+                                        <rect key="frame" x="94" y="29.5" width="187" height="29"/>
+                                        <fontDescription key="fontDescription" name="IRANSans-Medium" family="IRANSans" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5XD-HH-sZR" userLabel="topImageContainerView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="196"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t_c_2" translatesAutoresizingMaskIntoConstraints="NO" id="eOI-Cw-4au" userLabel="topImageView">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="196"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="دانشکده مهندسی کامپیوتر" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATZ-gx-hOe" userLabel="departmentTitleLabel">
+                                                <rect key="frame" x="16" y="130.5" width="344" height="28.5"/>
+                                                <fontDescription key="fontDescription" name="IRANSans-Medium" family="IRANSans" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تعداد دوره‌ها" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gC0-1y-Viv" userLabel="coursesCountLabel">
+                                                <rect key="frame" x="16" y="159" width="344" height="19"/>
+                                                <fontDescription key="fontDescription" name="IRANSans-Light" family="IRANSans" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="ATZ-gx-hOe" firstAttribute="trailing" secondItem="gC0-1y-Viv" secondAttribute="trailing" id="3BB-Vz-4W3"/>
+                                            <constraint firstItem="gC0-1y-Viv" firstAttribute="top" secondItem="ATZ-gx-hOe" secondAttribute="bottom" id="EDq-8k-PCX"/>
+                                            <constraint firstItem="eOI-Cw-4au" firstAttribute="height" secondItem="5XD-HH-sZR" secondAttribute="height" id="JNK-em-9t6"/>
+                                            <constraint firstAttribute="bottom" secondItem="gC0-1y-Viv" secondAttribute="bottom" constant="18" id="JU0-CG-xwt"/>
+                                            <constraint firstItem="gC0-1y-Viv" firstAttribute="leading" secondItem="ATZ-gx-hOe" secondAttribute="leading" id="KBd-i2-6qE"/>
+                                            <constraint firstAttribute="trailing" secondItem="gC0-1y-Viv" secondAttribute="trailing" constant="15" id="Oic-Qv-rCJ"/>
+                                            <constraint firstAttribute="height" constant="196" id="Wts-OZ-4du"/>
+                                            <constraint firstItem="ATZ-gx-hOe" firstAttribute="leading" secondItem="5XD-HH-sZR" secondAttribute="leading" constant="16" id="d8B-u3-hVr"/>
+                                            <constraint firstItem="eOI-Cw-4au" firstAttribute="width" secondItem="5XD-HH-sZR" secondAttribute="width" id="h3h-wf-lPW"/>
+                                            <constraint firstItem="eOI-Cw-4au" firstAttribute="centerY" secondItem="5XD-HH-sZR" secondAttribute="centerY" id="hcg-F7-7VA"/>
+                                            <constraint firstItem="eOI-Cw-4au" firstAttribute="centerX" secondItem="5XD-HH-sZR" secondAttribute="centerX" id="roW-ti-QMt"/>
+                                        </constraints>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9w-3Q-qqP" userLabel="closeButton">
                                         <rect key="frame" x="16" y="32" width="24" height="24"/>
                                         <constraints>
@@ -301,12 +341,6 @@
                                             <action selector="closeButtonTouchUpInside:" destination="C4B-d6-pZO" eventType="touchUpInside" id="hAF-59-yc2"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="دانشکده مهندسی کامپیوتر" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEd-cB-Wzp">
-                                        <rect key="frame" x="94" y="29.5" width="187" height="29"/>
-                                        <fontDescription key="fontDescription" name="IRANSans-Medium" family="IRANSans" pointSize="18"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" name="blackTwo"/>
                                 <constraints>
@@ -317,15 +351,35 @@
                                     <constraint firstItem="dEd-cB-Wzp" firstAttribute="centerX" secondItem="pmm-NJ-VaC" secondAttribute="centerX" id="dMo-ll-WRV"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GVc-df-vTf">
+                                <rect key="frame" x="0.0" y="196" width="375" height="471"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pmm-NJ-VaC" firstAttribute="top" secondItem="i0M-4U-zjH" secondAttribute="top" constant="-20" id="6Vn-A4-gFS"/>
+                            <constraint firstItem="i0M-4U-zjH" firstAttribute="trailing" secondItem="GVc-df-vTf" secondAttribute="trailing" id="AQ0-LR-Sg4"/>
+                            <constraint firstItem="GVc-df-vTf" firstAttribute="centerX" secondItem="i0M-4U-zjH" secondAttribute="centerX" id="F2m-ZP-mzt"/>
+                            <constraint firstItem="5XD-HH-sZR" firstAttribute="centerX" secondItem="i0M-4U-zjH" secondAttribute="centerX" id="Fb0-lx-7b5"/>
+                            <constraint firstItem="5XD-HH-sZR" firstAttribute="top" secondItem="i0M-4U-zjH" secondAttribute="top" constant="-20" id="N8z-6k-b77"/>
                             <constraint firstItem="i0M-4U-zjH" firstAttribute="trailing" secondItem="pmm-NJ-VaC" secondAttribute="trailing" id="Q5p-sD-FJH"/>
+                            <constraint firstItem="i0M-4U-zjH" firstAttribute="bottom" secondItem="GVc-df-vTf" secondAttribute="bottom" id="g1Y-m8-Utj"/>
+                            <constraint firstItem="i0M-4U-zjH" firstAttribute="trailing" secondItem="5XD-HH-sZR" secondAttribute="trailing" id="jXd-1A-nKk"/>
                             <constraint firstItem="pmm-NJ-VaC" firstAttribute="centerX" secondItem="i0M-4U-zjH" secondAttribute="centerX" id="rL2-CS-s9q"/>
+                            <constraint firstItem="GVc-df-vTf" firstAttribute="top" secondItem="i0M-4U-zjH" secondAttribute="top" constant="176" id="rvd-Wt-lKE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="i0M-4U-zjH"/>
                     </view>
+                    <connections>
+                        <outlet property="coursesCountLabel" destination="gC0-1y-Viv" id="9N6-c4-NrR"/>
+                        <outlet property="departmentTitleLabel" destination="ATZ-gx-hOe" id="HYo-Su-JXD"/>
+                        <outlet property="tableView" destination="GVc-df-vTf" id="PjI-9L-nWX"/>
+                        <outlet property="topBarTitleLabel" destination="dEd-cB-Wzp" id="52f-yH-hXH"/>
+                        <outlet property="topBarView" destination="pmm-NJ-VaC" id="VjY-LA-2yh"/>
+                        <outlet property="topImageContainerView" destination="5XD-HH-sZR" id="If3-Th-YC4"/>
+                        <outlet property="topImageView" destination="eOI-Cw-4au" id="opb-IA-7Hq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vB3-8l-BW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -338,6 +392,7 @@
         <image name="graduation-hat_grey" width="26" height="26"/>
         <image name="heart_grey" width="26" height="26"/>
         <image name="search" width="16" height="16"/>
+        <image name="t_c_2" width="427" height="320"/>
         <namedColor name="blackTwo">
             <color red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

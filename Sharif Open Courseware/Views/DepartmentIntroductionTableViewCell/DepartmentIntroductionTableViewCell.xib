@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSans.ttf">
+            <string>IRANSans</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="209" id="KGk-i7-Jjw" customClass="DepartmentIntroductionTableViewCell" customModule="Sharif_Open_Courseware" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="435" height="209"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="435" height="208.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="معرفی دانشکده" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ga-ON-z1b">
+                        <rect key="frame" x="358.5" y="16" width="61.5" height="16"/>
+                        <fontDescription key="fontDescription" name="IRANSans" family="IRANSans" pointSize="10"/>
+                        <color key="textColor" name="blueGreyThree"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZP-tU-XBn">
+                        <rect key="frame" x="15" y="40" width="405" height="121"/>
+                        <mutableString key="text">سامرست و میلز با استفاده از لیست مراجعین کتابخانه، رد مردی به نام جان دوو (اسپیسی) را می‌گیرند که مکرراً کتاب‌های مربوط به گناهان کبیره را به امانت می‌گرفته‌است. وقتی که دوو از نزدیک بودن کارآگاهان به آپارتمانش باخبر می‌شود؛ به روی آن‌ها آتش می‌گشاید و در حالی که میلز او را تعقیب می‌کند؛ متواری می‌شود. در نهایت، دوو دستِ بالا را می‌گیرد و به زور اسلحه، میلز را متوقف می‌کند؛ اما ناگهان فرار کرده و از گرفتن جانِ میلز صرف نظر می‌کند. بررسی آپارتمان دوو، منجر به یافتنِ دست‌نوشته‌هایی از قضاوت‌های نامعقول او و سرنخ‌هایی به سوی یک قربانی بالقوه دیگر می‌شود؛ اما اثر انگشتی یافت نمی‌شود.</mutableString>
+                        <fontDescription key="fontDescription" name="IRANSans" family="IRANSans" pointSize="11"/>
+                        <color key="textColor" name="slate"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="glx-a4-OTX" userLabel="bottomLineView">
+                        <rect key="frame" x="14" y="207.5" width="407" height="1"/>
+                        <color key="backgroundColor" name="veryLightBlue"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="BDZ-J4-kzQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="glx-a4-OTX" secondAttribute="trailing" constant="14" id="3Lg-yk-BYs"/>
+                    <constraint firstAttribute="trailing" secondItem="2Ga-ON-z1b" secondAttribute="trailing" constant="15" id="3e3-5z-8Zo"/>
+                    <constraint firstAttribute="bottom" secondItem="glx-a4-OTX" secondAttribute="bottom" id="XVT-e7-YLp"/>
+                    <constraint firstItem="glx-a4-OTX" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="YCf-26-iZd"/>
+                    <constraint firstItem="2Ga-ON-z1b" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="ZSO-l6-mkA"/>
+                    <constraint firstItem="VZP-tU-XBn" firstAttribute="trailing" secondItem="2Ga-ON-z1b" secondAttribute="trailing" id="f9F-pm-dIl"/>
+                    <constraint firstAttribute="bottom" secondItem="VZP-tU-XBn" secondAttribute="bottom" constant="16" id="fa0-yC-C4c"/>
+                    <constraint firstItem="VZP-tU-XBn" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="ns9-BF-CzV"/>
+                    <constraint firstItem="VZP-tU-XBn" firstAttribute="top" secondItem="2Ga-ON-z1b" secondAttribute="bottom" constant="8" id="uRN-SB-cti"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="186.23188405797103" y="161.71875"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="blueGreyThree">
+            <color red="0.52549019607843139" green="0.54509803921568623" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="slate">
+            <color red="0.24313725490196078" green="0.27058823529411763" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="veryLightBlue">
+            <color red="0.88627450980392153" green="0.90196078431372551" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		35A977498EC26FF0B9DDCEE0 /* Pods_Sharif_Open_Courseware.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F15D11743A0A81AFAE4520F7 /* Pods_Sharif_Open_Courseware.framework */; };
 		C47E0B412255D8AC00772A0C /* DepartmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E0B402255D8AC00772A0C /* DepartmentViewController.swift */; };
+		C47E0B432255EB0200772A0C /* DepartmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E0B422255EB0200772A0C /* DepartmentViewModel.swift */; };
+		C47E0B472255F35500772A0C /* DepartmentIntroductionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E0B452255F35500772A0C /* DepartmentIntroductionTableViewCell.swift */; };
+		C47E0B482255F35500772A0C /* DepartmentIntroductionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C47E0B462255F35500772A0C /* DepartmentIntroductionTableViewCell.xib */; };
+		C47E0B4C2255F75700772A0C /* DepartmentCoursesCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E0B4A2255F75700772A0C /* DepartmentCoursesCollectionTableViewCell.swift */; };
+		C47E0B4D2255F75700772A0C /* DepartmentCoursesCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C47E0B4B2255F75700772A0C /* DepartmentCoursesCollectionTableViewCell.xib */; };
 		C4CF6D662254A2E8005D3F38 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF6D652254A2E8005D3F38 /* Department.swift */; };
 		C4CF6D6A2254AC2F005D3F38 /* CourseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF6D682254AC2F005D3F38 /* CourseCollectionViewCell.swift */; };
 		C4CF6D6B2254AC2F005D3F38 /* CourseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4CF6D692254AC2F005D3F38 /* CourseCollectionViewCell.xib */; };
@@ -66,6 +71,11 @@
 		A7D5A147A6074B6D729A3F75 /* Pods-Sharif Open CoursewareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharif Open CoursewareUITests.release.xcconfig"; path = "Target Support Files/Pods-Sharif Open CoursewareUITests/Pods-Sharif Open CoursewareUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A885CB82800A99FF1180378C /* Pods-Sharif Open CoursewareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharif Open CoursewareTests.debug.xcconfig"; path = "Target Support Files/Pods-Sharif Open CoursewareTests/Pods-Sharif Open CoursewareTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C47E0B402255D8AC00772A0C /* DepartmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentViewController.swift; sourceTree = "<group>"; };
+		C47E0B422255EB0200772A0C /* DepartmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentViewModel.swift; sourceTree = "<group>"; };
+		C47E0B452255F35500772A0C /* DepartmentIntroductionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentIntroductionTableViewCell.swift; sourceTree = "<group>"; };
+		C47E0B462255F35500772A0C /* DepartmentIntroductionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartmentIntroductionTableViewCell.xib; sourceTree = "<group>"; };
+		C47E0B4A2255F75700772A0C /* DepartmentCoursesCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentCoursesCollectionTableViewCell.swift; sourceTree = "<group>"; };
+		C47E0B4B2255F75700772A0C /* DepartmentCoursesCollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartmentCoursesCollectionTableViewCell.xib; sourceTree = "<group>"; };
 		C4CF6D652254A2E8005D3F38 /* Department.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
 		C4CF6D682254AC2F005D3F38 /* CourseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCollectionViewCell.swift; sourceTree = "<group>"; };
 		C4CF6D692254AC2F005D3F38 /* CourseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -157,6 +167,8 @@
 		C428C40D224955FE00186BF5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C47E0B492255F71000772A0C /* DepartmentCoursesCollectionTableViewCell */,
+				C47E0B442255F31500772A0C /* DepartmentIntroductionTableViewCell */,
 				C4CF6D6C2254AC5C005D3F38 /* CoursesCollectionTableViewCell */,
 				C4CF6D672254ABD2005D3F38 /* CourseCollectionViewCell */,
 				C4DB741D2253FCE400C97FDD /* DepartmentCollectionViewCell */,
@@ -166,6 +178,24 @@
 				C47E0B402255D8AC00772A0C /* DepartmentViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C47E0B442255F31500772A0C /* DepartmentIntroductionTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C47E0B452255F35500772A0C /* DepartmentIntroductionTableViewCell.swift */,
+				C47E0B462255F35500772A0C /* DepartmentIntroductionTableViewCell.xib */,
+			);
+			path = DepartmentIntroductionTableViewCell;
+			sourceTree = "<group>";
+		};
+		C47E0B492255F71000772A0C /* DepartmentCoursesCollectionTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C47E0B4A2255F75700772A0C /* DepartmentCoursesCollectionTableViewCell.swift */,
+				C47E0B4B2255F75700772A0C /* DepartmentCoursesCollectionTableViewCell.xib */,
+			);
+			path = DepartmentCoursesCollectionTableViewCell;
 			sourceTree = "<group>";
 		};
 		C4CF6D642254A038005D3F38 /* Model */ = {
@@ -198,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				C4DB74112253E69A00C97FDD /* HomeViewModel.swift */,
+				C47E0B422255EB0200772A0C /* DepartmentViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -401,6 +432,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4DDF9C422431113005930E5 /* IRANSans_UltraLight.ttf in Resources */,
+				C47E0B482255F35500772A0C /* DepartmentIntroductionTableViewCell.xib in Resources */,
+				C47E0B4D2255F75700772A0C /* DepartmentCoursesCollectionTableViewCell.xib in Resources */,
 				C4CF6D702254AC7D005D3F38 /* CoursesCollectionTableViewCell.xib in Resources */,
 				C4E0C2702242CD81008518C3 /* LaunchScreen.storyboard in Resources */,
 				C4DB74162253E8BC00C97FDD /* ItemsHeaderTableViewCell.xib in Resources */,
@@ -540,14 +573,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C47E0B432255EB0200772A0C /* DepartmentViewModel.swift in Sources */,
 				C4CF6D6F2254AC7D005D3F38 /* CoursesCollectionTableViewCell.swift in Sources */,
 				C4DB74202253FD0A00C97FDD /* DepartmentCollectionViewCell.swift in Sources */,
 				C4DB74152253E8BC00C97FDD /* ItemsHeaderTableViewCell.swift in Sources */,
 				C4DDF9C722432007005930E5 /* UIView+Extension.swift in Sources */,
 				C4E0C2682242CD7F008518C3 /* HomeViewController.swift in Sources */,
+				C47E0B4C2255F75700772A0C /* DepartmentCoursesCollectionTableViewCell.swift in Sources */,
 				C4DB741B2253F27600C97FDD /* DepartmentsCollectionViewTableViewCell.swift in Sources */,
 				C4DB74122253E69A00C97FDD /* HomeViewModel.swift in Sources */,
 				C4CF6D6A2254AC2F005D3F38 /* CourseCollectionViewCell.swift in Sources */,
+				C47E0B472255F35500772A0C /* DepartmentIntroductionTableViewCell.swift in Sources */,
 				C4E0C2662242CD7F008518C3 /* AppDelegate.swift in Sources */,
 				C4CF6D662254A2E8005D3F38 /* Department.swift in Sources */,
 				C47E0B412255D8AC00772A0C /* DepartmentViewController.swift in Sources */,
