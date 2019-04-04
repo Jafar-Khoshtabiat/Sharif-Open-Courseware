@@ -10,6 +10,11 @@ import UIKit
 
 class DepartmentViewController: UIViewController {
     
+    enum Tag: Int {
+        case collectionViewTag = 2
+        case tableViewTag = 3
+    }
+    
     @IBOutlet weak var topBarView: UIView!
     @IBOutlet weak var topBarTitleLabel: UILabel!
     @IBOutlet weak var topImageContainerView: UIView!
@@ -18,16 +23,43 @@ class DepartmentViewController: UIViewController {
     @IBOutlet weak var coursesCountLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    var departmentViewModel: DepartmentViewModel?
+    
+    var showTopImage = true {
+        didSet {
+            if self.showTopImage {
+                UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseOut], animations: {
+                    self.topImageContainerView.frame = CGRect(x: 0, y: -20,
+                                                              width: self.topImageContainerView.frame.width,
+                                                              height: self.topImageContainerView.frame.height)
+                    
+                    self.tableView.frame = CGRect(x: 0, y: 176,
+                                                  width: self.tableView.frame.width,
+                                                  height: self.tableView.frame.height)
+                }, completion: nil)
+            } else {
+                UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseOut], animations: {
+                    self.topImageContainerView.frame = CGRect(x: 0, y: -20 - self.topImageContainerView.frame.height,
+                                                              width: self.topImageContainerView.frame.width,
+                                                              height: self.topImageContainerView.frame.height)
+                    
+                    self.tableView.frame = CGRect(x: 0, y: self.topBarView.frame.maxY,
+                                                  width: self.tableView.frame.width,
+                                                  height: self.tableView.frame.height)
+                }, completion: nil)
+            }
+        }
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
-    var departmentViewModel: DepartmentViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.tableView.allowsSelection = false
+        self.tableView.tag = Tag.tableViewTag.rawValue
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
@@ -94,11 +126,23 @@ extension DepartmentViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case (1, 0):
             let cell = tableView.dequeueReusableCell(withIdentifier: "DepartmentCoursesCollectionTableViewCell", for: indexPath) as! DepartmentCoursesCollectionTableViewCell
+            cell.collectionView.tag = Tag.collectionViewTag.rawValue
             cell.collectionView.delegate = self
             cell.collectionView.dataSource = self
             return cell
         default:
             fatalError("should not reach here")
+        }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.tag == Tag.tableViewTag.rawValue {
+            print("tableViewScroll -> \(scrollView.contentOffset)")
+            if scrollView.contentOffset.y > 250 && self.showTopImage {
+                self.showTopImage = false
+            } else if scrollView.contentOffset.y <= 250 && !self.showTopImage {
+                self.showTopImage = true
+            }
         }
     }
 }
