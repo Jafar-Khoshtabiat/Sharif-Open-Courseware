@@ -63,7 +63,6 @@ class CourseViewModel {
         if self.state == .courseVideos {
             self.state = .courseIntro
             self.courseViewController.displayCourseIntro(value: true)
-            self.courseViewController.switchTableView()
         }
     }
     
@@ -71,7 +70,6 @@ class CourseViewModel {
         if self.state == .courseIntro {
             self.state = .courseVideos
             self.courseViewController.displayCourseIntro(value: false)
-            self.courseViewController.switchTableView()
         }
     }
     

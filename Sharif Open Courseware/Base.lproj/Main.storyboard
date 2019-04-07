@@ -443,6 +443,10 @@
                                 <rect key="frame" x="0.0" y="244" width="375" height="423"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OoD-AE-u9s">
+                                <rect key="frame" x="0.0" y="244" width="375" height="423"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBY-wb-XlR" userLabel="addCourseView">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <subviews>
@@ -487,13 +491,17 @@
                             <constraint firstItem="kHa-b0-7H8" firstAttribute="top" secondItem="r1U-1b-9Ic" secondAttribute="top" constant="-20" id="DHH-lv-yFq"/>
                             <constraint firstItem="r1U-1b-9Ic" firstAttribute="trailing" secondItem="cIC-jZ-LLD" secondAttribute="trailing" id="OLo-LM-FHB"/>
                             <constraint firstItem="r1U-1b-9Ic" firstAttribute="top" secondItem="cIC-jZ-LLD" secondAttribute="top" constant="20" id="QMJ-AF-xTo"/>
+                            <constraint firstItem="OoD-AE-u9s" firstAttribute="height" secondItem="HIY-hl-yr4" secondAttribute="height" id="UBT-DI-TT7"/>
                             <constraint firstItem="r1U-1b-9Ic" firstAttribute="top" secondItem="cIC-jZ-LLD" secondAttribute="bottom" priority="900" constant="20" id="ZpX-V9-b1t"/>
+                            <constraint firstItem="OoD-AE-u9s" firstAttribute="width" secondItem="HIY-hl-yr4" secondAttribute="width" id="hAC-QP-3U2"/>
                             <constraint firstItem="r1U-1b-9Ic" firstAttribute="trailing" secondItem="kHa-b0-7H8" secondAttribute="trailing" id="jyH-jE-0Cz"/>
                             <constraint firstItem="kHa-b0-7H8" firstAttribute="centerX" secondItem="r1U-1b-9Ic" secondAttribute="centerX" id="mS8-na-Vbh"/>
                             <constraint firstItem="bBY-wb-XlR" firstAttribute="centerX" secondItem="r1U-1b-9Ic" secondAttribute="centerX" id="pwt-Bj-3Gt"/>
                             <constraint firstItem="r1U-1b-9Ic" firstAttribute="trailing" secondItem="If2-3a-P1E" secondAttribute="trailing" id="qPK-0f-GAT"/>
                             <constraint firstItem="HIY-hl-yr4" firstAttribute="top" secondItem="If2-3a-P1E" secondAttribute="bottom" id="tap-fA-zfS"/>
+                            <constraint firstItem="OoD-AE-u9s" firstAttribute="centerX" secondItem="HIY-hl-yr4" secondAttribute="centerX" id="ttl-Db-w0g"/>
                             <constraint firstItem="If2-3a-P1E" firstAttribute="top" secondItem="cIC-jZ-LLD" secondAttribute="bottom" id="vA6-3T-Odz"/>
+                            <constraint firstItem="OoD-AE-u9s" firstAttribute="centerY" secondItem="HIY-hl-yr4" secondAttribute="centerY" id="w30-VW-zXj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="r1U-1b-9Ic"/>
                     </view>
@@ -503,10 +511,10 @@
                         <outlet property="courseVideosView" destination="kf6-on-vCR" id="6Xc-gi-cMy"/>
                         <outlet property="deleteButton" destination="pqd-wi-gn6" id="GJQ-Q1-Pl3"/>
                         <outlet property="departmentNameLabel" destination="KLS-Ab-hCv" id="nmQ-9M-BB4"/>
+                        <outlet property="introTableView" destination="HIY-hl-yr4" id="TmR-Y2-ILh"/>
                         <outlet property="selectionView" destination="If2-3a-P1E" id="KHq-VL-Ef1"/>
                         <outlet property="selectionViewTopToTopBarViewConstraint" destination="AVO-KJ-ZmY" id="A3y-up-zjf"/>
                         <outlet property="selectionViewTopToTopImageViewConstraint" destination="vA6-3T-Odz" id="T2Z-M6-HNf"/>
-                        <outlet property="tableView" destination="HIY-hl-yr4" id="xlE-87-yVk"/>
                         <outlet property="teacherNameLabel" destination="M9J-RJ-59K" id="597-vC-IcS"/>
                         <outlet property="topBarTitleLabel" destination="F2W-Rs-hc0" id="TA8-Vm-qAD"/>
                         <outlet property="topBarView" destination="kHa-b0-7H8" id="8pH-Aa-8gO"/>
@@ -514,6 +522,7 @@
                         <outlet property="topImageView" destination="Qg2-tt-Hh4" id="u1Q-Di-i3L"/>
                         <outlet property="topImageViewBottomToSafeAreaTopConstraint" destination="ZpX-V9-b1t" id="f2A-9i-Omr"/>
                         <outlet property="topImageViewTopToSafeAreaTopConstraint" destination="QMJ-AF-xTo" id="5Ch-5p-oUE"/>
+                        <outlet property="videosTableView" destination="OoD-AE-u9s" id="lNo-1Z-h9L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWp-hE-Udb" userLabel="First Responder" sceneMemberID="firstResponder"/>

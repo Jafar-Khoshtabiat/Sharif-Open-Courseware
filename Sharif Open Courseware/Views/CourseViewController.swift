@@ -9,7 +9,12 @@
 import UIKit
 
 class CourseViewController: UIViewController {
-
+    
+    enum TableViewTag: Int {
+        case introTableViewTag = 200
+        case videosTableViewTag = 300
+    }
+    
     @IBOutlet weak var topBarView: UIView!
     @IBOutlet weak var topBarTitleLabel: UILabel!
     @IBOutlet weak var topImageContainerView: UIView!
@@ -21,7 +26,8 @@ class CourseViewController: UIViewController {
     @IBOutlet weak var selectionView: UIView!
     @IBOutlet weak var courseIntroView: UIView!
     @IBOutlet weak var courseVideosView: UIView!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var introTableView: UITableView!
+    @IBOutlet weak var videosTableView: UITableView!
     
     @IBOutlet weak var selectionViewTopToTopImageViewConstraint: NSLayoutConstraint!
     @IBOutlet weak var selectionViewTopToTopBarViewConstraint: NSLayoutConstraint!
@@ -66,13 +72,14 @@ class CourseViewController: UIViewController {
         
         viewModel.viewDidLoad()
         
-        self.tableView.allowsSelection = false
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+        self.introTableView.allowsSelection = false
+        self.introTableView.tag = TableViewTag.introTableViewTag.rawValue
+        self.introTableView.delegate = self
+        self.introTableView.dataSource = self
         
-        self.tableView.register(UINib(nibName: "DepartmentIntroductionTableViewCell", bundle: nil), forCellReuseIdentifier: "DepartmentIntroductionTableViewCell")
-        self.tableView.register(UINib(nibName: "TeacherIntroForCourseTableViewCell", bundle: nil), forCellReuseIdentifier: "TeacherIntroForCourseTableViewCell")
-        self.tableView.register(UINib(nibName: "DepartmentCoursesCollectionTableViewCell", bundle: nil), forCellReuseIdentifier: "DepartmentCoursesCollectionTableViewCell")
+        self.introTableView.register(UINib(nibName: "DepartmentIntroductionTableViewCell", bundle: nil), forCellReuseIdentifier: "DepartmentIntroductionTableViewCell")
+        self.introTableView.register(UINib(nibName: "TeacherIntroForCourseTableViewCell", bundle: nil), forCellReuseIdentifier: "TeacherIntroForCourseTableViewCell")
+        self.introTableView.register(UINib(nibName: "DepartmentCoursesCollectionTableViewCell", bundle: nil), forCellReuseIdentifier: "DepartmentCoursesCollectionTableViewCell")
         
         self.selectionViewTopToTopImageViewConstraint.priority = .defaultHigh
         self.selectionViewTopToTopBarViewConstraint.priority = .defaultLow
@@ -83,15 +90,15 @@ class CourseViewController: UIViewController {
     func displayCourseIntro(value: Bool) {
         if value {
             self.courseIntroView.isHidden = false
+            self.introTableView.isHidden = false
             self.courseVideosView.isHidden = true
+            self.videosTableView.isHidden = true
         } else {
             self.courseIntroView.isHidden = true
+            self.introTableView.isHidden = true
             self.courseVideosView.isHidden = false
+            self.videosTableView.isHidden = false
         }
-    }
-    
-    func switchTableView() {
-        self.tableView.reloadData()
     }
     
     /*
