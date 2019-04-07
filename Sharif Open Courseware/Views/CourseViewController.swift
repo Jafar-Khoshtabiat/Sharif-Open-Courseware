@@ -22,7 +22,6 @@ class CourseViewController: UIViewController {
     @IBOutlet weak var courseIntroView: UIView!
     @IBOutlet weak var courseVideosView: UIView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
     
     var courseViewModel: CourseViewModel?
     

@@ -503,7 +503,6 @@
                         <outlet property="departmentNameLabel" destination="KLS-Ab-hCv" id="nmQ-9M-BB4"/>
                         <outlet property="selectionView" destination="If2-3a-P1E" id="KHq-VL-Ef1"/>
                         <outlet property="tableView" destination="HIY-hl-yr4" id="xlE-87-yVk"/>
-                        <outlet property="tableViewTopConstraint" destination="tap-fA-zfS" id="PkJ-ik-cbR"/>
                         <outlet property="teacherNameLabel" destination="M9J-RJ-59K" id="597-vC-IcS"/>
                         <outlet property="topBarTitleLabel" destination="F2W-Rs-hc0" id="TA8-Vm-qAD"/>
                         <outlet property="topBarView" destination="kHa-b0-7H8" id="8pH-Aa-8gO"/>
