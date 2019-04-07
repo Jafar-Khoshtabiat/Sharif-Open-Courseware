@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		35A977498EC26FF0B9DDCEE0 /* Pods_Sharif_Open_Courseware.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F15D11743A0A81AFAE4520F7 /* Pods_Sharif_Open_Courseware.framework */; };
+		C42D9A0A225A5DCF0064B70F /* CourseVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9A08225A5DCF0064B70F /* CourseVideoTableViewCell.swift */; };
+		C42D9A0B225A5DCF0064B70F /* CourseVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C42D9A09225A5DCF0064B70F /* CourseVideoTableViewCell.xib */; };
 		C47E0B412255D8AC00772A0C /* DepartmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E0B402255D8AC00772A0C /* DepartmentViewController.swift */; };
 		C47E0B432255EB0200772A0C /* DepartmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E0B422255EB0200772A0C /* DepartmentViewModel.swift */; };
 		C47E0B472255F35500772A0C /* DepartmentIntroductionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E0B452255F35500772A0C /* DepartmentIntroductionTableViewCell.swift */; };
@@ -74,6 +76,8 @@
 		A18889C70759A3BC0FDB56F0 /* Pods_Sharif_Open_CoursewareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sharif_Open_CoursewareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D5A147A6074B6D729A3F75 /* Pods-Sharif Open CoursewareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharif Open CoursewareUITests.release.xcconfig"; path = "Target Support Files/Pods-Sharif Open CoursewareUITests/Pods-Sharif Open CoursewareUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A885CB82800A99FF1180378C /* Pods-Sharif Open CoursewareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharif Open CoursewareTests.debug.xcconfig"; path = "Target Support Files/Pods-Sharif Open CoursewareTests/Pods-Sharif Open CoursewareTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C42D9A08225A5DCF0064B70F /* CourseVideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseVideoTableViewCell.swift; sourceTree = "<group>"; };
+		C42D9A09225A5DCF0064B70F /* CourseVideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseVideoTableViewCell.xib; sourceTree = "<group>"; };
 		C47E0B402255D8AC00772A0C /* DepartmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentViewController.swift; sourceTree = "<group>"; };
 		C47E0B422255EB0200772A0C /* DepartmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentViewModel.swift; sourceTree = "<group>"; };
 		C47E0B452255F35500772A0C /* DepartmentIntroductionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentIntroductionTableViewCell.swift; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 		C428C40D224955FE00186BF5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C42D9A07225A5DA40064B70F /* CourseVideoTableViewCell */,
 				C47E0B52225665B300772A0C /* TeacherIntroForCourseTableViewCell */,
 				C47E0B492255F71000772A0C /* DepartmentCoursesCollectionTableViewCell */,
 				C47E0B442255F31500772A0C /* DepartmentIntroductionTableViewCell */,
@@ -188,6 +193,15 @@
 				C47E0B4E225607C500772A0C /* CourseViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C42D9A07225A5DA40064B70F /* CourseVideoTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C42D9A08225A5DCF0064B70F /* CourseVideoTableViewCell.swift */,
+				C42D9A09225A5DCF0064B70F /* CourseVideoTableViewCell.xib */,
+			);
+			path = CourseVideoTableViewCell;
 			sourceTree = "<group>";
 		};
 		C47E0B442255F31500772A0C /* DepartmentIntroductionTableViewCell */ = {
@@ -469,6 +483,7 @@
 				C4DDF9C122431113005930E5 /* IRANSans.ttf in Resources */,
 				C4DB74212253FD0A00C97FDD /* DepartmentCollectionViewCell.xib in Resources */,
 				C4CF6D6B2254AC2F005D3F38 /* CourseCollectionViewCell.xib in Resources */,
+				C42D9A0B225A5DCF0064B70F /* CourseVideoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +623,7 @@
 				C47E0B552256660700772A0C /* TeacherIntroForCourseTableViewCell.swift in Sources */,
 				C47E0B472255F35500772A0C /* DepartmentIntroductionTableViewCell.swift in Sources */,
 				C4E0C2662242CD7F008518C3 /* AppDelegate.swift in Sources */,
+				C42D9A0A225A5DCF0064B70F /* CourseVideoTableViewCell.swift in Sources */,
 				C47E0B512256334600772A0C /* CourseViewModel.swift in Sources */,
 				C4CF6D662254A2E8005D3F38 /* Department.swift in Sources */,
 				C47E0B412255D8AC00772A0C /* DepartmentViewController.swift in Sources */,
