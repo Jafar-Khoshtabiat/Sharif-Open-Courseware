@@ -443,7 +443,7 @@
                                 <rect key="frame" x="0.0" y="244" width="375" height="423"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBY-wb-XlR" userLabel="addCourseView">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBY-wb-XlR" userLabel="addCourseView">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FAm-r4-BJF" userLabel="rounedView">
@@ -501,9 +501,12 @@
                         <outlet property="courseVideosView" destination="kf6-on-vCR" id="6Xc-gi-cMy"/>
                         <outlet property="deleteButton" destination="pqd-wi-gn6" id="GJQ-Q1-Pl3"/>
                         <outlet property="departmentNameLabel" destination="KLS-Ab-hCv" id="nmQ-9M-BB4"/>
+                        <outlet property="selectionView" destination="If2-3a-P1E" id="KHq-VL-Ef1"/>
                         <outlet property="tableView" destination="HIY-hl-yr4" id="xlE-87-yVk"/>
+                        <outlet property="tableViewTopConstraint" destination="tap-fA-zfS" id="PkJ-ik-cbR"/>
                         <outlet property="teacherNameLabel" destination="M9J-RJ-59K" id="597-vC-IcS"/>
                         <outlet property="topBarTitleLabel" destination="F2W-Rs-hc0" id="TA8-Vm-qAD"/>
+                        <outlet property="topBarView" destination="kHa-b0-7H8" id="8pH-Aa-8gO"/>
                         <outlet property="topImageContainerView" destination="cIC-jZ-LLD" id="mv0-3f-uNe"/>
                         <outlet property="topImageView" destination="Qg2-tt-Hh4" id="u1Q-Di-i3L"/>
                     </connections>

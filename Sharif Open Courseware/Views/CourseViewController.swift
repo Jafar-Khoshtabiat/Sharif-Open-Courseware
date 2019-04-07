@@ -10,6 +10,7 @@ import UIKit
 
 class CourseViewController: UIViewController {
 
+    @IBOutlet weak var topBarView: UIView!
     @IBOutlet weak var topBarTitleLabel: UILabel!
     @IBOutlet weak var topImageContainerView: UIView!
     @IBOutlet weak var topImageView: UIImageView!
@@ -17,11 +18,56 @@ class CourseViewController: UIViewController {
     @IBOutlet weak var teacherNameLabel: UILabel!
     @IBOutlet weak var departmentNameLabel: UILabel!
     @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var selectionView: UIView!
     @IBOutlet weak var courseIntroView: UIView!
     @IBOutlet weak var courseVideosView: UIView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
     
     var courseViewModel: CourseViewModel?
+    
+    var showTopImage = true {
+        didSet {
+            print("actual height: \(self.tableView.frame.height)")
+            print("self.topBarView.frame.maxY -> \(self.topBarView.frame.maxY)")
+            print("self.topBarView.frame.height -> \(self.topBarView.frame.height)")
+//            print("self.topBarView.frame.height - 20")
+            if self.showTopImage {
+                UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseOut], animations: {
+                    self.topImageContainerView.frame = CGRect(x: 0, y: 0,
+                                                              width: self.topImageContainerView.frame.width,
+                                                              height: self.topImageContainerView.frame.height)
+                    
+                    self.selectionView.frame = CGRect(x: 0, y: self.topImageView.frame.height,
+                                                  width: self.selectionView.frame.width,
+                                                  height: self.selectionView.frame.height)
+                    
+                    self.tableView.frame = CGRect(x: 0, y: self.topImageView.frame.height + self.selectionView.frame.height,
+                                                  width: self.tableView.frame.width,
+                                                  height: self.tableView.frame.height - (self.topImageView.frame.height - self.topBarView.frame.height))
+                }, completion: { (finished) in
+                    print(self.tableView.frame.height)
+                })
+            } else {
+                UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseOut], animations: {
+                    self.topImageContainerView.frame = CGRect(x: 0, y: -20 - self.topImageContainerView.frame.height,
+                                                              width: self.topImageContainerView.frame.width,
+                                                              height: self.topImageContainerView.frame.height)
+                    
+                    self.selectionView.frame = CGRect(x: 0, y: self.topBarView.frame.height,
+                                                  width: self.selectionView.frame.width,
+                                                  height: self.selectionView.frame.height)
+                    
+                    self.tableView.frame = CGRect(x: 0, y: self.topBarView.frame.height + self.selectionView.frame.height,
+                                                  width: self.tableView.frame.width,
+                                                  height: self.tableView.frame.height + (self.topImageView.frame.height - self.topBarView.frame.height))
+                }, completion: { (finished) in
+                    print(self.tableView.frame.height)
+                    print("self.selectionView.frame.minY -> \(self.selectionView.frame.minY)")
+                })
+            }
+        }
+    }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -53,6 +99,10 @@ class CourseViewController: UIViewController {
             self.courseIntroView.isHidden = true
             self.courseVideosView.isHidden = false
         }
+    }
+    
+    func reload() {
+        self.tableView.reloadData()
     }
     
     /*
@@ -156,6 +206,18 @@ extension CourseViewController: UITableViewDelegate, UITableViewDataSource {
             // MARK: TODO
             return UITableViewCell()
         }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        if scrollView.tag == Tag.tableViewTag.rawValue {
+            if scrollView.contentOffset.y > 250 && self.showTopImage {
+                print("tableViewScroll -> \(scrollView.contentOffset)")
+                self.showTopImage = false
+            } else if scrollView.contentOffset.y <= 250 && !self.showTopImage {
+                print("tableViewScroll -> \(scrollView.contentOffset)")
+                self.showTopImage = true
+            }
+//        }
     }
 }
 
