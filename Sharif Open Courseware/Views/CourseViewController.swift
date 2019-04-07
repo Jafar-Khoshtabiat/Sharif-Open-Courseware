@@ -33,55 +33,22 @@ class CourseViewController: UIViewController {
     
     var showTopImage = true {
         didSet {
-//            print("actual height: \(self.tableView.frame.height)")
-//            print("self.topBarView.frame.maxY -> \(self.topBarView.frame.maxY)")
-//            print("self.topBarView.frame.height -> \(self.topBarView.frame.height)")
-//            print("self.topBarView.frame.height - 20")
             if self.showTopImage {
                 UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseOut], animations: {
-//                    self.topImageContainerView.frame = CGRect(x: 0, y: 0,
-//                                                              width: self.topImageContainerView.frame.width,
-//                                                              height: self.topImageContainerView.frame.height)
-//
-//                    self.selectionView.frame = CGRect(x: 0, y: self.topImageView.frame.height,
-//                                                  width: self.selectionView.frame.width,
-//                                                  height: self.selectionView.frame.height)
-//
-//                    self.tableView.frame = CGRect(x: 0, y: self.topImageView.frame.height + self.selectionView.frame.height,
-//                                                  width: self.tableView.frame.width,
-//                                                  height: self.tableView.frame.height - (self.topImageView.frame.height - self.topBarView.frame.height))
-                    
                     self.selectionViewTopToTopImageViewConstraint.priority = .defaultHigh
                     self.selectionViewTopToTopBarViewConstraint.priority = .defaultLow
                     self.topImageViewTopToSafeAreaTopConstraint.priority = .defaultHigh
                     self.topImageViewBottomToSafeAreaTopConstraint.priority = .defaultLow
                     self.view.layoutIfNeeded()
-                }, completion: { (finished) in
-//                    print(self.tableView.frame.height)
-                })
+                }, completion: nil)
             } else {
                 UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseOut], animations: {
-//                    self.topImageContainerView.frame = CGRect(x: 0, y: -20 - self.topImageContainerView.frame.height,
-//                                                              width: self.topImageContainerView.frame.width,
-//                                                              height: self.topImageContainerView.frame.height)
-//
-//                    self.selectionView.frame = CGRect(x: 0, y: self.topBarView.frame.height,
-//                                                  width: self.selectionView.frame.width,
-//                                                  height: self.selectionView.frame.height)
-//
-//                    self.tableView.frame = CGRect(x: 0, y: self.topBarView.frame.height + self.selectionView.frame.height,
-//                                                  width: self.tableView.frame.width,
-//                                                  height: self.tableView.frame.height + (self.topImageView.frame.height - self.topBarView.frame.height))
-                    
                     self.selectionViewTopToTopBarViewConstraint.priority = .defaultHigh
                     self.selectionViewTopToTopImageViewConstraint.priority = .defaultLow
                     self.topImageViewBottomToSafeAreaTopConstraint.priority = .defaultHigh
                     self.topImageViewTopToSafeAreaTopConstraint.priority = .defaultLow
                     self.view.layoutIfNeeded()
-                }, completion: { (finished) in
-//                    print(self.tableView.frame.height)
-//                    print("self.selectionView.frame.minY -> \(self.selectionView.frame.minY)")
-                })
+                }, completion: nil)
             }
         }
     }
