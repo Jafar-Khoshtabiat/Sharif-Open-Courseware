@@ -23,29 +23,31 @@ class DepartmentViewController: UIViewController {
     @IBOutlet weak var coursesCountLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var tableViewTopConstraintToTopImageView: NSLayoutConstraint!
+    @IBOutlet weak var tableViewTopConstraintToTopBarView: NSLayoutConstraint!
+    
+    @IBOutlet weak var topImageViewTopConstraintToSafeAreaTop: NSLayoutConstraint!
+    @IBOutlet weak var topImageViewBottomConstraintToSafeAreaTop: NSLayoutConstraint!
+    
     var departmentViewModel: DepartmentViewModel?
     
     var showTopImage = true {
         didSet {
             if self.showTopImage {
                 UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseOut], animations: {
-                    self.topImageContainerView.frame = CGRect(x: 0, y: -20,
-                                                              width: self.topImageContainerView.frame.width,
-                                                              height: self.topImageContainerView.frame.height)
-                    
-                    self.tableView.frame = CGRect(x: 0, y: 176,
-                                                  width: self.tableView.frame.width,
-                                                  height: self.tableView.frame.height)
+                    self.tableViewTopConstraintToTopImageView.priority = .defaultHigh
+                    self.tableViewTopConstraintToTopBarView.priority = .defaultLow
+                    self.topImageViewTopConstraintToSafeAreaTop.priority = .defaultHigh
+                    self.topImageViewBottomConstraintToSafeAreaTop.priority = .defaultLow
+                    self.view.layoutIfNeeded()
                 }, completion: nil)
             } else {
                 UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseOut], animations: {
-                    self.topImageContainerView.frame = CGRect(x: 0, y: -20 - self.topImageContainerView.frame.height,
-                                                              width: self.topImageContainerView.frame.width,
-                                                              height: self.topImageContainerView.frame.height)
-                    
-                    self.tableView.frame = CGRect(x: 0, y: self.topBarView.frame.maxY,
-                                                  width: self.tableView.frame.width,
-                                                  height: self.tableView.frame.height)
+                    self.tableViewTopConstraintToTopImageView.priority = .defaultLow
+                    self.tableViewTopConstraintToTopBarView.priority = .defaultHigh
+                    self.topImageViewTopConstraintToSafeAreaTop.priority = .defaultLow
+                    self.topImageViewBottomConstraintToSafeAreaTop.priority = .defaultHigh
+                    self.view.layoutIfNeeded()
                 }, completion: nil)
             }
         }
@@ -65,6 +67,11 @@ class DepartmentViewController: UIViewController {
         
         self.tableView.register(UINib(nibName: "DepartmentIntroductionTableViewCell", bundle: nil), forCellReuseIdentifier: "DepartmentIntroductionTableViewCell")
         self.tableView.register(UINib(nibName: "DepartmentCoursesCollectionTableViewCell", bundle: nil), forCellReuseIdentifier: "DepartmentCoursesCollectionTableViewCell")
+        
+        self.tableViewTopConstraintToTopImageView.priority = .defaultHigh
+        self.tableViewTopConstraintToTopBarView.priority = .defaultLow
+        self.topImageViewTopConstraintToSafeAreaTop.priority = .defaultHigh
+        self.topImageViewBottomConstraintToSafeAreaTop.priority = .defaultLow
     }
     
     /*
