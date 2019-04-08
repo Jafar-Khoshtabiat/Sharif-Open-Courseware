@@ -23,6 +23,7 @@ class CourseVideoTableViewCell: UITableViewCell {
         self.layer.applySketchShadow(color: UIColor(named: "slate")!, alpha: 0.22, x: 0.0, y: 5.0, blur: 13.0, spread: 0.0)
         
         self.roundedView.layer.cornerRadius = 8
+        self.roundedView.layer.masksToBounds = true
         
         self.seenView.layer.cornerRadius = self.seenView.frame.height / 2
         

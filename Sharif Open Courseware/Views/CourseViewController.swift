@@ -166,7 +166,7 @@ extension CourseViewController: UITableViewDelegate, UITableViewDataSource {
         case TableViewTag.introTableViewTag.rawValue:
             return viewModel.getNumberOfIntroTableViewRowsInSection(section: section)
         case TableViewTag.videosTableViewTag.rawValue:
-            return viewModel.getNumberOfIntroTableViewRowsInSection(section: section)
+            return viewModel.getNumberOfVideosTableViewRowsInSection(section: section)
         default:
             fatalError("should not reach here")
         }
