@@ -27,35 +27,33 @@ class CourseViewModel {
         self.courseViewController.displayCourseIntro(value: self.state == .courseIntro)
     }
     
-    func getNumberOfSections() -> Int {
-        switch self.state {
-        case .courseIntro:
-            return 3
-        case .courseVideos:
+    func getNumberOfIntroTableViewSections() -> Int {
+        return 3
+    }
+    
+    func getNumberOfIntroTableViewRowsInSection(section: Int) -> Int {
+        switch section {
+        case 0:
             return 1
+        case 1:
+            return 1
+        case 2:
+            return 1
+        default:
+            fatalError("should not reach here")
         }
     }
     
-    func getNumberOfRowsInSection(section: Int) -> Int {
-        switch self.state {
-        case .courseIntro:
-            switch section {
-            case 0:
-                return 1
-            case 1:
-                return 1
-            case 2:
-                return 1
-            default:
-                fatalError("should not reach here")
-            }
-        case .courseVideos:
-            switch section {
-            case 0:
-                return 1
-            default:
-                fatalError("should not reach here")
-            }
+    func getNumberOfVideosTableViewSections() -> Int {
+        return 1
+    }
+    
+    func getNumberOfVideosTableViewRowsInSection(section: Int) -> Int {
+        switch section {
+        case 0:
+            return 10
+        default:
+            fatalError("should not reach here")
         }
     }
     

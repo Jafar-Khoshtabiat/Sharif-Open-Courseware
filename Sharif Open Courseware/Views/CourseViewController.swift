@@ -81,6 +81,12 @@ class CourseViewController: UIViewController {
         self.introTableView.register(UINib(nibName: "TeacherIntroForCourseTableViewCell", bundle: nil), forCellReuseIdentifier: "TeacherIntroForCourseTableViewCell")
         self.introTableView.register(UINib(nibName: "DepartmentCoursesCollectionTableViewCell", bundle: nil), forCellReuseIdentifier: "DepartmentCoursesCollectionTableViewCell")
         
+        self.videosTableView.tag = TableViewTag.videosTableViewTag.rawValue
+        self.videosTableView.delegate = self
+        self.videosTableView.dataSource = self
+        
+        self.videosTableView.register(UINib(nibName: "CourseVideoTableViewCell", bundle: nil), forCellReuseIdentifier: "CourseVideoTableViewCell")
+        
         self.selectionViewTopToTopImageViewConstraint.priority = .defaultHigh
         self.selectionViewTopToTopBarViewConstraint.priority = .defaultLow
         self.topImageViewTopToSafeAreaTopConstraint.priority = .defaultHigh
@@ -141,7 +147,14 @@ extension CourseViewController: UITableViewDelegate, UITableViewDataSource {
             fatalError("should not reach here")
         }
         
-        return viewModel.getNumberOfSections()
+        switch tableView.tag {
+        case TableViewTag.introTableViewTag.rawValue:
+            return viewModel.getNumberOfIntroTableViewSections()
+        case TableViewTag.videosTableViewTag.rawValue:
+            return viewModel.getNumberOfVideosTableViewSections()
+        default:
+            fatalError("should not reach here")
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -149,7 +162,14 @@ extension CourseViewController: UITableViewDelegate, UITableViewDataSource {
             fatalError("should not reach here")
         }
         
-        return viewModel.getNumberOfRowsInSection(section: section)
+        switch tableView.tag {
+        case TableViewTag.introTableViewTag.rawValue:
+            return viewModel.getNumberOfIntroTableViewRowsInSection(section: section)
+        case TableViewTag.videosTableViewTag.rawValue:
+            return viewModel.getNumberOfIntroTableViewRowsInSection(section: section)
+        default:
+            fatalError("should not reach here")
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -157,8 +177,8 @@ extension CourseViewController: UITableViewDelegate, UITableViewDataSource {
             fatalError("should not reach here")
         }
         
-        switch viewModel.getState() {
-        case .courseIntro:
+        switch tableView.tag {
+        case TableViewTag.introTableViewTag.rawValue:
             switch (indexPath.section, indexPath.row) {
             case (0, 0):
                 return UITableView.automaticDimension
@@ -169,9 +189,17 @@ extension CourseViewController: UITableViewDelegate, UITableViewDataSource {
             default:
                 fatalError("should not reach here")
             }
-        case .courseVideos:
-            // MARK: TODO
-            return UITableView.automaticDimension
+            
+        case TableViewTag.videosTableViewTag.rawValue:
+            switch indexPath.section {
+            case 0:
+                return 75
+            default:
+                fatalError("should not reach here")
+            }
+            
+        default:
+            fatalError("should not reach here")
         }
     }
     
@@ -180,8 +208,8 @@ extension CourseViewController: UITableViewDelegate, UITableViewDataSource {
             fatalError("should not reach here")
         }
         
-        switch viewModel.getState() {
-        case .courseIntro:
+        switch tableView.tag {
+        case TableViewTag.introTableViewTag.rawValue:
             switch (indexPath.section, indexPath.row) {
             case (0, 0):
                 let cell = tableView.dequeueReusableCell(withIdentifier: "DepartmentIntroductionTableViewCell", for: indexPath) as! DepartmentIntroductionTableViewCell
@@ -198,9 +226,18 @@ extension CourseViewController: UITableViewDelegate, UITableViewDataSource {
             default:
                 fatalError("should not reach here")
             }
-        case .courseVideos:
-            // MARK: TODO
-            return UITableViewCell()
+            
+        case TableViewTag.videosTableViewTag.rawValue:
+            switch indexPath.section {
+            case 0:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "CourseVideoTableViewCell", for: indexPath) as! CourseVideoTableViewCell
+                return cell
+            default:
+                fatalError("should not reach here")
+            }
+            
+        default:
+            fatalError("should not reach here")
         }
     }
     

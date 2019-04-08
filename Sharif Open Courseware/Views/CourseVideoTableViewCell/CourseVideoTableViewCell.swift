@@ -10,9 +10,22 @@ import UIKit
 
 class CourseVideoTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var roundedView: UIView!
+    @IBOutlet weak var videoImageView: UIImageView!
+    @IBOutlet weak var sessionNumberLabel: UILabel!
+    @IBOutlet weak var sessionNameLabel: UILabel!
+    @IBOutlet weak var seenView: UIView!
+    @IBOutlet weak var seenImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        self.layer.applySketchShadow(color: UIColor(named: "slate")!, alpha: 0.22, x: 0.0, y: 5.0, blur: 13.0, spread: 0.0)
+        
+        self.roundedView.layer.cornerRadius = 8
+        
+        self.seenView.layer.cornerRadius = self.seenView.frame.height / 2
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -20,5 +33,4 @@ class CourseVideoTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }
