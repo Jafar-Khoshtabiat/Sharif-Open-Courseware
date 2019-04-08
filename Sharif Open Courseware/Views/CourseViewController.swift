@@ -231,6 +231,7 @@ extension CourseViewController: UITableViewDelegate, UITableViewDataSource {
             switch indexPath.section {
             case 0:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "CourseVideoTableViewCell", for: indexPath) as! CourseVideoTableViewCell
+                cell.selectionStyle = .none
                 return cell
             default:
                 fatalError("should not reach here")
