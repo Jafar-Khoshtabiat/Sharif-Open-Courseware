@@ -193,7 +193,7 @@ extension CourseViewController: UITableViewDelegate, UITableViewDataSource {
         case TableViewTag.videosTableViewTag.rawValue:
             switch indexPath.section {
             case 0:
-                return 75
+                return 81
             default:
                 fatalError("should not reach here")
             }

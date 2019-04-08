@@ -10,6 +10,7 @@ import UIKit
 
 class CourseVideoTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var roundedView: UIView!
     @IBOutlet weak var videoImageView: UIImageView!
     @IBOutlet weak var sessionNumberLabel: UILabel!
@@ -20,7 +21,7 @@ class CourseVideoTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.layer.applySketchShadow(color: UIColor(named: "slate")!, alpha: 0.22, x: 0.0, y: 5.0, blur: 13.0, spread: 0.0)
+        self.shadowView.layer.applySketchShadow(color: UIColor(named: "slate")!, alpha: 0.22, x: 0.0, y: 5.0, blur: 13.0, spread: 0.0)
         
         self.roundedView.layer.cornerRadius = 8
         self.roundedView.layer.masksToBounds = true
