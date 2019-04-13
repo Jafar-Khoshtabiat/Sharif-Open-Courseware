@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol HomeViewControllerProtocol {
+    func startLoading()
+    func endLoading()
+}
+
 class HomeViewController: UIViewController {
     
     enum State {
@@ -53,6 +58,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var coursesCollectionTableView: UITableView!
     
     var homeViewModel: HomeViewModel?
+    var loadingView: LoadingView?
     
     var state: State? {
         didSet {
@@ -144,6 +150,12 @@ class HomeViewController: UIViewController {
         self.coursesCollectionTableView.register(UINib(nibName: "CoursesCollectionTableViewCell", bundle: nil), forCellReuseIdentifier: "CoursesCollectionTableViewCell")
         
         self.homeViewModel = HomeViewModel(vc: self)
+        
+        guard let viewModel = self.homeViewModel else {
+            fatalError("this variable can't be nil")
+        }
+        
+        viewModel.sync()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -409,4 +421,16 @@ extension HomeViewController: ItemsHeaderTableViewCellDelegate {
         }
     }
 }
+
+extension HomeViewController: HomeViewControllerProtocol {
+    func startLoading() {
+        self.loadingView = self.showLoadingView()
+    }
+    
+    func endLoading() {
+        self.loadingView?.removeFromSuperview()
+        self.loadingView = nil
+    }
+}
+
 

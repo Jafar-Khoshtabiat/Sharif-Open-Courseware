@@ -25,6 +25,11 @@
 		C4CF6D6B2254AC2F005D3F38 /* CourseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4CF6D692254AC2F005D3F38 /* CourseCollectionViewCell.xib */; };
 		C4CF6D6F2254AC7D005D3F38 /* CoursesCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF6D6D2254AC7D005D3F38 /* CoursesCollectionTableViewCell.swift */; };
 		C4CF6D702254AC7D005D3F38 /* CoursesCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4CF6D6E2254AC7D005D3F38 /* CoursesCollectionTableViewCell.xib */; };
+		C4D97A2722622A5000B8FFCD /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D97A2622622A5000B8FFCD /* Extension+UIViewController.swift */; };
+		C4D97A2922622AA600B8FFCD /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D97A2822622AA600B8FFCD /* LoadingView.swift */; };
+		C4D97A2C22622CCC00B8FFCD /* UserDefaultsUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D97A2B22622CCC00B8FFCD /* UserDefaultsUtility.swift */; };
+		C4D97A3022622EBA00B8FFCD /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D97A2F22622EBA00B8FFCD /* Service.swift */; };
+		C4D97A322262310300B8FFCD /* ServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D97A312262310300B8FFCD /* ServiceController.swift */; };
 		C4DB74122253E69A00C97FDD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB74112253E69A00C97FDD /* HomeViewModel.swift */; };
 		C4DB74152253E8BC00C97FDD /* ItemsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB74132253E8BC00C97FDD /* ItemsHeaderTableViewCell.swift */; };
 		C4DB74162253E8BC00C97FDD /* ItemsHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4DB74142253E8BC00C97FDD /* ItemsHeaderTableViewCell.xib */; };
@@ -93,6 +98,11 @@
 		C4CF6D692254AC2F005D3F38 /* CourseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseCollectionViewCell.xib; sourceTree = "<group>"; };
 		C4CF6D6D2254AC7D005D3F38 /* CoursesCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesCollectionTableViewCell.swift; sourceTree = "<group>"; };
 		C4CF6D6E2254AC7D005D3F38 /* CoursesCollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoursesCollectionTableViewCell.xib; sourceTree = "<group>"; };
+		C4D97A2622622A5000B8FFCD /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
+		C4D97A2822622AA600B8FFCD /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		C4D97A2B22622CCC00B8FFCD /* UserDefaultsUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtility.swift; sourceTree = "<group>"; };
+		C4D97A2F22622EBA00B8FFCD /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		C4D97A312262310300B8FFCD /* ServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceController.swift; sourceTree = "<group>"; };
 		C4DB74112253E69A00C97FDD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C4DB74132253E8BC00C97FDD /* ItemsHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		C4DB74142253E8BC00C97FDD /* ItemsHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsHeaderTableViewCell.xib; sourceTree = "<group>"; };
@@ -191,6 +201,7 @@
 				C4E0C2672242CD7F008518C3 /* HomeViewController.swift */,
 				C47E0B402255D8AC00772A0C /* DepartmentViewController.swift */,
 				C47E0B4E225607C500772A0C /* CourseViewController.swift */,
+				C4D97A2822622AA600B8FFCD /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -257,6 +268,39 @@
 			path = CoursesCollectionTableViewCell;
 			sourceTree = "<group>";
 		};
+		C4D97A2522622A0600B8FFCD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C4DDF9C622432007005930E5 /* UIView+Extension.swift */,
+				C4D97A2622622A5000B8FFCD /* Extension+UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C4D97A2A22622C5600B8FFCD /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C4D97A2B22622CCC00B8FFCD /* UserDefaultsUtility.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		C4D97A2D22622E8600B8FFCD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C4D97A2F22622EBA00B8FFCD /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C4D97A2E22622E9500B8FFCD /* ServiceControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C4D97A312262310300B8FFCD /* ServiceController.swift */,
+			);
+			path = ServiceControllers;
+			sourceTree = "<group>";
+		};
 		C4DB74102253E64E00C97FDD /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +363,10 @@
 		C4E0C2642242CD7F008518C3 /* Sharif Open Courseware */ = {
 			isa = PBXGroup;
 			children = (
+				C4D97A2E22622E9500B8FFCD /* ServiceControllers */,
+				C4D97A2D22622E8600B8FFCD /* Service */,
+				C4D97A2A22622C5600B8FFCD /* Utility */,
+				C4D97A2522622A0600B8FFCD /* Extensions */,
 				C4CF6D642254A038005D3F38 /* Model */,
 				C4DB74102253E64E00C97FDD /* ViewModels */,
 				C428C40D224955FE00186BF5 /* Views */,
@@ -334,7 +382,6 @@
 				C4E0C26E2242CD81008518C3 /* LaunchScreen.storyboard */,
 				C4E0C2712242CD81008518C3 /* Info.plist */,
 				C4DDF9B822430E84005930E5 /* Colors.xcassets */,
-				C4DDF9C622432007005930E5 /* UIView+Extension.swift */,
 			);
 			path = "Sharif Open Courseware";
 			sourceTree = "<group>";
@@ -611,6 +658,7 @@
 			files = (
 				C47E0B432255EB0200772A0C /* DepartmentViewModel.swift in Sources */,
 				C4CF6D6F2254AC7D005D3F38 /* CoursesCollectionTableViewCell.swift in Sources */,
+				C4D97A2722622A5000B8FFCD /* Extension+UIViewController.swift in Sources */,
 				C4DB74202253FD0A00C97FDD /* DepartmentCollectionViewCell.swift in Sources */,
 				C4DB74152253E8BC00C97FDD /* ItemsHeaderTableViewCell.swift in Sources */,
 				C4DDF9C722432007005930E5 /* UIView+Extension.swift in Sources */,
@@ -621,10 +669,14 @@
 				C4DB74122253E69A00C97FDD /* HomeViewModel.swift in Sources */,
 				C4CF6D6A2254AC2F005D3F38 /* CourseCollectionViewCell.swift in Sources */,
 				C47E0B552256660700772A0C /* TeacherIntroForCourseTableViewCell.swift in Sources */,
+				C4D97A2922622AA600B8FFCD /* LoadingView.swift in Sources */,
 				C47E0B472255F35500772A0C /* DepartmentIntroductionTableViewCell.swift in Sources */,
+				C4D97A2C22622CCC00B8FFCD /* UserDefaultsUtility.swift in Sources */,
+				C4D97A322262310300B8FFCD /* ServiceController.swift in Sources */,
 				C4E0C2662242CD7F008518C3 /* AppDelegate.swift in Sources */,
 				C42D9A0A225A5DCF0064B70F /* CourseVideoTableViewCell.swift in Sources */,
 				C47E0B512256334600772A0C /* CourseViewModel.swift in Sources */,
+				C4D97A3022622EBA00B8FFCD /* Service.swift in Sources */,
 				C4CF6D662254A2E8005D3F38 /* Department.swift in Sources */,
 				C47E0B412255D8AC00772A0C /* DepartmentViewController.swift in Sources */,
 			);

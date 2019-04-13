@@ -16,18 +16,6 @@ class HomeViewModel {
         self.homeViewController = vc
     }
     
-    func coursesButtonTouchUpInsideEvent() {
-        self.homeViewController.state = .courses
-    }
-    
-    func teachersButtonTouchUpInsideEvent() {
-        self.homeViewController.state = .teachers
-    }
-    
-    func myCoursesButtonTouchUpInsideEvent() {
-        self.homeViewController.state = .myCourses
-    }
-    
     func getNumberOfSections() -> Int {
         return 2
     }
@@ -49,5 +37,29 @@ class HomeViewModel {
     
     func courseViewModelFactory(vc: CourseViewController) -> CourseViewModel {
         return CourseViewModel(state: .courseIntro, vc: vc)
+    }
+}
+
+// IBActions event
+extension HomeViewModel {
+    func coursesButtonTouchUpInsideEvent() {
+        self.homeViewController.state = .courses
+    }
+    
+    func teachersButtonTouchUpInsideEvent() {
+        self.homeViewController.state = .teachers
+    }
+    
+    func myCoursesButtonTouchUpInsideEvent() {
+        self.homeViewController.state = .myCourses
+    }
+}
+
+extension HomeViewModel {
+    func sync() {
+        self.homeViewController.startLoading()
+        ServiceController().sync(successHandler: {
+            
+        })
     }
 }
